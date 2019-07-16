@@ -95,5 +95,9 @@
     <orderEntry type="library" name="Maven: org.testng:testng:7.0.0-beta4" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.72" level="project" />
     <orderEntry type="library" name="bootstrap.bundle" level="application" />
+    <orderEntry type="library" name="summernote" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="popper" level="application" />
   </component>
 </module>
