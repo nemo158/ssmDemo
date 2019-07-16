@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://scu.co.cnki.net/Student/SubmitGuideRecord.html?r=0.8057493298288871 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./jquery.min.js(5).download"></script>
+    <script type="text/javascript" src="./jquery.cookie.js(5).download"></script>
+    <script type="text/javascript" src="./jquery.extend.js(5).download"></script>
+    <script type="text/javascript" src="./jquery.easyui.min.js(5).download"></script>
+    <script type="text/javascript" src="./common.js(5).download"></script>
+    <script type="text/javascript" src="./constant.js(5).download"></script>
+    <script type="text/javascript" src="./audit.js(3).download"></script>
+    <script type="text/javascript" src="./JSEncrypt.js(5).download"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../Scripts/json2.js?r=2019052911093722"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="./base(5).css">
+    <link rel="stylesheet" href="./easyui(5).css">
+
+    <title>提交指导记录-- 学生角色</title>
+</head>
+<body>
+    <!-- 时间限制提示 -->
+    <div id="timeLimit" class="gxf_tips" style="display:none;">
+        <div class="gxf_tip">
+            <i></i>信息提示
+        </div>
+        <div>
+            <p style="margin-top: 10px; font-size:14px;" id="timeText"></p>
+        </div>
+    </div>
+    <div class="main" id="main">
+        <!-- 课题基本信息 -->
+        <div id="gxf-project-information"><div class="gxf_problem gxf_problem_detail"><div><h2><span></span>课题基本信息</h2></div><div class="gxf_pro_content gxf_content_table"><ul class="clearfix gxf_project_detadil_ul"><li style="width:100%;"><span class="detadil_txt_left"> 课题题目：</span><span style="width:600px;" class="detadil_txt_right">条件生成对抗网络在少数类有效数据生成中的研究与应用</span></li><li><span class="detadil_txt_left"> 可选专业：</span><span class="detadil_txt_right">软件工程</span></li><li><span class="detadil_txt_left"> 课题申报时间：</span><span class="detadil_txt_right">2018-12-11</span></li><li><span class="detadil_txt_left"> 题目类型：</span><span class="detadil_txt_right">理论研究</span></li><li><span class="detadil_txt_left"> 题目来源：</span><span class="detadil_txt_right">教师科研纵向课题</span></li><li><span class="detadil_txt_left"> 选择模式：</span><span class="detadil_txt_right">学生提交课题</span></li><li><span class="detadil_txt_left"> 课题所属专业：</span><span class="detadil_txt_right">软件学院-软件工程</span></li><li><span class="detadil_txt_left"> 指导教师：</span><span class="detadil_txt_right">段磊（20092049）</span></li><li><span class="detadil_txt_left"> 教师职称：</span><span class="detadil_txt_right">教授</span></li><li><span class="detadil_txt_left"> 导师联系邮箱：</span><span class="detadil_txt_right"></span></li><li><span class="detadil_txt_left"> 学生姓名：</span><span class="detadil_txt_right">王启帆（2015141463170）</span></li><li><span class="detadil_txt_left"> 学生院系专业：</span><span class="detadil_txt_right">软件学院-软件工程</span></li></ul></div></div></div>
+
+        <div class="gxf_problem gxf_problem_require">
+            <div id="tit"><h2><span></span>学生指导记录列表</h2></div>
+            <div id="Submit_GuideRecord" style="margin-bottom: 10px;">
+                <input id="submit" class="formBtn" type="button" value="提交指导记录">
+            </div>
+
+            <div id="div_talble" class="table" style="width:100%;">
+                <div class="panel datagrid panel-htop easyui-fluid" style="width: 1262px;"><div class="datagrid-wrap panel-body panel-body-noheader" title="" style="width: 1260px;"><div class="datagrid-view" style="width: 1280px; height: 612px;"><div class="datagrid-view1" style="width: 30px;"><div class="datagrid-header" style="width: 30px; height: 34px;"><div class="datagrid-header-inner" style="display: block;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 35px;"><tbody><tr class="datagrid-header-row"><td rowspan="0"><div class="datagrid-header-rownumber"></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 30px; margin-top: 0px; height: 576px;"><div class="datagrid-body-inner"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0" style=""><tbody><tr id="datagrid-row-r1-1-0" datagrid-row-index="0" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">1</div></td></tr><tr id="datagrid-row-r1-1-1" datagrid-row-index="1" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">2</div></td></tr><tr id="datagrid-row-r1-1-2" datagrid-row-index="2" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">3</div></td></tr><tr id="datagrid-row-r1-1-3" datagrid-row-index="3" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">4</div></td></tr><tr id="datagrid-row-r1-1-4" datagrid-row-index="4" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">5</div></td></tr><tr id="datagrid-row-r1-1-5" datagrid-row-index="5" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">6</div></td></tr><tr id="datagrid-row-r1-1-6" datagrid-row-index="6" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">7</div></td></tr><tr id="datagrid-row-r1-1-7" datagrid-row-index="7" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">8</div></td></tr><tr id="datagrid-row-r1-1-8" datagrid-row-index="8" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">9</div></td></tr><tr id="datagrid-row-r1-1-9" datagrid-row-index="9" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">10</div></td></tr><tr id="datagrid-row-r1-1-10" datagrid-row-index="10" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">11</div></td></tr><tr id="datagrid-row-r1-1-11" datagrid-row-index="11" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">12</div></td></tr><tr id="datagrid-row-r1-1-12" datagrid-row-index="12" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">13</div></td></tr><tr id="datagrid-row-r1-1-13" datagrid-row-index="13" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">14</div></td></tr><tr id="datagrid-row-r1-1-14" datagrid-row-index="14" class="datagrid-row  " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">15</div></td></tr><tr id="datagrid-row-r1-1-15" datagrid-row-index="15" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">16</div></td></tr></tbody></table></div></div><div class="datagrid-footer" style="width: 30px;"><div class="datagrid-footer-inner" style="display: block;"><table class="datagrid-ftable" cellspacing="0" cellpadding="0" border="0" style=""><tbody></tbody></table></div></div></div><div class="datagrid-view2" style="width: 1250px;"><div class="datagrid-header" style="width: 1250px; height: 34px;"><div class="datagrid-header-inner" style="display: block;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 35px;"><tbody><tr class="datagrid-header-row"><td field="名称"><div class="datagrid-cell datagrid-cell-c1-名称" style="text-align: center;"><span>课题题目</span><span class="datagrid-sort-icon"></span></div></td><td field="创建时间"><div class="datagrid-cell datagrid-cell-c1-创建时间" style="text-align: center;"><span>提交时间</span><span class="datagrid-sort-icon"></span></div></td><td field="指导记录提交次数"><div class="datagrid-cell datagrid-cell-c1-指导记录提交次数" style="text-align: center;"><span>提交次数</span><span class="datagrid-sort-icon"></span></div></td><td field="审核"><div class="datagrid-cell datagrid-cell-c1-审核" style="text-align: center;"><span>审核状态</span><span class="datagrid-sort-icon"></span></div></td><td field="成绩" style="display: none;"><div class="datagrid-cell datagrid-cell-c1-成绩" style="text-align: center;"><span>平时成绩</span><span class="datagrid-sort-icon"></span></div></td><td field="操作"><div class="datagrid-cell datagrid-cell-c1-操作" style="text-align: center;"><span>操作 </span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 1250px; margin-top: 0px; height: 576px; overflow-x: hidden;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0" style=""><tbody><tr id="datagrid-row-r1-2-0" datagrid-row-index="0" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:22:00</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">1</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95371&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-1" datagrid-row-index="1" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:22:24</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">2</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95374&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-2" datagrid-row-index="2" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:22:42</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">3</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95375&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-3" datagrid-row-index="3" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:22:58</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">4</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95376&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-4" datagrid-row-index="4" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:23:14</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">5</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95378&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-5" datagrid-row-index="5" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:23:32</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">6</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95380&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-6" datagrid-row-index="6" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:23:49</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">7</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95382&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-7" datagrid-row-index="7" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:24:05</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">8</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95386&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-8" datagrid-row-index="8" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:24:23</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">9</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95387&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-9" datagrid-row-index="9" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:24:39</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">10</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95389&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-10" datagrid-row-index="10" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:24:53</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">11</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95391&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-11" datagrid-row-index="11" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:25:09</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">12</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95393&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-12" datagrid-row-index="12" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:25:24</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">13</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95395&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-13" datagrid-row-index="13" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:25:40</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">14</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95396&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-14" datagrid-row-index="14" class="datagrid-row  " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:26:00</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">15</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95398&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr><tr id="datagrid-row-r1-2-15" datagrid-row-index="15" class="datagrid-row datagrid-row-alt " style="height: 36px;"><td field="名称"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-名称">条件生成对抗网络在少数类有效数据生成中的研究与应用</div></td><td field="创建时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-创建时间">2019-05-23 14:26:13</div></td><td field="指导记录提交次数"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-指导记录提交次数">16</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="成绩" style="display: none;"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-成绩"></div></td><td field="操作"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-操作"><a class="listA" href="javascript:openframe(&#39;指导记录详情&#39;, &#39;../Student/ProjectLogDetail.html?sid=120007552&amp;ProjectId=6134&amp;LogID=95401&amp;stuAcademyNum=null&amp;tid=null&amp;num=16&#39;,false)">查看详情</a>&nbsp;&nbsp;</div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 1250px;"><div class="datagrid-footer-inner" style="display: block;"><table class="datagrid-ftable" cellspacing="0" cellpadding="0" border="0" style=""><tbody></tbody></table></div></div></div><table id="list" style="display: none;" class="datagrid-f"> </table><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c1-名称{width:6px}
+.datagrid-cell-c1-创建时间{width:1px}
+.datagrid-cell-c1-指导记录提交次数{width:1px}
+.datagrid-cell-c1-审核{width:6px}
+.datagrid-cell-c1-成绩{width:1px}
+.datagrid-cell-c1-操作{width:6px}
+</style></div></div></div>
+                
+            </div>
+        </div>
+        <!-- 列表 -->
+    </div>
+
+    <script type="text/javascript">
+        var current_role = get_current_role(); //角色ID
+        var sid = getUrlParam("sid");//sid
+        var tid = getUrlParam("tid");//Tid        
+        var ProjectId = getUrlParam("ProjectId"); //学生课题编号
+        var stuAcademyNum = getUrlParam("stuAcademyNum"); //学生课题编号
+        $(function () {
+            //获取课题基本信息
+            if (current_role == 2) {//学生
+                getProjectInformation("", "task");
+            };
+            if (current_role == 3) {//教师
+                getProjectInformation(ProjectId);
+                paramsData = {
+                    action: "GetProjectLogSystemData",
+                    sid: sid,
+                    ProjectId: ProjectId,
+                    stuAcademyNum: stuAcademyNum
+                };
+            };
+            $.when(GteTable(list, url, columnData, paramsData, idField, false, true))
+                .done(function (data) {
+                    //myMessage("哈哈，成功了！");
+                    if (data && (data.errorCode == 993 || data.errorCode == 990)) {
+                        myMessage(data.message);//未获取指导记录配置信息
+                        return false;
+                    }
+                    if (data && data.errorCode == 995) {
+                        //没有课题;
+                        if (current_role == 2) {//学生提交
+                            openframe('添加指导记录', 'Student/AddGuideRecord.html?flag=0');
+                        }
+                        if (current_role == 3) {//教师提交
+                            openframe('添加指导记录', 'Student/AddGuideRecord.html?flag=0&sid=' + sid + '&ProjectId=' + ProjectId + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid);
+                        }
+                        closeTab("提交指导记录");
+                        return;
+                    };
+                    var rows = $("#list").datagrid("getRows");
+                    //myMessage(rows[1]["指导记录设置"]);&& checkValIsUndefinedOrNull(rows[1]["指导记录设置"])
+                    if (!rows || rows.length <= 0) {
+                        $("#Submit_GuideRecord>input").click();
+                        closeTab("提交指导记录");
+                    };
+                })
+            .fail(function () {
+                myMessage("出错啦！");
+            });
+            GetHideList();//是否显示平时成绩
+            isDateAndSubmitted(); //验证时间和是否显示左上提交按钮
+        });
+        function isDateAndSubmitted() {// 时间限制提示
+            $.ajax({
+                url: "../Handler/ProjectLog.ashx",
+                data: {
+                    "action": "IsSubmittedBtn",
+                    "type": 4,//指导记录
+                    "sid": sid,
+                    "ProjectId": ProjectId,
+                    "stuAcademyNum": stuAcademyNum
+                },
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        //是否显示提交按钮
+                        if (data.rows[0]["是否显示提交按钮"] == 1) {
+                            $("#Submit_GuideRecord").show();
+                        } else {
+                            $("#Submit_GuideRecord").hide();
+                        };
+                        if (data.rows[0]["是否有时间限制"] == 1) {
+                            // 到期提交
+                            var nowTime = +(new Date());                         //当前时间毫秒数
+                            var startTime = data.rows[0]["开始时间"].replace(new RegExp("-", "gm"), "/");
+                            startTime = (new Date(startTime)).getTime();        //开始时间毫秒数
+                            var endTime = data.rows[0]["结束时间"].replace(new RegExp("-", "gm"), "/");
+                            endTime = (new Date(endTime)).getTime();        //结束时间毫秒数
+
+                            if (nowTime >= startTime && nowTime <= endTime) {
+                                $("#Submit_GuideRecord").show();
+                            } else {
+                                $("#Submit_GuideRecord").hide();
+                            };
+                            $("#timeLimit").show();
+                            $("#tit").hide();
+                            $("#timeText").html("您所在学校或者院系设置的指导记录提交时间为【 <span style='color:#f00;'>"
+                                + data.rows[0]["开始时间"] + "</span> 至 <span style='color:#f00;'> " + data.rows[0]["结束时间"] + "</span> 】，请在该时间范围内进行操作。");
+                        };
+                        if (!checkValIsUndefinedOrNull(data.message)) {//错误提示
+                            $("#timeText").html(data.message);
+                            $("#tit").hide();
+                            $("#timeLimit").show();
+                        };
+                    } else {
+                        $("#div_talble,#tit").hide();
+                        $("#timeText").html(data.message);
+                        $("#timeLimit").show();
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+        var rowsrole = GetGrade();
+        var list_pscj = GetGradeNames(10, rowsrole);//平时成绩       
+        //初始化列表
+        var columnData = [[
+            { field: '名称', align: 'center', title: '课题题目', width: 15 },
+            { field: '创建时间', align: 'center', title: '提交时间', width: 10 },
+            {
+                field: '指导记录提交次数', align: 'center', title: '提交次数', width: 10,
+                formatter: function (value, row, index) {
+                    var str = null;
+                    if (checkValIsUndefinedOrNull(row["指导记录设置"])) {
+                        str = row["指导记录提交次数"];
+                    } else {
+                        if (row["指导记录设置"] == "1" && row["指导记录是否启用时间"] == "1") {
+                            str = row["设置提交次数"] + "<br>";
+                            if (!checkValIsUndefinedOrNull(row["开始时间"]) && !checkValIsUndefinedOrNull(row["结束时间"])) {
+                                str += row["开始时间"] + "--" + row["结束时间"];
+                            }
+                        };
+                        if (row["指导记录设置"] == "1" && row["指导记录是否启用时间"] == "0") {
+                            str = row["指导记录提交次数"];
+                        };
+                    };
+                    return str;
+                }
+            },
+            {
+                field: '审核', align: 'center', title: '审核状态', width: 15,
+                formatter: function (value, row, index) {
+                    var curclass = getAuditCss(row["审核"]);
+                    var words = getAuditStateText(row["审核"], 3);
+                    return "<span class=\"" + curclass + "\">" + words + "</span>";
+                }
+            },
+            {
+                field: '成绩', align: 'center', title: list_pscj, width: 10,
+                formatter: function (value, row, index) {
+                    return row["成绩"] > 0 ? row["成绩"] : '';
+                }
+                
+            },
+            {
+                field: '操作', title: '操作 ', align: 'center', width: 15,
+                formatter: function (value, row, index) {
+                    var str = "";
+                    if (!checkValIsUndefinedOrNull(row["指导记录设置"]) && row["指导记录设置"] == "1" && row["指导记录是否启用时间"] == "1") {//如果管理员开启了次数时间限制
+                        if (!checkValIsUndefinedOrNull(row["是否显示提交按钮"]) && row["是否显示提交按钮"] == "1") {
+                            if (checkValIsUndefinedOrNull(row["ID"])) {
+                                if (current_role == 2) {//学生
+                                    str = '<a class="listA"  href="javascript:openframe(\'添加指导记录\', \'Student/AddGuideRecord.html?num=' + row["设置提交次数"] + ' \',false)">提交</a>';
+                                }
+                                if (current_role == 3) {//教师
+                                    str = '<a class="listA"  href="javascript:openframe(\'添加指导记录\', \'Student/AddGuideRecord.html?num=' + row["设置提交次数"]
+                                        + '&sid=' + sid + '&ProjectId=' + ProjectId + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid
+                                        + ' \',false)">提交</a>';
+                                }
+                            } else {
+                                str = '<a class="listA"  href="javascript:openframe(\'指导记录详情\', \'../Student/ProjectLogDetail.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                                     + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '\',false)">查看详情</a>&nbsp;&nbsp;';
+                                if (row["允许修改"] == 1 || checkValIsUndefinedOrNull(row["审核时间"]) || row["审核"] == -1) {
+                                    str += '<a class="listA"  href="javascript:openframe(\'修改指导记录\', \'Student/AddGuideRecord.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                                        + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '&flag=1&num=' + row["设置提交次数"] + '\',false)">修改</a>';
+                                };
+                            };
+                        } else {
+                            if (!checkValIsUndefinedOrNull(row["ID"])) {
+                                str = '<a class="listA"  href="javascript:openframe(\'指导记录详情\', \'../Student/ProjectLogDetail.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                                    + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '&num=' + row["设置提交次数"] + '\',false)">查看详情</a>&nbsp;&nbsp;';
+                                if (row["允许修改"] == 1 || checkValIsUndefinedOrNull(row["审核时间"]) || row["审核"] == -1) {
+                                    str += '<a class="listA"  href="javascript:openframe(\'修改指导记录\', \'Student/AddGuideRecord.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                                        + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '&flag=1&num=' + row["设置提交次数"] + '\',false)">修改</a>';
+                                };
+                            } else {
+                                str = "";
+                            };
+                        };
+                    } else if (row["指导记录设置"] == "1" && row["指导记录是否启用时间"] == "0") {//开启次数限制 不开启时间控制
+                        if (checkValIsUndefinedOrNull(row["ID"])) {
+                            if (current_role == 2) {//学生
+                                str = '<a class="listA"  href="javascript:openframe(\'添加指导记录\', \'Student/AddGuideRecord.html?num=' + row["指导记录提交次数"] + ' \',false)">提交</a>';
+                            }
+                            if (current_role == 3) {//教师
+                                str = '<a class="listA"  href="javascript:openframe(\'添加指导记录\', \'Student/AddGuideRecord.html?num=' + row["指导记录提交次数"]
+                                    + '&sid=' + sid + '&ProjectId=' + ProjectId + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid
+                                    + ' \',false)">提交</a>';
+                            }
+                        } else {
+                            str = '<a class="listA"  href="javascript:openframe(\'指导记录详情\', \'../Student/ProjectLogDetail.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                                + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '&num=' + row["设置提交次数"] + '\',false)">查看详情</a>&nbsp;&nbsp;';
+                            if (row["允许修改"] == 1 || checkValIsUndefinedOrNull(row["审核时间"]) || row["审核"] == -1) {
+                                str += '<a class="listA"  href="javascript:openframe(\'修改指导记录\', \'Student/AddGuideRecord.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                                    + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '&flag=1&num=' + row["设置提交次数"] + '\',false)">修改</a>';
+                            };
+                        };
+                    } else {//没有开启次数时间控制
+                        str = '<a class="listA"  href="javascript:openframe(\'指导记录详情\', \'../Student/ProjectLogDetail.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                            + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '\',false)">查看详情</a>&nbsp;&nbsp;';
+                        if (row["允许修改"] == 1 || checkValIsUndefinedOrNull(row["审核时间"]) || row["审核"] == -1) {
+                            str += '<a class="listA"  href="javascript:openframe(\'修改指导记录\', \'Student/AddGuideRecord.html?sid=' + row["SID"] + '&ProjectId=' + row["课题编号"] + '&LogID=' + row["ID"]
+                                + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid + '&flag=1' + '\',false)">修改</a>';
+                        };
+                    };
+                    if (current_role == 3 && (row["审核"] == 1001 || row["审核"] == -1)) {
+                        str += '&nbsp;&nbsp;<a class="listA" href="javascript:remove(\'' + index + '\')">删除</a>&nbsp;&nbsp;';
+                    }
+                    return str;
+                }
+            }
+        ]];
+        var list = $("#list");
+        var url = "../Handler/ProjectLog.ashx";
+        var paramsData = {
+            action: "GetProjectLogSystemData"
+        };
+        var idField = "课题编号";
+        //获取成绩自定义名称
+        
+        function GetHideList() {
+            $.ajax({
+                url: "../Handler/ReviewHandler.ashx",
+                type: "post",
+                data: {
+                    action: 'GetReviewColumn'
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        if (data.dataList[0]["不显示平时成绩"] == 0) {
+                            $("#list").datagrid('hideColumn', '成绩');
+                        };
+                    };
+                }
+            });
+        };
+
+        $("#submit").click(function () {
+            //onclick="openframe('添加指导记录', 'Student/AddGuideRecord.html')"
+            if (get_current_role() == 2) {//学生
+                openframe('添加指导记录', 'Student/AddGuideRecord.html');
+            };
+            if (get_current_role() == 3) {//教师
+                openframe('添加指导记录', 'Student/AddGuideRecord.html?flag=0&sid=' + sid + '&ProjectId=' + ProjectId + '&stuAcademyNum=' + stuAcademyNum + '&tid=' + tid);
+            };
+        });
+
+        //点击删除操作
+        function remove(index) {
+            $('#delmessagebox').text("您确定要删除该条信息吗?");
+            $('#delmessagebox').dialog({
+                title: '删除',
+                buttons: [{
+                    text: '确定',
+                    handler: function () {
+                        $.ajax({
+                            url: "../Handler/ProjectLog.ashx",
+                            type: "post",
+                            dataType: "json",
+                            data: {
+                                action: "DeleteProjectslog",
+                                id: $("#list").datagrid("getData").rows[index]["ID"]
+                            },
+                            success: function (data) {
+                                myMessage(data.message);
+                                if (data.isSuccess == true) {
+                                    try {
+                                        refreshTab(getRoleName(3) + "提交指导记录");
+                                    } catch (e) {
+                                        console.log(e);
+                                    };
+                                    $("#delmessagebox").dialog("close");
+                                    $('#list').datagrid("clearSelections");
+                                    $('#list').datagrid('reload');//重新加载
+                                };
+                            },
+                            error: function (err) {
+                                console.log(err);
+                            }
+                        });
+                    }
+                }, {
+                    text: '取消',
+                    handler: function () {
+                        $("#delmessagebox").dialog("close");
+                        $('#list').datagrid("clearSelections");
+                    }
+                }]
+            });
+            $("#delmessagebox").dialog("open").window('center');
+
+        };
+    </script><div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 191px; z-index: 9002;"><div class="panel-header panel-header-noborder window-header" style="width: 400px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 443px; top: 191px; width: 400px; height: 205px; z-index: 9001;"></div><div class="window-mask" style="display: none; z-index: 9000; width: 1286px; height: 586px;"></div>
+
+
+<div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px;"><div class="panel-header panel-header-noborder window-header" style="width: 392px;"><div class="panel-title">New Dialog</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-close"></a></div></div><div id="delmessagebox" class="easyui-dialog panel-body panel-body-noborder window-body" style="width: 398px; height: 163px;" data-options="closed:true" title=""></div></div><div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px;"></div><div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9005;"><div class="panel-header panel-header-noborder window-header" style="width: 392px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9004;"></div><div class="window-mask" style="display: none; z-index: 9003; position: fixed;"></div><div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9014;"><div class="panel-header panel-header-noborder window-header" style="width: 392px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9013;"></div><div class="window-mask" style="display: none; z-index: 9012; position: fixed;"></div></body></html>

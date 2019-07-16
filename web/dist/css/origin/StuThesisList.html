@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://scu.co.cnki.net/Student/StuThesisList.html?r=0.2875465269365143 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>提交论文</title>
+    <link rel="stylesheet" href="./base(7).css">
+    <link rel="stylesheet" href="./easyui(7).css">
+
+    <script type="text/javascript" src="./jquery.min.js(7).download"></script>
+    <script type="text/javascript" src="./jquery.cookie.js(7).download"></script>
+    <script type="text/javascript" src="./jquery.extend.js(7).download"></script>
+    <script type="text/javascript" src="./jquery.easyui.min.js(7).download"></script>
+    <script type="text/javascript" src="./common.js(7).download"></script>
+    <script type="text/javascript" src="./constant.js(7).download"></script>
+    <script type="text/javascript" src="./audit.js(5).download"></script>
+    <script type="text/javascript" src="./JSEncrypt.js(7).download"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../Scripts/json2.js?r=2019061716551813"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="main gxf_tips" id="nochoiceDiv" style="display:none; margin-bottom:15px;">
+        <div class="gxf_tip"> <i></i>信息提示 </div>
+        <div> <p>您还没有选择课题，或者选择的课题未被指导教师通过，您现在不能提交。</p> </div>
+    </div>
+    <div class="main gxf_tips" id="noShowUploadList" style="display:none; margin-bottom:15px;">
+        <div class="gxf_tip"> <i></i>信息提示 </div>
+        <div><p>您所在学校尚未设置您可进行上传文档的次数，暂不能进行上传。</p></div>
+    </div>
+    <div id="choiceDiv" class="main" style="">
+        <div class="gxf_tips" id="WritingHelperBox" style="margin: 25px 0px 0px;">
+            <div class="gxf_tip"> <i></i>信息提示 </div>
+            <div>
+                <span class="txt_red">如果论文需要多次写作检查和格式检查，请点击这里</span>
+                <a id="goWritingHelper" class="listA A_line" href="javascript:;" title="">进入写作助手</a>
+            </div>
+        </div>
+        <!-- 课题基本信息 -->
+        <div id="gxf-project-information"><div class="gxf_problem gxf_problem_detail"><div><h2><span></span>课题基本信息</h2></div><div class="gxf_pro_content gxf_content_table"><ul class="clearfix gxf_project_detadil_ul"><li style="width:100%;"><span class="detadil_txt_left"> 课题题目：</span><span style="width:600px;" class="detadil_txt_right">条件生成对抗网络在少数类有效数据生成中的研究与应用</span></li><li><span class="detadil_txt_left"> 可选专业：</span><span class="detadil_txt_right">软件工程</span></li><li><span class="detadil_txt_left"> 课题申报时间：</span><span class="detadil_txt_right">2018-12-11</span></li><li><span class="detadil_txt_left"> 题目类型：</span><span class="detadil_txt_right">理论研究</span></li><li><span class="detadil_txt_left"> 题目来源：</span><span class="detadil_txt_right">教师科研纵向课题</span></li><li><span class="detadil_txt_left"> 选择模式：</span><span class="detadil_txt_right">学生提交课题</span></li><li><span class="detadil_txt_left"> 课题所属专业：</span><span class="detadil_txt_right">软件学院-软件工程</span></li><li><span class="detadil_txt_left"> 指导教师：</span><span class="detadil_txt_right">段磊（20092049）</span></li><li><span class="detadil_txt_left"> 教师职称：</span><span class="detadil_txt_right">教授</span></li><li><span class="detadil_txt_left"> 导师联系邮箱：</span><span class="detadil_txt_right"></span></li><li><span class="detadil_txt_left"> 学生姓名：</span><span class="detadil_txt_right">王启帆（2015141463170）</span></li><li><span class="detadil_txt_left"> 学生院系专业：</span><span class="detadil_txt_right">软件学院-软件工程</span></li></ul></div></div></div>
+        <div class=" gxf_problem gxf_problem_title">
+            <div><h2><span></span>学生论文列表</h2></div>
+            <div class="panel datagrid panel-htop easyui-fluid" style="width: 1262px;"><div class="datagrid-wrap panel-body panel-body-noheader" title="" style="width: 1260px;"><div class="datagrid-view" style="width: 1280px; height: 0px;"><div class="datagrid-view1" style="width: 0px;"><div class="datagrid-header" style="width: 0px; height: 0px;"><div class="datagrid-header-inner" style="display: block;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td rowspan="0"><div class="datagrid-header-rownumber"></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 0px;"><div class="datagrid-body-inner"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r1-1-0" datagrid-row-index="0" class="datagrid-row  " style="height: 28px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">1</div></td></tr><tr id="datagrid-row-r1-1-1" datagrid-row-index="1" class="datagrid-row datagrid-row-alt " style="height: 28px;"><td class="datagrid-td-rownumber"><div class="datagrid-cell-rownumber">2</div></td></tr></tbody></table></div></div><div class="datagrid-footer" style="width: 0px;"><div class="datagrid-footer-inner" style="display: block;"><table class="datagrid-ftable" cellspacing="0" cellpadding="0" border="0"><tbody></tbody></table></div></div></div><div class="datagrid-view2" style="width: 1280px;"><div class="datagrid-header" style="width: 1280px; height: 0px;"><div class="datagrid-header-inner" style="display: block;"><table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 0px;"><tbody><tr class="datagrid-header-row"><td field="篇名"><div class="datagrid-cell datagrid-cell-c1-篇名" style="text-align: center;"><span>文件名</span><span class="datagrid-sort-icon"></span></div></td><td field="作者"><div class="datagrid-cell datagrid-cell-c1-作者" style="text-align: center;"><span>作者</span><span class="datagrid-sort-icon"></span></div></td><td field="上传时间"><div class="datagrid-cell datagrid-cell-c1-上传时间" style="text-align: center;"><span>提交时间</span><span class="datagrid-sort-icon"></span></div></td><td field="thesisnum"><div class="datagrid-cell datagrid-cell-c1-thesisnum" style="text-align: center;"><span>检测次数</span><span class="datagrid-sort-icon"></span></div></td><td field="检测结果"><div class="datagrid-cell datagrid-cell-c1-检测结果" style="text-align: center;"><span>检测结果</span><span class="datagrid-sort-icon"></span></div></td><td field="WriteCheckResultText"><div class="datagrid-cell datagrid-cell-c1-WriteCheckResultText" style="text-align: center;"><span>写作检查</span><span class="datagrid-sort-icon"></span></div></td><td field="FormatCheckResultText"><div class="datagrid-cell datagrid-cell-c1-FormatCheckResultText" style="text-align: center;"><span>格式检查</span><span class="datagrid-sort-icon"></span></div></td><td field="审核"><div class="datagrid-cell datagrid-cell-c1-审核" style="text-align: center;"><span>审核状态</span><span class="datagrid-sort-icon"></span></div></td><td field="operate"><div class="datagrid-cell datagrid-cell-c1-operate" style="text-align: center;"><span>操作</span><span class="datagrid-sort-icon"></span></div></td></tr></tbody></table></div></div><div class="datagrid-body" style="width: 1280px; margin-top: 0px; height: 0px;"><table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0"><tbody><tr id="datagrid-row-r1-2-0" datagrid-row-index="0" class="datagrid-row  " style="height: 28px;"><td field="篇名"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-篇名">2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊 </div></td><td field="作者"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-作者">王启帆</div></td><td field="上传时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-上传时间">2019-05-07 20:08:49</div></td><td field="thesisnum"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-thesisnum">1<br>(2019/4/1 0:00:00--2019/5/13 11:59:00)</div></td><td field="检测结果"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-检测结果"><span class="per_y" title="文字复制比">7.5%</span></div></td><td field="WriteCheckResultText"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-WriteCheckResultText">一般</div></td><td field="FormatCheckResultText"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-FormatCheckResultText">未提交</div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class="txt_green">审核通过</span></div></td><td field="operate"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-operate"><a class="listA" href="javascript:openframe(&#39;提交格式检查&#39;, &#39;Thesis/FormatToCheck.html?id=6134&amp;fileId=9079&#39;,false)">提交格式检查</a><br><a class="listA" href="javascript:openframe(&#39;毕设（论文）详情&#39;, &#39;Thesis/ThesisDetails.html?fileId=9079&amp;sid=120007552&amp;id=6134&#39;,false)">查看详情</a><br><a class="listA" href="javascript:openframe(&#39;写作检查结果&#39;, &#39;Thesis/ContentDetectionResults.html?writeaid=7760&amp;sid=120007552&amp;id=6134&#39;,false)">写作检查结果</a><br><a class="listA" href="javascript:openframe(&#39;论文历史记录&#39;,&#39;Student/ThesisHistoryList.html?sid=120007552&amp;projectId=6134&amp;num=1&#39;);">历史记录</a></div></td></tr><tr id="datagrid-row-r1-2-1" datagrid-row-index="1" class="datagrid-row datagrid-row-alt " style="height: 28px;"><td field="篇名"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-篇名"></div></td><td field="作者"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-作者"></div></td><td field="上传时间"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-上传时间"></div></td><td field="thesisnum"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-thesisnum">2<br>(2019/4/22 0:00:00--2019/5/18 11:59:00)</div></td><td field="检测结果"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-检测结果"></div></td><td field="WriteCheckResultText"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-WriteCheckResultText"></div></td><td field="FormatCheckResultText"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-FormatCheckResultText"></div></td><td field="审核"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-审核"><span class=""></span></div></td><td field="operate"><div style="text-align:center;white-space:normal;height:auto;" class="datagrid-cell datagrid-cell-c1-operate"></div></td></tr></tbody></table></div><div class="datagrid-footer" style="width: 1280px;"><div class="datagrid-footer-inner" style="display: block;"><table class="datagrid-ftable" cellspacing="0" cellpadding="0" border="0"><tbody></tbody></table></div></div></div><table id="list" style="display: none;" class="datagrid-f"> </table><style type="text/css" easyui="true">
+.datagrid-header-rownumber{width:29px}
+.datagrid-cell-rownumber{width:29px}
+.datagrid-cell-c1-篇名{width:11px}
+.datagrid-cell-c1-作者{width:1px}
+.datagrid-cell-c1-上传时间{width:6px}
+.datagrid-cell-c1-thesisnum{width:11px}
+.datagrid-cell-c1-检测结果{width:6px}
+.datagrid-cell-c1-WriteCheckResultText{width:1px}
+.datagrid-cell-c1-FormatCheckResultText{width:1px}
+.datagrid-cell-c1-审核{width:6px}
+.datagrid-cell-c1-operate{width:16px}
+</style></div></div></div>
+        </div>
+        <!--<div class="table">
+            <div class="boxbtn clearfix">
+                <div style="float:left;">
+                    <input id="upload_button" type="button" class="formBtn" name="name" value="上传论文" style="display:none;" onclick="openframe('提交论文', 'Student/StuUploadThesis.html')" />
+                </div>
+            </div>
+        </div>-->
+    </div>
+    
+    <script type="text/javascript">
+        var role = get_current_role();
+        var isCheckResultHide = $("#writingHelper", window.parent.document).is(":hidden");
+        $(function () {
+            var obj = getProjectInformation(getUrlParam("projectid"), "task");
+            if (obj["isTrue"]) {
+                $("#nochoiceDiv").hide();
+                isShowUploadList();
+            } else {
+                $("#choiceDiv").hide();
+                $("#nochoiceDiv").show();
+            };
+        });
+
+
+        var columnData = [[
+            { field: '篇名', align: 'center', title: '文件名', width: 20 },
+            { field: '作者', align: 'center', title: '作者', width: 10 },
+            { field: '上传时间', align: 'center', title: '提交时间', width: 15 },
+            {
+                field: 'thesisnum', align: 'center', title: '检测次数', width: 20,
+                formatter: function (value, row, index) {
+                    var str = row["论文次数"];
+                    if (row["是否最终"] == "1") { str = '(最终版)'; }
+                    if (row["是否超权限"] == "1") { str += '(超权限)'; }
+                    if (row["提交次数时间"] != "" && row["提交次数时间"] != null) { str += '<br>' + row["提交次数时间"]; }
+                    return str;
+                }
+            },
+            {
+                field: '检测结果', align: 'center', title: '检测结果', width: 15,
+                formatter: function (value, row, index) {
+                    return returnTestingResult(row["检测状态"], row["检测结果"], row["检测结果txt"], row["检测时间"]);
+                }
+            },
+            {
+                field: 'WriteCheckResultText', align: 'center', title: '写作检查', width: 10,
+                formatter: function (value, row, index) {
+                    var str = '<a href="javascript:void(0);" title="您所在学校尚未开通该功能，暂不能使用；若需使用请联系学校管理员，通过销售与知网沟通">未开通功能<a>';
+                    return (isCheckResultHide ? str : row["WriteCheckResultText"]);
+                }
+            },
+            {
+                field: 'FormatCheckResultText', align: 'center', title: '格式检查', width: 10,
+                formatter: function (value, row, index) {
+                    var str = '<a href="javascript:void(0);" title="您所在学校尚未开通该功能，暂不能使用；若需使用请联系学校管理员，通过销售与知网沟通">未开通功能<a>';
+                    return (isCheckResultHide ? str : row["FormatCheckResultText"]);
+                }
+            },
+            {
+                field: 'InnerCheckResultText', align: 'center', title: '校内互检', width: 10,
+                //formatter: function (value, row, index) {
+                //    var str = '<a href="javascript:void(0);" title="您所在学校尚未开通该功能，暂不能使用；若需使用请联系学校管理员，通过销售与知网沟通">未开通功能<a>';
+                //    return (isCheckResultHide ? str : row["InnerCheckResultText"]);
+                //}
+            },
+            {
+                field: '审核', align: 'center', title: '审核状态', width: 15,
+                formatter: function (value, row, index) {
+                    var curclass = "";
+                    var words = "";
+                    $.each(sh, function (index, r) {
+                        if (r.value - 2 == row["审核"]) {
+                            curclass = r.css;
+                            words = r.name;
+                        };
+                    });
+                    return "<span class=\"" + curclass + "\">" + words + "</span>";
+                }
+            },
+            {
+                field: 'operate', title: '操作', align: 'center', width: 25,
+                formatter: function (value, row, index) {
+                    var str = '';
+                    if (!checkValIsUndefinedOrNull(row["论文ID"])) {
+                        if (role == 2 && row["CanFormatCheck"] == 1 && row["FormatCheckId"] <= 0 && !isCheckResultHide) {
+                            str += '<a class="listA" href="javascript:openframe(\'提交格式检查\', \'Thesis/FormatToCheck.html?id=' + row["课题编号"] + '&fileId='
+                                + row["论文ID"] + '\',false)">提交格式检查</a><br />';
+                        }
+                        str += '<a class="listA" href="javascript:openframe(\'毕设（论文）详情\', \'Thesis/ThesisDetails.html?fileId=' + row["论文ID"]
+                            + '&sid=' + row["SID"] + '&id=' + row["课题编号"] + '\',false)">查看详情</a>';
+                        if (role == 2 && row["WriteCheckResult"] == 1 && !isCheckResultHide) {
+                            str += '<br /><a class="listA" href="javascript:openframe(\'写作检查结果\', \'Thesis/ContentDetectionResults.html?writeaid='
+                                + row["WriteCheckId"] + '&sid=' + row["SID"] + '&id=' + row["课题编号"] + '\',false)">写作检查结果</a>';
+                        }
+                        if (role == 2 && row["FormatCheckResult"] == 1 && !isCheckResultHide) {
+                            str += '<br /><a class="listA" href="javascript:openframe(\'写作格式检查结果\', \'Thesis/FormatDetectionResult.html?writeaid='
+                                + row["FormatCheckId"] + '&sid=' + row["SID"] + '&id=' + row["课题编号"] + '\',false)">格式检查结果</a>';
+                        }
+                        if (row["InnerKeyId"] && row["InnerCheckResult"] > 0 && row["InnerCheckResult"] <= 100 && row["InnerCheckResultText"] != '-1') {
+                            str += '<br /><a class="listA" href="javascript:openframe(\'校内互检详情\', \'Thesis/InnerCheckResult.html?thesisId='
+                                + row["论文ID"] + '&sid=' + row["SID"] + '&id=' + row["课题编号"] + '&innerKeyId=' + encodeURIComponent(row["InnerKeyId"]) + '\',false)">校内互检</a>';
+                        }
+                    }
+                    if (role == "2") {
+                        if (row["是否提交"] == "1") {
+                            str += '<a class="listA" href="javascript:openframe(\'提交论文\', \'Student/StuUploadThesis.html?type=add&num=' + row["论文次数"]
+                                + '&last=' + row["是否最终"] + '&allow=' + row["是否超权限"] + '\',false)">提交文档</a>';
+                        }
+                        if (row["是否修改"] == "1") {
+                            if (checkValIsUndefinedOrNull(row["检测结果"]) || (row["检测结果"] < 0 && row["检测结果"] != -7) || row["检测结果"] > 100) {
+                                if (checkValIsUndefinedOrNull(row["审核时间"]) || row['审核'] == -1) {
+                                    str += '<br /><a class="listA" href="javascript:openframe(\'修改论文\', \'Student/StuUploadThesis.html?type=update&thesisid=' + row["论文ID"]
+                                        + '&sid=' + row["SID"] + '&projectid=' + row["课题编号"] + '\',false)">修改</a>';
+                                } else if (row["审核"] == 1) {
+                                    if (row["检测结果"] == -3 || row["检测结果"] == -4 || row["检测结果"] == -5 || row["检测结果"] == -6 || row["检测结果"] == -8 || row["检测结果"] == -11
+                                        || row["检测结果"] == 1000 || row["检测结果"] == 1101 || row["检测结果"] == 1102 || row["检测结果"] == 1103 || row["检测结果"] == 1104
+                                        || row["检测结果"] == 1105 || row["检测结果"] == 1106 || row["检测结果"] == 1107 || row["检测结果"] == 1108 || row["检测结果"] == 1109) {
+
+                                        str += '<br /><a class="listA" href="javascript:openframe(\'修改论文\', \'Student/StuUploadThesis.html?type=update&thesisid=' + row["论文ID"]
+                                            + '&sid=' + row["SID"] + '&projectid=' + row["课题编号"] + '\',false)">修改</a>';
+                                    }
+                                }
+                            } else if (checkValIsUndefinedOrNull(row["检测时间"]) && row["检测状态"] == -3) {
+                                str += '<br /><a class="listA" href="javascript:openframe(\'修改论文\', \'Student/StuUploadThesis.html?type=update&thesisid=' + row["论文ID"]
+                                    + '&sid=' + row["SID"] + '&projectid=' + row["课题编号"] + '\',false)">修改</a>';
+                            }
+                        } else {
+                            if (row["检测结果"] == -3 || row["检测结果"] == -4 || row["检测结果"] == -5 || row["检测结果"] == -6 || row["检测结果"] == -8 || row["检测结果"] == -11
+                                || row["检测结果"] == 1000 || row["检测结果"] == 1101 || row["检测结果"] == 1102 || row["检测结果"] == 1103 || row["检测结果"] == 1104
+                                || row["检测结果"] == 1105 || row["检测结果"] == 1106 || row["检测结果"] == 1107 || row["检测结果"] == 1108 || row["检测结果"] == 1109) {
+
+                                str += '<br /><a class="listA" href="javascript:openframe(\'修改论文\', \'Student/StuUploadThesis.html?type=update&thesisid=' + row["论文ID"]
+                                    + '&sid=' + row["SID"] + '&projectid=' + row["课题编号"] + '\',false)"">修改</a>';
+                            }
+                        }
+                    }
+                    if (row["historyID"] > 0) {
+                        str += '<br /><a class="listA" href="javascript:openframe(\'论文历史记录\',\'Student/ThesisHistoryList.html?sid=' + row["SID"] + '&projectId='
+                            + row["课题编号"] + '&num=' + row["论文次数"] + '\');">历史记录</a>';
+                    }
+                    if (row["检测状态"] == "5" && role == "3") {
+                        str += '<br /><a class="listA" href="javascript:set_check_state(\'' + index + '\')">确认检测</a>';
+                    }
+                    return str;
+                }
+            }
+        ]];
+        var list = $("#list");
+        var url = "../Handler/ThesisInfo.ashx";
+        var paramsData = {
+            action: "GetStuTheseList",
+            Project: getUrlParam("projectid"),
+            SID: getUrlParam("sid")
+        };
+        var idField = "论文ID";
+
+        // 是否上传论文
+        function isShowUploadList() {
+            $.ajax({
+                url: "../Handler/ThesisInfo.ashx?action=IsShowUploadButton",
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        $("#choiceDiv").show();
+                        isCheckResultHide ? $("#WritingHelperBox").hide() : $("#WritingHelperBox").show();
+                        $("#noShowUploadList").hide();
+                        getIsSHowInnerCheck().done(function (inner) {
+                            if (inner.isSuccess && inner.dataList) {
+                                if (!inner.dataList.CanInnerCheck) {
+                                    columnData[0].splice(7, 1);
+                                }
+                                // 加载列表
+                                GteTable(list, url, columnData, paramsData, idField, false, true)
+                                //.done(function (data) {
+                                //if (data.isSuccess && data.rows && data.rows.length > 0 && data.rows[0]["CanInnerCheck"] == 1) {
+                                //    $('#list').datagrid('showColumn', 'InnerCheckResultText');
+                                //} else {
+                                //    $('#list').datagrid('hideColumn', 'InnerCheckResultText');
+                                //}
+                                //});
+                            }
+                        }).fail(function (err) {
+                            console.log(err);
+                        });
+                    } else {
+                        $("#choiceDiv").hide();
+                        $("#noShowUploadList").show();
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+
+        // 是否显示校内互检
+        function getIsSHowInnerCheck() {
+            var xhr = $.ajax({
+                url: "../Handler/ThesisInfo.ashx?action=CanShowInnerCheck",
+                dataType: "json",
+                type: "POST"
+            });
+            return xhr;
+        };
+
+        // 确认检测
+        function set_check_state(index) {
+            $('#delmessagebox').text("您确定要允许学生（" + $("#list").datagrid("getData").rows[index]["作者"] + " ）的论文（" + $("#list").datagrid("getData").rows[index]["篇名"]
+                + " ）检测吗？").dialog({
+                    title: '确认检测',
+                    buttons: [{
+                        text: '确定',
+                        handler: function () {
+                            $.ajax({
+                                url: "../Handler/ThesisInfo.ashx",
+                                type: "post",
+                                dataType: "json",
+                                data: {
+                                    action: "AllowCheck",
+                                    ktbh: $("#list").datagrid("getData").rows[index]["课题编号"],
+                                    sid: $("#list").datagrid("getData").rows[index]["SID"],
+                                    fileid: $("#list").datagrid("getData").rows[index]["论文ID"]
+                                },
+                                success: function (data) {
+                                    myMessage(data.message);
+                                    if (data.isSuccess) {
+                                        $("#delmessagebox").dialog("close");
+                                        $('#list').datagrid("clearSelections").datagrid('reload');//重新加载
+                                    }
+                                },
+                                error: function (err) {
+                                    console.log(err);
+                                }
+                            });
+                        }
+                    }, {
+                        text: '取消',
+                        handler: function () {
+                            $("#delmessagebox").dialog("close");
+                            $('#list').datagrid("clearSelections");
+                        }
+                    }]
+                }).dialog("open").window('center');
+        };
+
+        // 跳转到写作助手
+        $("#WritingHelperBox").off().on("click", "#goWritingHelper", function () {
+            window.parent.redirectToWriteaid();
+        });
+
+    </script>
+
+<div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px;"><div class="panel-header panel-header-noborder window-header" style="width: 392px;"><div class="panel-title">New Dialog</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-close"></a></div></div><div id="delmessagebox" class="easyui-dialog panel-body panel-body-noborder window-body" style="padding: 10px 30px; width: 338px; height: 143px;" data-options="closed:true,modal:true" title=""></div></div><div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px;"></div><div class="window-mask" style="display:none"></div><div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9002;"><div class="panel-header panel-header-noborder window-header" style="width: 392px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9001;"></div><div class="window-mask" style="display: none; z-index: 9000; position: fixed;"></div><div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9008;"><div class="panel-header panel-header-noborder window-header" style="width: 392px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9007;"></div><div class="window-mask" style="display: none; z-index: 9006; position: fixed;"></div><div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9011;"><div class="panel-header panel-header-noborder window-header" style="width: 392px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9010;"></div><div class="window-mask" style="display: none; z-index: 9009; position: fixed;"></div></body></html>

@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+    <link rel="stylesheet" href="./base(1).css">
+    <link rel="stylesheet" href="./easyui(1).css">
+    <link rel="stylesheet" href="./webuploader.css">
+
+    <script type="text/javascript" src="./jquery.min.js(1).download"></script>
+    <script type="text/javascript" src="./jquery.cookie.js(1).download"></script>
+    <script type="text/javascript" src="./jquery.extend.js(1).download"></script>
+    <script type="text/javascript" src="./jquery.easyui.min.js(1).download"></script>
+    <script type="text/javascript" src="./common.js(1).download"></script>
+    <script type="text/javascript" src="./constant.js(1).download"></script>
+    <script type="text/javascript" src="./data.output.js.download"></script>
+    <script type="text/javascript" src="./audit.js.download"></script>
+    <script type="text/javascript" src="./swfupload.js.download"></script>
+    <script type="text/javascript" src="./swfupload.queue.js.download"></script>
+    <script type="text/javascript" src="./JSEncrypt.js(1).download"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../Scripts/json2.js?r=2019061113215459"></script>
+    <![endif]-->
+    <script type="text/javascript" src="./webuploader.nolog.js.download"></script>
+    <script type="text/javascript" src="./webuploader.handler.js.download"></script>
+
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+
+        .a-text {
+            display: inline;
+        }
+
+        [name*="none"] {
+            display: none;
+        }
+        #plan_box div:nth-child(5){
+            padding-top:0px;margin-top:0px;border-top:none
+        }
+        .zd-box{
+            height:108px;
+            line-height:66px;
+            font-size:12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!--<div style="padding: 10px 0;">
+            <a id="switchover" class="listA" href="javascript:;">登录到研学</a>
+        </div>-->
+        <!--快捷导航-->
+        <ul class="rapid-nav margt clearfix">
+            <li><i class="sign"></i><a class="listA" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#my_task">我的课题</a></li>
+            <li><a class="listA" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#my_word">我的过程文档</a></li>
+            <li><a class="listA" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#my_team">我的答辩组</a></li>
+            <li><a class="listA disNone" id="nav_btn" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#my_grade" style="display: inline;">我的成绩</a></li>
+            <li><a class="listA" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#export_document">导出文档</a></li>
+        </ul>
+        <!--进度提示-->
+        <div id="progress_bar">
+            <div class="gxf_problem gxf_problem_detail">
+                <div><h2><span></span>进度提示</h2></div>
+            </div>
+            <div class="my-subject">
+                <div class="margb"><i class="txt_red">*</i><span class="color-box greenBox"></span>表示已完成的工作阶段，<span class="color-box orangeBox"></span>表示正在进行的工作阶段，<span class="color-box wathetBox"></span>表示尚未开始的工作阶段；<span class="color-box grayBox"></span>表示未对该项操作进行时间设置（以当前所处时间与设置的时间段比较后进行提示）</div>
+                <!--进度块的盒子-->
+                <div id="plan_box" class="clearfix  plan"><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">申报课题</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">选题</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">提交任务书</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">提交开题报告</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">提交中期检查</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">提交指导记录</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">提交文献综述</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">提交外文译文</h4><p class="plan-time">未设置<br>未设置</p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-gray">提交毕设论文</h4><p class="zd-box">已设置【2】个 <a id="look_paper_time" class="listA" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#">详情</a></p></div><div class="plan-child" style="width:10%"><h4 class="plan-tiele plan-bgc-green">评审答辩</h4><p class="plan-time">2019/3/4 11:54:00<br>2019/7/4 11:30:00</p></div></div>
+            </div>
+        </div>
+
+        <!--师生预选-->
+        <div id="preSelectBox" style="display: none;">
+            <div class="gxf_problem gxf_problem_detail">
+                <div><h2><span></span>我的预选方向</h2></div>
+            </div>
+            <div class="my-subject">
+                <p> <a href="javascript:goToPreSelectList();" class="radiusBtn main-l">预选方向</a> </p>
+                <div class="my-row clearfix" style="height:auto; line-height:40px;">
+                    <div class="my-row-l"> 预选方向： </div>
+                    <div class="my-row-r" style="height:auto;">
+                        <div style="width:100%; height:auto;">
+                            <span id="preSelectTitleDetails">&nbsp;</span>
+                        </div>
+                    </div>
+                </div>
+                <!--指导教师、联系方式-->
+                <div class="my-row" style="border-top: 1px solid #cfcfcf; padding-left:0;padding-top: 5px">
+                    <div class="my-teacher">
+                        <div class="my-row-l">
+                            <span class="teacher-icon"></span>
+                            指导教师：
+                        </div>
+                        <div id="preSelectTeaName" class="my-row-r"> </div>
+                    </div>
+                    <div class="my-relation">
+                        <div class="my-row-l">
+                            <span class="tel"></span>
+                            联系方式：
+                        </div>
+                        <div id="preSelectTeaPhone" class="my-row-r"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--我的课题-->
+        <div id="my_task">
+            <div class="gxf_problem gxf_problem_detail">
+                <div><h2><span></span>我的课题</h2></div>
+            </div>
+            <div class="my-subject">
+                <!--第一行文字和两个按钮-->
+                <p style="margin-bottom:18px;">
+                    <a id="teaprojectLink" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="radiusBtn main-l" style="">点击选题</a>
+                    <a id="stuprojectLink" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="radiusBtn margl" style="">申报课题</a>
+                    <a id="xuantifenxi" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="radiusBtn margl" style="">选题分析</a>
+                    <a id="UpdateProject" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="radiusBtn margl" style="display:none;"></a>
+                </p>
+
+                <!--课题题目-->
+                <div class="my-row clearfix" style="height:auto; line-height:22px;">
+                    <div class="my-row-l">
+                        课题题目：
+                    </div>
+                    <div class="my-row-r" style="height:auto;">
+                        <div style="width:100%; height:auto;">
+                            <!--课题数量-->
+                            <span name="none-tow">已有 <i id="subject_nuber" class="subject-nuber">1</i>个课题</span>
+                            <!--题目的名字-->
+                            <span id="task_topic" name="none-one" style="display: inline;">条件生成对抗网络在少数类有效数据生成中的研究与应用【学生提交课题】</span>
+                            <a id="aProject" href="javascript:;" name="none-one" class="margl a-text" style="display: inline;">查看详情</a>
+                            <a id="aProject_one" href="javascript:;" name="none-tow" class="margl a-text">查看详情</a>
+                        </div>
+                        <!--<a href="#" class="a-text">导出课题信息</a>-->
+                    </div>
+                </div>
+
+                <!--审核状态-->
+                <div id="shzt" class="my-row">
+                    <div class="my-row-l">
+                        审核状态：
+                    </div>
+                    <div class="my-row-r">
+                        <div id="audit_state"><span class="txt_green">审核通过</span></div>
+                    </div>
+                </div>
+
+                <!--任务书-->
+                <div id="TaskIsShow" class="my-row" style="">
+                    <div class="my-row-l">
+                        任务书：
+                    </div>
+                    <div class="my-row-r">
+                        <a id="task" href="javascript:;" class="a-text">查看任务书</a>
+                        <!--<a href="#" class="a-text">导出任务书信息</a>-->
+                    </div>
+                </div>
+
+                <!--指导教师、联系方式-->
+                <div class="my-row" name="none-one" style="display: block;">
+                    <div class="my-teacher">
+                        <div class="my-row-l">
+                            <span class="teacher-icon"></span>
+                            指导教师：
+                        </div>
+                        <div id="teacher_name" class="my-row-r">段磊&nbsp;(20092049)&nbsp;/&nbsp;计算机学院&nbsp;/&nbsp;教授</div>
+                    </div>
+                    <div class="my-relation">
+                        <div class="my-row-l">
+                            <span class="tel"></span>
+                            联系方式：
+                        </div>
+                        <div id="tel_mail" class="my-row-r"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--过程文档信息-->
+        <div id="my_word">
+            <div class="gxf_problem gxf_problem_detail">
+                <div><h2><span></span>过程文档信息</h2></div>
+            </div>
+            <div>
+                <!--开题报告行-->
+                <div id="proposal" class="wd-row clearfix" style="">
+                    <div class=" wd-row-l">开题报告：</div>
+
+                    <div class="wd-row-r">
+                        <div id="open_topic" class="row-r-left"><span class="txt_green">已提交</span><span class="txt_green margl">审核通过</span></div>
+                        <div class="row-r-right">
+                            <span id="yunxuxiugai_tow" class="redcolor margr" style="display:none;">允许修改1次</span>
+                            <a id="open_topic_a" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="a-text">查看详情</a>
+                            <!--<a href="#" class="a-text">导出毕业设计信息</a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--中期报告行-->
+                <div id="metaphase" class="wd-row clearfix" style="">
+                    <div class="wd-row-l">中期检查：</div>
+
+                    <div class="wd-row-r">
+                        <div id="centre_report" class="row-r-left"><span class="txt_green">已提交</span><span class="txt_green margl">审核通过</span></div>
+                        <div class="row-r-right">
+                            <span id="yunxuxiugai_four" class="redcolor margr" style="display:none;">允许修改1次</span>
+                            <a id="centre_report_a" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="a-text">查看详情</a>
+                            <!--<a href="#" class="a-text">导出毕业设计信息</a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--指导记录行-->
+                <div id="adviser" class="wd-row clearfix" style="">
+                    <div class="wd-row-l">指导记录：</div>
+
+                    <div class="wd-row-r">
+                        <div id="adviser_record" class="row-r-left"><span class="txt_green">已提交</span><span class="txt_green margl">审核通过</span></div>
+                        <div class="row-r-right">
+                            <span id="yunxuxiugai_three" class="redcolor margr" style="display:none;">允许修改1次</span>
+                            <a id="adviser_record_a" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="a-text">查看详情</a>
+                            <!--<a href="#" class="a-text">导出毕业设计信息</a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--外文行-->
+                <div id="foreign_language" class="wd-row clearfix" style="">
+                    <div class="wd-row-l">外文翻译：</div>
+
+                    <div class="wd-row-r">
+                        <div id="translate" class="row-r-left"><span class="txt_green">已提交</span><span class="txt_green margl">审核通过</span></div>
+                        <div class="row-r-right">
+                            <span id="yunxuxiugai_one" class="redcolor margr" style="display:none;">允许修改1次</span>
+                            <a id="translate_a" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="a-text">查看详情</a>
+                            <!--<a href="#" class="a-text">导出毕业设计信息</a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--文献综述行-->
+                <div id="literature_summarize" class="wd-row clearfix" style="">
+                    <div class="wd-row-l">文献综述：</div>
+
+                    <div class="wd-row-r">
+                        <div id="literature" class="row-r-left"><span class="txt_green">已提交</span><span class="txt_green margl">审核通过</span></div>
+                        <div class="row-r-right">
+                            <span id="yunxuxiugai_five" class="redcolor margr" style="display:none;">允许修改1次</span>
+                            <a id="literature_a" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="a-text">查看详情</a>
+                            <!--<a href="#" class="a-text">导出毕业设计信息</a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--毕业设计（论文）行-->
+                <div id="thesis" class="wd-row wd-row-btm clearfix wd-row-btm" style="">
+                    <div class=" wd-row-l">
+                        毕业设计（论文）：
+                    </div>
+                    <div class="wd-row-r">
+                        <div id="paper" class="row-r-left"><span class="txt_green">已提交</span><span class="txt_green margl">审核通过</span></div>
+                        <div class="row-r-right">
+                            <sapn id="overrun" class="redcolor margr" name="none">允许提交（超权限）1次</sapn>
+                            <sapn id="last" class="redcolor  margr" name="none">允许提交（最终版）</sapn>
+                            <a id="paper_a" href="http://scu.co.cnki.net/Student/Home.html?r=0.7435549956239422#" class="a-text">查看详情</a>
+                            <!--<a href="#" class="a-text">导出毕业设计信息</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--我的答辩组-->
+        <div id="my_team">
+            <div class="gxf_problem gxf_problem_detail">
+                <div><h2><span></span>我的答辩组</h2></div>
+            </div>
+            <div class="my-subject">
+                <!--开题答辩组-->
+                <div class="my-row clearfix" id="open_reply" style="height: auto; line-height: 24px; border-bottom: 1px solid rgb(207, 207, 207);">
+                    <div class="my-row-l">
+                        开题答辩组：
+                    </div>
+                    <div class="my-row-r clearfix answer" style="height:auto;">
+                        <div>
+                            <span id="openRreply_text" class="margr">未安排</span>
+                        </div>
+                        <div id="open_btn_box" style="height:auto; display:none;">
+                            <a id="open_one" href="javascript:;" class="a-text margr">查看开题答辩安排</a>
+                            <a id="open_tow" href="javascript:;" class="a-text">查看开题答辩结论</a>
+                        </div>
+                    </div>
+                </div>
+                <!--答辩情况-->
+                <div class="my-row margt clearfix" style="height:auto; line-height:24px;">
+                    <div class="my-row-l">
+                        答辩情况：
+                    </div>
+                    <div class="my-row-r clearfix answer" style="height:auto;">
+                        <div>
+                            <span id="answer_number" class="margr">你还未安排答辩</span>
+                            <!--<span id="answer_text"></span>-->
+                        </div>
+                        <div style="height:auto;">
+                            <a id="anpai" href="javascript:;" class="a-text margr">查看答辩安排</a>
+                            <a id="jilu" href="javascript:;" class="a-text">查看答辩记录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--错误信息提示框-->
+        <div id="nochoiceDiv" class="gxf_tips" style="display:none; margin-bottom:15px; margin:30px 0 0 0">
+            <div class="gxf_tip">
+                <i></i>信息提示
+            </div>
+            <div>
+                <p id="p_tishi"></p>
+            </div>
+        </div>
+
+        <!--我的成绩-->
+        <div id="my_grade" class="disNone" style="display: block;">
+            <div class="gxf_problem gxf_problem_detail">
+                <div><h2><span></span>我的成绩</h2></div>
+            </div>
+            <div class="my-subject">
+                <!--总成绩-->
+                <div class="my-row clearfix">
+                    <div class="my-row-l font-style">
+                        总成绩：
+                    </div>
+                    <div class="my-row-r" style="height:auto;">
+                        <span class="font-style" id="zcj">E(32.8)</span>
+                        <a id="grade_html" href="javascript:;" name="none" class="a-text main-l" style="display: inline;">查看详情</a>
+                    </div>
+
+                </div>
+
+                <!--老师们给出成绩展示-->
+                <div class="clearfix tea-row">
+                    <div id="is_show_zhongqi" class="disNone">
+                        <span id="zqname" class="wd-nosub">中期考评成绩</span>
+                        <span id="zqkp" class="somber">无需录入</span>
+                    </div>
+                    <div id="is_show_gufan" class="disNone">
+                        <span id="gfname" class="wd-nosub">规范审查成绩</span>
+                        <span id="gfsc" class="somber">无需录入</span>
+                    </div>
+                    <div id="is_show_zhidao" class="disNone">
+                        <span id="zdname" class="wd-nosub">指导成绩</span>
+                        <span id="zdjscj" class="somber">B(82.0)</span>
+                    </div>
+                    <div id="is_show_zhuanyefuze" class="disNone">
+                        <span id="zyname" class="wd-nosub">评阅成绩</span>
+                        <span id="zyfzr" class="somber">无需录入</span>
+                    </div>
+                    <div id="is_show_pingyuezhuanjia" class="disNone" style="margin-top:0;padding-top:0;border:none;">
+                        <span id="pyname" class="wd-nosub">评阅专家成绩</span>
+                        <span id="pyzj" class="somber">等待录入</span>
+                    </div>
+                    <div id="is_show_dabian" class="disNone">
+                        <span id="dbname" class="wd-nosub">答辩成绩</span>
+                        <span id="dbcj" class="somber">等待录入</span>
+                    </div>
+                    <div id="is_show_pingyueTow" class="disNone">
+                        <span id="tow_pyname" class="wd-nosub">第二评阅成绩</span>
+                        <span id="tow_pycj" class="somber">无需录入</span>
+                    </div>
+                    <div id="is_show_ktdb" class="disNone">
+                        <span id="ktdb_name" class="wd-nosub">开题答辩成绩</span>
+                        <span id="ktdb" class="somber">无需录入</span>
+                    </div>
+                    <div id="is_show_pscj" class="disNone">
+                        <span id="pscj_name" class="wd-nosub">平时成绩</span>
+                        <span id="pscj" class="somber"><i class="txt_red">无需录入</i></span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!--导出文档-->
+        <div id="export_document">
+            <div class="gxf_problem gxf_problem_detail">
+                <div><h2><span></span>导出文档</h2></div>
+            </div>
+            <div class="margb">
+                <div class="explain">
+                    <p>您所在学校目前已配置的过程文档有：<span id="explain_type" style="font-weight:700;">开题报告&nbsp;&nbsp;任务书&nbsp;&nbsp;中期报告&nbsp;&nbsp;指导教师评阅意见书&nbsp;&nbsp;评阅专家评阅意见书&nbsp;&nbsp;指导记录&nbsp;&nbsp;答辩录入员评阅意见书&nbsp;&nbsp;其他文档&nbsp;&nbsp;</span> </p>
+                    <div class="download_wechart_tips">
+                        <div class="tips_left">
+                            <img src="./weixindigg.jpg" alt="导出文档微信消息提示" title="点击放大" onclick="showWechartBox();">
+                        </div>
+                        <div class="tips_right">
+                            <p>扫一扫关注微信，在导出任务处理完成后，系统将会按照您的设定给您发送提醒</p>
+                            <p>导出文档的下载有效期是<span class="txt_red">96个小时（以处理完成时间开始计算）</span>，请在文档导出处理成功后及时下载；过期后需要重新生成导出文档后才能下载</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="my-subject">
+                    <div>
+                        <span id="derive" href="#" class="radiusBtn">导出全部过程文档</span><span class="main-l">支持导出已配置的全部过程文档<!--、提交的论文及各类附件文档--></span>
+                    </div>
+
+                    <div>
+                        <span id="configuration" href="#" class="radiusBtn margt">导出已配置的文档</span><span class="main-l">支持选择某一种已配置的过程文档导出（不支持论文和附件导出<!--，如需导出论文和附件，请使用“导出全部过程文档”功能-->）</span>
+                    </div>
+                    <!--导出已配置的文档的 弹框-->
+                    
+                    <div>
+                        <span id="" href="#" class="radiusBtn margt" onclick="showOutputList()">下载已导出的文档</span><span class="main-l">选择导出文档后，需要等待系统后台进行导出，导出完成后点击“下载”可将导出的文档下载到本地</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div style="width:0;height:0;overflow:hidden">
+            <!--查看详情时间-->
+            
+            
+            </div>
+        </div>
+    <script type="text/javascript">
+        // 是否有权限修改和查看申请修改
+        var isTrueApply = false;
+        (function getPermission() {
+            $.ajax({
+                url: "../Handler/CommonHandler.ashx",
+                data: { "action": "GetSystemSetData" },
+                dataType: "json",
+                async: false,
+                type: "POST",
+                success: function (data) {
+                    if (data.isSuccess == true) {
+                        if (data.rows[0]["申请教学秘书修改课题"] == 1) {
+                            isTrueApply = true;
+                        }
+                    } else {
+                        myMessage(data.message);
+                    }
+                },
+                error: function () {
+                    console.log(err);
+                }
+            });
+        })();
+        $(document).ready(function () {
+            getSub();//指导记录的跳转
+            getIsSchedule()//获取要显示的进度盒子
+            GetRoleName();//取自定义的成绩名称
+            getPreSelectState();//师生预选
+            getData();//获取数据
+            getAnswer(); //获取我的答辩组情况
+            getGrade();//获取我的成绩
+            showPortion()//显示部分成绩
+            GetExplain_type(); //获取说明的模板类型
+        });
+
+    function showWechartBox() {
+        $("#wechartModel").dialog({ title: "提示" }).dialog('open').window('center');
+    }
+
+        //获取要显示的进度盒子
+        function getIsSchedule() {
+            $.ajax({
+                url: "../Handler/PlanInfo.ashx?action=GetPlanFunModelsWithMenu",
+                data:{iSCreat:0},
+                type: 'post',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.isSuccess) {
+                        var html = '';
+                        var title;
+                        var classStyle = 'plan-bgc-gray';
+                        var obj = {};
+                        var arr = [];
+                        $.each(data.rows, function (i, v) {
+                            if (v["id"] == 0) { arr[0] = v; };
+                            if (v["id"] == 8) { arr[1]=v; };
+                            if (v["id"] == 9) { arr[2] = v; };
+                            if (v["id"] == 1) { arr[3] = v; };
+                            if (v["id"] == 2) { arr[4] = v; };
+                            if (v["id"] == 4) { arr[5] = v; };
+                            if (v["id"] == 5) { arr[6] = v; };
+                            if (v["id"] == 6) { arr[7] = v; };
+                            if (v["id"] == 3) { arr[8] = v; };
+                            if (v["id"] == 7) { arr[9] = v; };
+                            if (v["id"] == 10) { arr[10] = v; };
+                            if (v["show"]) {
+                                if (obj.number) {
+                                    obj.number++
+                                } else {
+                                    obj.number = 1
+                                };
+                            };
+                        });
+                        $.each(arr, function (i, v) {
+                            if (v["type"] == "") { classStyle = 'plan-bgc-gray' };
+                            if (v["type"] == 1) { classStyle = 'plan-bgc-blue' };
+                            if (v["type"] == 2) { classStyle = 'plan-bgc-green' };
+                            if (v["type"] == 3) { classStyle = 'plan-bgc-yellow' };
+                            if (v["id"] == 0) { title = '申报课题' };
+                            if (v["id"] == 1) { title = '提交开题报告' };
+                            if (v["id"] == 2) { title = '提交中期检查' };
+                            if (v["id"] == 3) { title = '提交毕设论文' };
+                            if (v["id"] == 4) { title = '提交指导记录' };
+                            if (v["id"] == 5) { title = '提交文献综述' };
+                            if (v["id"] == 6) { title = '提交外文译文' };
+                            if (v["id"] == 7) { title = '评审答辩' };
+                            if (v["id"] == 8) { title = '选题' };
+                            if (v["id"] == 9) { title = '提交任务书' };
+                            if (v["id"] == 10) { title = '推优' };
+                            if (v["show"]) {
+                                if (v["id"] != 3 && v["id"] != 4) {
+                                    var star = v["BeginTime"] == "" ? "未设置" : v["BeginTime"];
+                                    var end = v["EndTime"] == "" ? "未设置" : v["EndTime"];
+                                    html += '<div class="plan-child" style="width:' + 100 / obj.number + '%"><h4 class="plan-tiele ' + classStyle + '">' + title + '</h4><p class="plan-time">' + star + '<br>' + end + '</p></div>';
+                                };
+                                //论文单独处理
+                                if (v["id"] == 3 && v["checkIsTime"] == 1) {
+                                    html += '<div class="plan-child" style="width:' + 100 / obj.number + '%"><h4 class="plan-tiele ' + classStyle + '">' + title + '</h4><p class="zd-box">已设置【' + v["checkNum"] + '】个 <a id="look_paper_time" class="listA" href="#">详情</a></p></div>'
+                                } else if (v["id"] == 3) {
+                                    var star = v["BeginTime"] == "" ? "未设置" : v["BeginTime"];
+                                    var end = v["EndTime"] == "" ? "未设置" : v["EndTime"];
+                                    html += '<div class="plan-child" style="width:' + 100 / obj.number + '%"><h4 class="plan-tiele ' + classStyle + '">' + title + '</h4><p class="plan-time">' + star + '<br>' + end + '</p></div>';
+                                };
+                                //指导记录单独处理
+                                if (v["id"] == 4 && v["logIsTime"] == 1) {
+                                    var number = '';
+                                    if (v["logIsMin"] == 1) { number = '最少【' + v["logMinNum"] + '】次' }
+                                    if (v["logIsMax"] == 1) { number = '最多【' + v["logMaxNum"] + '】次' }
+                                    if (v["logIsMax"] == 1 && v["logIsMin"] == 1) { number ='已设置【'+ v["logMinNum"] + '-' + v["logMaxNum"] + '】次' }
+                                    html += '<div class="plan-child" style="width:' + 100 / obj.number + '%"><h4 class="plan-tiele ' + classStyle + '">' + title + '</h4><p class="zd-box">' + number + ' <a id="look_guide_time" class="listA" href="#">详情</a></p></div>'
+                                } else if (v["id"] == 4) {
+                                    var star = v["BeginTime"] == "" ? "未设置" : v["BeginTime"];
+                                    var end = v["EndTime"] == "" ? "未设置" : v["EndTime"];
+                                    html += '<div class="plan-child" style="width:' + 100 / obj.number + '%"><h4 class="plan-tiele ' + classStyle + '">' + title + '</h4><p class="plan-time">' + star + '<br>' + end + '</p></div>';
+                                };
+                                
+                            };
+                        })
+                        $("#plan_box").html(html);
+                        //查看论文详情时间
+                        $("#look_paper_time").click(function () {
+                            $.ajax({
+                                url: '../Handler/SystemSet.ashx?action=GetCheckCount',
+                                data: 'post',
+                                dataType: 'json',
+                                success: function (data) {
+                                    if (data.isSuccess) {
+                                        var rank_Data = [[
+                                            { field: '次数', align: 'center', title: '次数', width: 100 },
+                                            { field: '开始时间', align: 'center', title: '学生提交论文的开始时间', width: 290 },
+                                            { field: '结束时间', align: 'center', title: '学生提交论文的结束时间', width: 290 },
+                                        ]];
+                                        var rank = $("#see")
+                                        GteTableJson(rank, rank_Data, data.rows, false);
+                                        $("#ts_text_box").hide();
+                                        $("#consignorModel").dialog({ title: "查看提交论文时间" });
+                                        $("#consignorModel").dialog('open').window('center');
+                                    } else {
+                                        myMessage(data.message);
+                                    };
+                                }
+                            })
+                        });
+
+                        //查看指导详情时间
+                        $("#look_guide_time").click(function () {
+                            $.ajax({
+                                url: '../Handler/SystemSet.ashx?action=GetSystemTime&type=4',
+                                data: 'post',
+                                dataType: 'json',
+                                success: function (data) {
+                                    if (data.isSuccess) {
+                                        var rank_Data = [[
+                                            { field: '次数', align: 'center', title: '次数', width: 100 },
+                                            { field: '开始时间', align: 'center', title: '学生提交指导记录的开始时间', width: 290 },
+                                            { field: '结束时间', align: 'center', title: '学生提交指导记录的结束时间', width: 290 },
+                                        ]];
+                                        var rank = $("#see")
+                                        GteTableJson(rank, rank_Data, data.rows, false);
+                                        $("#ts_text_box").show();
+                                        if (data.rows[0]["是否启用最小指导记录提交次数"] == 1) {
+                                            $("#min_n").text(data.rows[0]["最小指导记录提交次数"]);
+                                            $("#ts_text_box>p").eq(1).hide();
+                                        };
+                                        if (data.rows[0]["是否启用最大指导记录提交次数"] == 1) {
+                                            $("#min_m").text(data.rows[0]["指导记录提交次数"]);
+                                            $("#ts_text_box>p").eq(0).hide();
+                                        };
+                                        if (data.rows[0]["是否启用最大指导记录提交次数"] == 1 && data.rows[0]["是否启用最小指导记录提交次数"] == 1) { $("#ts_text_box>p").show(); };
+                                        $("#consignorModel").dialog({ title: "查看提交指导记录时间" });
+                                        $("#consignorModel").dialog('open').window('center');
+                                    } else {
+                                        myMessage(data.message);
+                                    };
+                                }
+                            });
+                        });
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+        
+        //自定义成绩名称方法
+        function GetRoleName() {
+            var rowsrole = GetGrade();
+            //成绩自定义名称
+            $("#zdname").text(GetGradeNames(1, rowsrole));//指导成绩
+            $("#zyname").text(GetGradeNames(2, rowsrole));//专业负责人成绩
+            $("#pyname").text(GetGradeNames(3, rowsrole));//评阅专家成绩
+            $("#dbname").text(GetGradeNames(4, rowsrole));//答辩成绩
+            $("#zqname").text(GetGradeNames(6, rowsrole));//中期成绩
+            $("#gfname").text(GetGradeNames(7, rowsrole));//规范成绩
+            $("#tow_pyname").text(GetGradeNames(8, rowsrole));//第二评阅专家成绩
+            $("#ktdb_name").text(GetGradeNames(9, rowsrole));//平时成绩
+            $("#pscj_name").text(GetGradeNames(10, rowsrole));//平时成绩
+            
+        };
+        //选题分析按钮
+        $("#xuantifenxi").click(function () {
+            openframe('选题分析', '../Project/AnalysisOfTopics.html', true);
+        });
+        //学生选题跳转
+        $("#teaprojectLink").click(function () {
+            openframe('学生选题', '../Project/StuChoiceProjectList.html', true);
+        });
+        //申报课题跳转
+        $("#stuprojectLink").click(function () {
+            openframe('学生申报课题', '../Project/StuProjectList.html', true);
+        });
+        //查看任务书跳转
+        $("#task").click(function () {
+            openframe('查看任务书', '../Task/Add.html', true);
+        });
+        //外文翻译跳转
+        $("#translate_a").click(function () {
+            openframe('提交外文译文和原件', '../Student/SubmitForeignLiterature.html', true);
+        });
+        //开题报告跳转
+        $("#open_topic_a").click(function () {
+            openframe('提交开题报告', '../Student/SubmitOpenReport.html', true);
+        });
+        //指导记录跳转
+        function getSub() {
+            $.ajax({
+                url: '../Handler/SystemSet.ashx?action=GetSystemList',
+                type: 'post',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.isSuccess && data.rows[0]['指导记录提交设置'] == 2) {//教师提交
+                        $("#adviser_record_a").click(function () {
+                            openframe('查看指导记录', '../Student/ProjectLogHistoryRecord.html', true);
+                        });
+                    } else {//学生提交
+                        $("#adviser_record_a").click(function () {
+                            openframe('提交指导记录', '../Student/SubmitGuideRecord.html', true);
+                        });
+                    };
+                }
+            });
+        };
+        //中期检查跳转
+        $("#centre_report_a").click(function () {
+            openframe('提交中期检查', '../Student/SubmitMiddleReport.html', true);
+        });
+        //文献综述跳转
+        $("#literature_a").click(function () {
+            openframe('提交文献综述', '../Student/SubmitLiteratureReview.html', true);
+        });
+        //毕业设计（论文）跳转
+        $("#paper_a").click(function () {
+            openframe('提交毕业设计(论文)', '../Student/StuThesisList.html', true);
+        });
+
+        //获取数据
+        function getData() {
+            $.ajax({
+                url: "../Handler/StuHome.ashx?action=BindStuInfo",
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        //课题显示样式
+                        if (data.rows[0]["显示课题详情"] == 1) {
+                            $("[name='none-one']").show();//题目 老师显示
+                        } else if (data.rows[0]["显示课题详情"] != 1) {
+                            $("[name='none-tow']").show();//课题数字显示
+                        };
+                        //论文行是否显示提示
+                        if (data.rows[0]["最终版权限"] == 1) {
+                            $("#last").show();
+                        };
+                        if (data.rows[0]["超权限权限"] == 1) {
+                            $("#overrun").show();
+                        };
+                        var ktbh = data.rows[0]["课题编号"];
+                        //每行是否显示允许修改提示文字
+                        if (data.rows[0]["外文译文允许修改"] == 1) {
+                            $("#yunxuxiugai_one").show();
+                        };
+                        if (data.rows[0]["开题报告允许修改"] == 1) {
+                            $("#yunxuxiugai_tow").show();
+                        };
+                        if (data.rows[0]["指导记录允许修改"] == 1) {
+                            $("#yunxuxiugai_three").show();
+                        };
+                        if (data.rows[0]["中期报告允许修改"] == 1) {
+                            $("#yunxuxiugai_four").show();
+                        };
+                        if (data.rows[0]["文献综述允许修改"] == 1) {
+                            $("#yunxuxiugai_five").show();
+                        };
+                        // 申请修改课题/查看修改申请
+                        if (isTrueApply) {
+                            if (data.rows[0]["审核状态"] == 1 && data.rows[0]["修改申请"] == 0) {
+                                $("#UpdateProject").html("申请修改课题");
+                                $("#UpdateProject").show();
+                            }
+                        }
+
+                        if (data.rows[0]["审核状态"] == 1 && !checkValIsUndefinedOrNull(data.rows[0]["修改申请审核"])) {
+                            $("#UpdateProject").html("查看修改申请");
+                            $("#UpdateProject").show();
+                        }
+
+                        $("#UpdateProject").on("click", function () {
+                            openframe('申请修改课题记录', '../Project/ApplyForUpdateProList.html?id=' + ktbh, false);
+                        });
+
+                        //任务书是否显示
+                        if (data.rows[0]["是否显示任务书"] != -1) {
+                            $("#TaskIsShow").show();
+                        };
+
+                        $("#subject_nuber").text(data.rows[0]["课题数量"])//学生课题数量
+                        if (data.rows[0]["课题数量"] == 0) {
+                            $("#aProject_one,#shzt,#TaskIsShow").hide();//链接，审核状态行，任务书行隐藏掉
+                        }
+
+                        if (data.rows[0]["课题题目"] == null) {
+                            $("#task_topic").html("<span style='color:#c5001c;'>您还没有申报或者选择课题</span>")
+                        } else {
+                            $("#task_topic").text(retrieveUnequa(data.rows[0]["课题题目"]) + '【' + getprojetype(data.rows[0]["课题模式"]) + '】')//课题题目
+                        };
+
+                        if (data.rows[0]["显示课题详情"] == 1) {
+                            if (data.rows[0]["是否教师确认"] == 1) {
+                                $("#audit_state").html("<span class='" + getAuditCss(data.rows[0]["审核状态"]) + "'>" + getAuditStateText(data.rows[0]["审核状态"], 6) + "，</span>" + getteacher(data.rows[0]["教师确认状态"]))//审核状态
+                            } else {
+                                if (data.rows[0]["是否草稿"] && data.rows[0]["是否草稿"] == 1) {
+                                    $("#audit_state").html("草稿")//审核状态
+                                } else {
+                                    $("#audit_state").html("<span class='" + getAuditCss(data.rows[0]["审核状态"]) + "'>" + getAuditStateText(data.rows[0]["审核状态"], 6) + "</span>")//审核状态
+                                }
+                            };
+                        }
+
+                        if (data.rows[0]["显示课题详情"] == 0) {
+                            $("#audit_state").html("<span class='txt_yellow'>等待指导教师确认</span>")//审核状态
+                        }
+                        //指导教师信息
+                        if (data.rows[0]["教师姓名"] == null) {
+                            $("#teacher_name").html()
+                        } else {
+                            $("#teacher_name").html(data.rows[0]["教师姓名"] + '&nbsp;(' + data.rows[0]["教师编号"] + ')&nbsp;/&nbsp;' + data.rows[0]["教师学院名称"] + '&nbsp;/&nbsp;' + data.rows[0]["教师职称"]);
+                            $("#tel_mail").html(data.rows[0]["教师电话"]) //+ '&nbsp;/&nbsp;' + data.rows[0]["教师邮箱"]); //联系方式
+
+                        };
+
+                        //开题报告
+                        if (data.rows[0]["是否显示开题报告"] != -1) {
+                            $("#proposal").show();
+                            if (data.rows[0]["是否显示中期报告"] == -1 && data.rows[0]["是否显示指导记录"] == -1 && data.rows[0]["是否显示外文译文"] == -1 && data.rows[0]["是否显示文献综述"] == -1 && data.rows[0]["是否显示论文"] == -1) {
+                                $("#proposal").addClass("wd-row-btm")//给自己一行加上 底线
+                            };
+                        };
+                        if (data.rows[0]['是否开题报告草稿'] != 1) {
+                            $("#open_topic").html(getsubcss(data.rows[0]["是否提交开题报告"]));
+                            if (data.rows[0]["是否提交开题报告"] == 1) {
+                                var shzttext = "<span class='" + getAuditCss(data.rows[0]["开题报告审核"]) + ' margl' + "'>" + getAuditStateText(data.rows[0]["开题报告审核"], 1) + "</span>";
+                                $("#open_topic").append(shzttext);
+                            };
+                        } else {
+                            $("#open_topic").html('<span class="wd-nosub">草稿</span>');
+                        };
+                        
+
+                        //中期报告
+                        if (data.rows[0]["是否显示中期报告"] != -1) {
+                            $("#metaphase").show();
+                            if (data.rows[0]["是否显示指导记录"] == -1 && data.rows[0]["是否显示外文译文"] == -1 && data.rows[0]["是否显示文献综述"] == -1 && data.rows[0]["是否显示论文"] == -1) {
+                                $("#metaphase").addClass("wd-row-btm")//给自己一行加上 底线
+                            };
+                        };
+                        $("#centre_report").html(getsubcss(data.rows[0]["是否提交中期报告"]));
+                        if (data.rows[0]["是否提交中期报告"] == 1) {
+                            var shzttext = "<span class='" + getAuditCss(data.rows[0]["中期报告审核"]) + ' margl' + "'>" + getAuditStateText(data.rows[0]["中期报告审核"], 5) + "</span>";
+                            $("#centre_report").append(shzttext);
+                        };
+
+                        //指导记录
+                        if (data.rows[0]["是否显示指导记录"] != -1) {
+                            $("#adviser").show();
+                            if (data.rows[0]["是否显示外文译文"] == -1 && data.rows[0]["是否显示文献综述"] == -1 && data.rows[0]["是否显示论文"] == -1) {
+                                $("#adviser").addClass("wd-row-btm")//给自己一行加上 底线
+                            };
+                        };
+                        $("#adviser_record").html(getsubcss(data.rows[0]["是否提交指导记录"]));
+                        if (data.rows[0]["是否提交指导记录"] == 1) {
+                            var shzttext = "<span class='" + getAuditCss(data.rows[0]["指导记录审核"]) + ' margl' + "'>" + getAuditStateText(data.rows[0]["指导记录审核"], 3) + "</span>";
+                            $("#adviser_record").append(shzttext);
+                        };
+
+                        //外文翻译
+                        if (data.rows[0]["是否显示外文译文"] != -1) {
+                            $("#foreign_language").show();
+                            if (data.rows[0]["是否显示文献综述"] == -1 && data.rows[0]["是否显示论文"] == -1) {
+                                $("#foreign_language").addClass("wd-row-btm")//给自己一行加上 底线
+                            };
+
+                        };
+                        $("#translate").html(getsubcss(data.rows[0]["是否提交外文译文"]));
+                        if (data.rows[0]["是否提交外文译文"] == 1) {
+                            var shzttext = "<span class='" + getAuditCss(data.rows[0]["外文译文审核"]) + ' margl' + "'>" + getAuditStateText(data.rows[0]["外文译文审核"], 2) + "</span>";
+                            $("#translate").append(shzttext);
+                        };
+
+                        //文献综述
+                        if (data.rows[0]["是否显示文献综述"] != -1) {
+                            if (data.rows[0]["是否显示论文"] == -1) {
+                                $("#literature_summarize").addClass("wd-row-btm"); //给自己一行加上 底线
+                            };
+                            $("#literature_summarize").show();
+                        };
+                        $("#literature").html(getsubcss(data.rows[0]["是否提交文献综述"]));
+                        if (data.rows[0]["是否提交文献综述"] == 1) {
+                            var shzttext = "<span class='" + getAuditCss(data.rows[0]["文献综述审核"]) + ' margl' + "'>" + getAuditStateText(data.rows[0]["文献综述审核"], 10) + "</span>";
+                            $("#literature").append(shzttext);
+                        };
+
+                        //毕业设计（论文）
+                        if (data.rows[0]["是否显示论文"] != -1) {
+                            $("#thesis").show();        //已经在行内给自己一行加上 底线
+                        };
+                        $("#paper").html(getsubcss(data.rows[0]["是否提交论文"]));
+                        if (data.rows[0]["是否提交论文"] == 1) {
+                            var shzttext = "<span class='" + getAuditCss(data.rows[0]["论文审核"]) + ' margl' + "'>" + getAuditStateText(data.rows[0]["论文审核"], 4) + "</span>";
+                            $("#paper").append(shzttext);
+                        };
+
+                        //显示课题数量的链接
+                        $("#aProject_one").click(function () {
+                            openframe('学生选题', '../Project/StuChoiceProjectList.html', false);
+                        });
+                        //显示题目名称时的链接
+                        if (ktbh) {
+                            //查看课题跳转 需要带课题编号过去。 课题编号不为空代表有课题
+                            if (data.rows[0]["是否草稿"] && data.rows[0]["是否草稿"] == 1) {
+                                $("#aProject").text("草稿");
+                            } else {
+                                $("#aProject").text("查看详情");
+                            }
+                            $("#aProject").click(function () {
+                                if (data.rows[0]["是否草稿"] && data.rows[0]["是否草稿"] == 1) {
+                                    openframe('录入课题', 'Project/Update.html?id=' + ktbh + '&ProjectFlag=0', false);
+                                    //openframe('课题详细信息', '../Project/Details.html?id=' + ktbh, false);
+                                } else {
+                                    openframe('课题详细信息', '../Project/Details.html?id=' + ktbh, false);
+                                }
+                            });
+                        } else {
+                            $("#aProject").hide();
+                        }
+
+
+                        if (data.rows[0]["申报课题模式"] == '2')//学生提交课题
+                        {
+                            $("#stuprojectLink").show();
+                            $("#teaprojectLink").hide();
+                        };
+                        if (data.rows[0]["申报课题模式"] == '1')//教师提交课题
+                        {
+                            $("#stuprojectLink").hide();
+                            $("#teaprojectLink").show();
+                        };
+                        if (data.rows[0]["申报课题模式"] == '0')//学生 教师 提交课题
+                        {
+                            $("#stuprojectLink").show();
+                            $("#teaprojectLink").show();
+                        };
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+
+        //获取我的答辩组
+        function getAnswer() {
+            //答辩安排
+            $("#anpai").click(function () {
+                openframe('查看答辩安排', '../Answer/ReplyArrange.html', true);
+            });
+            $("#jilu").click(function () {
+                openframe('查看答辩记录', '../Answer/SubReplyRecord.html', true);
+            });
+            $.ajax({
+                url: "../Handler/Answer.ashx",
+                data: {
+                    action: "GetStuHomeAnswerInfo"
+                },
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data)
+                    if (data.isSuccess) {
+                        //开题答辩
+                        if (data.rows[0]["启用开题答辩"] == 1) {
+                            $("#open_reply").show();
+                            if (data.rows[0]['是否已安排开题答辩'] == 1) {
+                                $("#openRreply_text").text("你已安排开题答辩");
+                                $("#open_btn_box").show();
+                                $("#open_one").click(function () {
+                                    openframe('查看开题答辩安排', '../OpenAnswer/OpenAnswerArrange.html', true);
+                                });
+                                $("#open_tow").click(function () {
+                                    openframe('查看开题答辩结论', '../OpenAnswer/OpenAnswerRecordHistory.html', true);
+                                });
+                            } else {
+                                $("#openRreply_text").text("未安排");
+                            };
+                        };
+                       //答辩组
+                        if (data.rows[0]['答辩次序'] == 0) {
+                            $("#answer_number").text("你还未安排答辩");
+                        } else {
+                            $("#answer_number").text("已安排第" + data.rows[0]['答辩次序'] + "次答辩");
+                        };
+                        $("#answer_text").text("答辩成绩：" + data.rows[0]['答辩成绩txt'])
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+
+        //获取我的成绩
+        //显示哪几种成绩
+        function showPortion() {
+            $.ajax({
+                url: "../Handler/SystemSet.ashx?action=GetShoolSystemSetList",
+                type: 'post',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.isSuccess) {
+                        if (data.rows[0]['学生查看成绩'] == 1) { 
+                        return
+                        } else if (data.rows[0]['学生查看成绩'] == 2) {
+                            $("#my_grade,#nav_btn").show();
+                        } else if (data.rows[0]['学生查看成绩'] == 0) {
+                            $("#my_grade,#nav_btn").show();
+                            GetHideList();//获取各分成绩是否显示
+                        };
+                    }
+                }
+            });
+        }
+        //获取各分成绩是否显示
+        function GetHideList() {
+            $.ajax({
+                url: "../Handler/ReviewHandler.ashx",
+                type: "post",
+                data: {
+                    action: 'GetReviewColumn'
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        if (data.dataList[0]["不显示第二评阅成绩"] == 1) {
+                            $("#is_show_pingyueTow").show()
+                        };
+                        if (data.dataList[0]["不显示规范审查成绩"] == 1) {
+                            $("#is_show_gufan").show()
+                        };
+                        if (data.dataList[0]["不显示中期考评成绩"] == 1) {
+                            $("#is_show_zhongqi").show();
+                        };
+                        if (data.dataList[0]["不显示答辩成绩"] == 1) {
+                            $("#is_show_dabian").show();
+                        };
+                        if (data.dataList[0]["不显示评阅专家成绩"] == 1) {
+                            $("#is_show_pingyuezhuanjia").show();
+                        };
+                        if (data.dataList[0]["不显示专业负责人评阅成绩"] == 1) {
+                            $("#is_show_zhuanyefuze").show();
+                        };
+                        if (data.dataList[0]["不显示指导成绩"] == 1) {
+                            $("#is_show_zhidao").show();
+                        };
+                        if (data.dataList[0]["不显示开题答辩成绩"] == 1) {
+                            $("#is_show_ktdb").show();
+                        };
+                        if (data.dataList[0]["不显示平时成绩"] == 1) {
+                            $("#is_show_pscj").show();
+                        };
+                        
+                    };
+                }
+            });
+        };
+        function getGrade() {
+            $.ajax({
+                url: "../Handler/StudentList.ashx",
+                data: {
+                    action: "GetStuScore"
+                },
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        $("#zcj").text(data.rows[0]["总成绩txt"]);
+                        if (data.rows[0]["中期考评成绩txt"] < 60) {
+                            $("#zqkp").html('<i class="txt_red">' + data.rows[0]["中期考评成绩txt"] + '</i>');
+                        } else {
+                            $("#zqkp").text(data.rows[0]["中期考评成绩txt"]);
+                        };
+
+                        if (data.rows[0]["规范审查成绩txt"] < 60) {
+                            $("#gfsc").html('<i class="txt_red">' + data.rows[0]["规范审查成绩txt"] + '</i>');
+                        } else {
+                            $("#gfsc").text(data.rows[0]["规范审查成绩txt"]);
+                        };
+
+                        if (data.rows[0]["指导成绩txt"] < 60) {
+                            $("#zdjscj").html('<i class="txt_red">' + data.rows[0]["指导成绩txt"] + '</i>');
+                        } else {
+                            $("#zdjscj").text(data.rows[0]["指导成绩txt"]);
+                        };
+
+                        if (data.rows[0]["评阅成绩txt"] < 60) {
+                            $("#zyfzr").html('<i class="txt_red">' + data.rows[0]["评阅成绩txt"] + '</i>');
+                        } else {
+                            $("#zyfzr").text(data.rows[0]["评阅成绩txt"]);
+                        };
+
+                        if (data.rows[0]["评阅专家成绩txt"] < 60) {
+                            $("#pyzj").html('<i class="txt_red">' + data.rows[0]["评阅专家成绩txt"] + '</i>');
+                        } else {
+                            $("#pyzj").text(data.rows[0]["评阅专家成绩txt"]);
+                        };
+
+                        if (data.rows[0]["是否审核答辩成绩"] == '1') {
+                            if (checkValIsUndefinedOrNull(data.rows[0]["答辩成绩审核状态"]) || data.rows[0]["答辩成绩审核状态"] == '1' || data.rows[0]["答辩成绩审核状态"] == 1001 || data.rows[0]["答辩成绩审核状态"] == -1) {
+                                if (data.rows[0]["答辩成绩txt"] < 60) {
+                                    $("#dbcj").html('<i class="txt_red">' + data.rows[0]["答辩成绩txt"] + '</i>');
+                                } else {
+                                    $("#dbcj").html(data.rows[0]["答辩成绩txt"]);
+                                }
+                            } else {
+                                if (data.rows[0]["答辩成绩txt"] < 60) {
+                                    $("#dbcj").html('<i class="txt_red">' + data.rows[0]["答辩成绩txt"] + '</i>'
+                                        + '<i class="answerScoreMessage" onclick="myMessage(\'因您所在学校当前配置了答辩成绩需要审核，您有一个新的答辩成绩正在等待审核中。'
+                                        + '当前显示的答辩成绩可能不是您的最终答辩成绩，系统将在审核环节完成后，根据实际审核情况显示\');"></i>'); 
+                                    
+                                } else {
+                                    $("#dbcj").html(data.rows[0]["答辩成绩txt"]
+                                        + '<i class="answerScoreMessage" onclick="myMessage(\'因您所在学校当前配置了答辩成绩需要审核，您有一个新的答辩成绩正在等待审核中。'
+                                        + '当前显示的答辩成绩可能不是您的最终答辩成绩，系统将在审核环节完成后，根据实际审核情况显示\');"></i>');
+                                }
+                            }
+                        } else {
+                            if (data.rows[0]["答辩成绩txt"] < 60) {
+                                $("#dbcj").html('<i class="txt_red">' + data.rows[0]["答辩成绩txt"] + '</i>');
+                            } else {
+                                $("#dbcj").html(data.rows[0]["答辩成绩txt"]);
+                            }
+                        }
+
+                        if (data.rows[0]["第二评阅成绩txt"] < 60) {
+                            $("#tow_pycj").html('<i class="txt_red">' + data.rows[0]["第二评阅成绩txt"] + '</i>');
+                        } else {
+                            $("#tow_pycj").text(data.rows[0]["第二评阅成绩txt"]);
+                        };
+                        if (data.rows[0]["开题答辩成绩txt"] < 60) {
+                            $("#ktdb").html('<i class="txt_red">' + data.rows[0]["开题答辩成绩txt"] + '</i>');
+                        } else {
+                            $("#ktdb").text(data.rows[0]["开题答辩成绩txt"]);
+                        };
+                        if (data.rows[0]["平时成绩"] < 60) {
+                            $("#pscj").html('<i class="txt_red">' + data.rows[0]["平时成绩txt"] + '</i>');
+                        } else {
+                            $("#pscj").text(data.rows[0]["平时成绩txt"]);
+                        };
+
+                        $("#pycj").text(data.rows[0]["评阅专家成绩txt"])
+                        //总成绩后的跳转按钮
+                        $("#grade_html").click(function () {
+                            openframe('查看成绩', 'Review/ScoreDetails.html', false);
+                        }).show();
+                    } else {
+                        $("#p_tishi").text(data.message);
+                        $("#nochoiceDiv").show();
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+        //获取我的成绩结束
+        //统一导出文档
+        $("#derive").click(function () {
+            GetWordList("15")
+        });
+        function GetWordList(type) {
+            $.ajax({
+                url: "../Handler/WordHandler.ashx",
+                type: "post",
+                dataType: "json",
+                data: {
+                    action: "ExportWordForStudent",
+                    wordFileType: type
+                },
+                success: function (data) {
+                    if (data.isSuccess) {
+                        showOutputList();
+                    } else {
+                        myMessage(data.message);
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+        //获取说明的模板类型
+        function GetExplain_type() {
+            $.ajax({
+                url: "../Handler/WordHandler.ashx",
+                type: "post",
+                dataType: "json",
+                data: {
+                    action: "GetAllWordFileType",
+                },
+                success: function (data) {
+                    if (data.isSuccess && data.rows.length > 0) {
+                        var str = '';
+                        for (var i = 0; i < data.rows.length; i++) {
+                            str += data.rows[i]["类型名称"] + '&nbsp;&nbsp;';
+                        };
+                        $("#explain_type").html(str);
+
+                        var strinput = '';
+                        for (var i = 0; i < data.rows.length; i++) {
+                            strinput += "<input class=\"radio-margl\" id=\"aa_" + i + "\" name=\"danxuan\"  type=\"radio\"  value=\"" + data.rows[i]["类型"] + "\" /><label for=\"aa_" + i + "\">" + data.rows[i]["类型名称"] + "</lable>";
+                        };
+                        $("#radioType").html(strinput);
+                    } else {
+                        $("#explain_type").parent().html('<span class="SAtext">未设置模板文件</span>');
+                        $("#radioType").html('<span class="margl">未设置模板文件</span>');
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+        //点击导出已配置的文档
+        $("#configuration").click(function () {
+            //打开弹框
+            $("[name='danxuan']").eq(0).prop("checked", true);
+            $("#popup").dialog({
+                title: '导出已配置的文档的类型表',
+                buttons: [{
+                    text: '确定',
+                    handler: function () {
+                        if ($("#popup input").length <= 0) {
+                            $("#popup").dialog("close");
+                            return;
+                        };
+                        GetWordList($("#popup input[type='radio']:checked").val())
+                        $("#popup").dialog("close");
+                    }
+                },
+                {
+                    text: '取消',
+                    handler: function () {
+                        $("#popup").dialog("close");
+                    }
+                }]
+            });
+            $("#popup").dialog('open').window('center');
+        });
+
+        // 师生预选
+        function getPreSelectState() {
+            $.ajax({
+                url: "../Handler/MenuHandler.ashx",
+                data: {
+                    action: "GetMenuModuleState",
+                    moduleId: 30
+                },
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        if (data.dataList && data.dataList.state == 1) {
+                            getPreSelectDetails();
+                            $("#preSelectBox").show();
+                        }
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+        function getPreSelectDetails() {
+            $.ajax({
+                url: "../Handler/PreSelection.ashx",
+                data: {
+                    action: "GetStuPreSelectInfo"
+                },
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.isSuccess && data.rows && data.rows.length > 0) {
+                        $("#preSelectTitleDetails").html(data.rows[0]["课题方向"] + '<a href="javascript:goToPreSelectList();" class="margl a-text">查看详情</a>');
+                        var name = "";
+                        if (data.rows[0]["姓名"]) {
+                            name += data.rows[0]["姓名"];
+                            if (data.rows[0]["教师编号"]) {
+                                name += "（" + data.rows[0]["教师编号"] + "）";
+                            }
+                            if (data.rows[0]["学院名称"]) {
+                                name += " / " + data.rows[0]["学院名称"];
+                            }
+                            if (data.rows[0]["职称"]) {
+                                name += " / " + data.rows[0]["职称"];
+                            }
+                        }
+                        $("#preSelectTeaName").html(name);
+                        var telEmail = "";
+                        if (data.rows[0]["邮箱"] && data.rows[0]["电话"]) {
+                            telEmail += data.rows[0]["电话"] + " / " + data.rows[0]["邮箱"];
+                        } else {
+                            if (data.rows[0]["邮箱"]) {
+                                telEmail += data.rows[0]["邮箱"];
+                            }
+                            if (data.rows[0]["电话"]) {
+                                telEmail += data.rows[0]["电话"];
+                            }
+                        }
+                        $("#preSelectTeaPhone").html(telEmail);
+                    };
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+        function goToPreSelectList() {
+            openframe('师生预选', '../PreSelection/StuPreSelect.html', true);
+        };
+
+        $("#switchover").on("click", function () {
+            $.ajax({
+                url: "../Handler/StuHome.ashx",
+                data: {
+                    action: "LoginLearningPlatform"
+                },
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.isSuccess) {
+                        $.ajax({
+                            url: "../Handler/StuHome.ashx",
+                            data: {
+                                action: "LearningPlatformTokenName"
+                            },
+                            type: "post",
+                            dataType: "json",
+                            success: function (newData) {
+                                if (newData.isSuccess) {
+                                    window.parent.location.href = "http://x.dev.cnki.net/read/article/AcademicThesis?filename=a0f38cb1-0048-46c8-8317-27f066097d25.xml&tablename="
+                                        + "&dbcode=&fileSourceType=2&taskId=4389&appId=CRSP_PSMC_DEV&" + newData.message + "=" + data.message;
+                                } else {
+                                    window.parent.location.href = "http://x.dev.cnki.net/read/article/AcademicThesis?filename=a0f38cb1-0048-46c8-8317-27f066097d25.xml&tablename="
+                                        + "&dbcode=&fileSourceType=2&taskId=4389&appId=CRSP_PSMC_DEV&token=" + data.message;
+                                }
+                            },
+                            error: function (err) {
+                                console.log(err);
+                            }
+                        });
+                    } else {
+                        myMessage(data.message);
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+
+    </script><div class="panel window panel-htop" style="display: none; width: 400px; left: 435px; top: 185px; z-index: 9002;"><div class="panel-header panel-header-noborder window-header" style="width: 400px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 435px; top: 185px; width: 400px; height: 200px; z-index: 9001;"></div><div class="window-mask" style="display: none; z-index: 9000; width: 1270px; height: 1053px;"></div>
+
+
+
+<div class="panel window panel-htop" style="display: none; width: 600px; left: 335px; top: 163px;"><div class="panel-header panel-header-noborder window-header" style="width: 600px;"><div class="panel-title">New Dialog</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-close"></a></div></div><div id="popup" class="easyui-dialog panel-body panel-body-noborder window-body" data-options="closed:true" style="padding-top: 10px; width: 600px; height: 224px;" title="">
+                        <ul id="radioType" class="addFormBuild"><input class="radio-margl" id="aa_0" name="danxuan" type="radio" value="2"><label for="aa_0">开题报告<input class="radio-margl" id="aa_1" name="danxuan" type="radio" value="3"><label for="aa_1">任务书<input class="radio-margl" id="aa_2" name="danxuan" type="radio" value="5"><label for="aa_2">中期报告<input class="radio-margl" id="aa_3" name="danxuan" type="radio" value="7"><label for="aa_3">指导教师评阅意见书<input class="radio-margl" id="aa_4" name="danxuan" type="radio" value="8"><label for="aa_4">评阅专家评阅意见书<input class="radio-margl" id="aa_5" name="danxuan" type="radio" value="9"><label for="aa_5">指导记录<input class="radio-margl" id="aa_6" name="danxuan" type="radio" value="14"><label for="aa_6">答辩录入员评阅意见书<input class="radio-margl" id="aa_7" name="danxuan" type="radio" value="16"><label for="aa_7">其他文档</label></label></label></label></label></label></label></label></ul>
+                    </div></div><div class="window-shadow" style="display: none; left: 335px; top: 163px; width: 600px; height: 260px;"></div><div class="panel window panel-htop" style="display: none; width: 680px; left: 295px; top: 143px;"><div class="panel-header panel-header-noborder window-header" style="width: 680px;"><div class="panel-title">New Dialog</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-close"></a></div></div><div id="consignorModel" class="easyui-dialog panel-body panel-body-noborder window-body" data-options="closed:true,modal: true" style="text-align: center; padding: 5px; width: 680px; min-height: 264px;" title="">
+                <div id="ts_text_box" class="ts-text-box disNone margt" style="text-align:left">
+                    <p>最少需要提交 <i id="min_n"></i>次指导记录</p>
+                    <p>最多需要提交 <i id="min_m"></i>次指导记录</p>
+                    <p>指导记录已启用时间<i class="txt_red">*可以设置的时间控制段以“最多”提交的次数计；若未设置“最多”次数要求，则以“最少”的计数</i></p>
+                </div>
+                <table id="see" style="width:100%;"></table>
+
+            </div></div><div class="window-shadow" style="display: none; left: 295px; top: 143px; width: 680px; height: 300px;"></div><div class="window-mask" style="display:none"></div><div class="panel window panel-htop" style="display: none; width: 500px; left: 385px; top: 146px;"><div class="panel-header panel-header-noborder window-header" style="width: 500px;"><div class="panel-title">New Dialog</div><div class="panel-tool"><a href="javascript:;" class="panel-tool-close"></a></div></div><div id="wechartModel" class="easyui-dialog panel-body panel-body-noborder window-body" data-options="closed:true,modal: true" style="text-align: center; width: 500px;" title="">
+                <img src="./weixindigg.jpg" alt="二维码">
+            </div></div><div class="window-shadow" style="display: none; left: 385px; top: 146px; width: 500px; height: 294px;"></div><div class="window-mask" style="display:none"></div><div class="panel window panel-htop" style="display: none; width: 400px; left: 435px; top: 193px; z-index: 9011;"><div class="panel-header panel-header-noborder window-header" style="width: 400px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 435px; top: 193px; width: 400px; height: 200px; z-index: 9010;"></div><div class="window-mask" style="display: none; z-index: 9009; position: fixed;"></div><div class="panel window panel-htop" style="display: none; width: 400px; left: 435px; top: 193px; z-index: 9029;"><div class="panel-header panel-header-noborder window-header" style="width: 400px;"><div class="panel-title">提示</div><div class="panel-tool"></div></div></div><div class="window-shadow" style="display: none; left: 435px; top: 193px; width: 400px; height: 200px; z-index: 9028;"></div><div class="window-mask" style="display: none; z-index: 9027; position: fixed;"></div></body></html>
