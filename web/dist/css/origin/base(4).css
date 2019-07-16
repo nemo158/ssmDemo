@@ -139,6 +139,7 @@ s, i {
 
 .margt {
     margin-top: 10px;
+    text-align: right;
 }
 
 .mgL {
@@ -668,14 +669,15 @@ s, i {
 
 /*查询按钮 红色*/
 .formBtn {
-    padding: 0 10px;
+    padding: 0 50px;
     border: none;
     outline: none;
     height: 26px;
     color: #fff;
     cursor: pointer;
     border-radius: 6px;
-    background-color: #22B3C8;
+    background-color: #3c8dbc;
+    margin-right: 20px;
 }
 
     .formBtn:hover {
@@ -684,13 +686,14 @@ s, i {
 
 /*取消按钮*/
 .clearBtn {
-    padding: 0 10px;
+    padding: 0 50px;
     outline: none;
     height: 26px;
     color: #000;
     cursor: pointer;
     border-radius: 6px;
     background-color: #fafafa;
+    margin-right: 10px;
 }
 
     .clearBtn:hover {
