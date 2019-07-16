@@ -366,7 +366,7 @@ s, i {
     -moz-box-sizing: border-box;
 }
 
-.nav {
+.navs {
     width: 250px;
     position: absolute;
     top: 0;
@@ -376,7 +376,7 @@ s, i {
     border-right: 1px solid #4cc1d3;
 }
 
-.navIcon {
+.navsIcon {
     position: absolute;
     left: 250px;
     top: 50%;
@@ -391,7 +391,7 @@ s, i {
     color: #008c93;
 }
 
-.nav > h3 {
+.navs > h3 {
     position: relative;
     text-align: center;
     height: 35px;
@@ -400,23 +400,23 @@ s, i {
     border-bottom: 1px solid #23b4c9;
 }
 
-    .nav > h3 > i {
+    .navs > h3 > i {
         position: absolute;
         left: 65px;
         top: 9px;
         width: 22px;
         height: 22px;
-        background: url("images/navIcon.png") no-repeat 0 0;
+        background: url("images/navsIcon.png") no-repeat 0 0;
     }
 
-    .nav > h3 > span {
+    .navs > h3 > span {
         position: absolute;
         left: 86px;
         top: 0;
         line-height: 35px;
     }
 
-.navCon {
+.navsCon {
     width: 250px;
     position: absolute;
     top: 35px;
@@ -426,7 +426,7 @@ s, i {
     font-size: 14px;
 }
 
-    .navCon > ul {
+    .navsCon > ul {
         width: 267px;
         position: absolute;
         top: 0;
@@ -435,7 +435,7 @@ s, i {
         overflow-y: auto;
     }
 
-        .navCon > ul::-webkit-scrollbar {
+        .navsCon > ul::-webkit-scrollbar {
             display: none;
         }
 
@@ -474,91 +474,91 @@ s, i {
     width: 18px;
     height: 18px;
     margin-right: 10px;
-    background: url("images/navIcon.png") no-repeat -24px -1px;
+    background: url("images/navsIcon.png") no-repeat -24px -1px;
     vertical-align: middle;
     position: absolute;
     left: 15px;
     top: 15px;
 }
 
-.navTabCon > li > a > .detection {
-    background: url("images/navIcon.png") no-repeat -48px -1px;
+.navsTabCon > li > a > .detection {
+    background: url("images/navsIcon.png") no-repeat -48px -1px;
 }
 
-.navTabCon > li > a > .teachers {
-    background: url("images/navIcon.png") no-repeat -96px -1px;
+.navsTabCon > li > a > .teachers {
+    background: url("images/navsIcon.png") no-repeat -96px -1px;
 }
 
-.navTabCon > li > a > .courseDocument {
-    background: url("images/navIcon.png") no-repeat -120px -1px;
+.navsTabCon > li > a > .courseDocument {
+    background: url("images/navsIcon.png") no-repeat -120px -1px;
 }
 
-.navTabCon > li > a > .read {
-    background: url("images/navIcon.png") no-repeat -144px -1px;
+.navsTabCon > li > a > .read {
+    background: url("images/navsIcon.png") no-repeat -144px -1px;
 }
 
-.navTabCon > li > a > .goodPaper {
-    background: url("images/navIcon.png") no-repeat -168px -1px;
+.navsTabCon > li > a > .goodPaper {
+    background: url("images/navsIcon.png") no-repeat -168px -1px;
 }
 
-.navTabCon > li > a > .deriveDocument {
-    background: url("images/navIcon.png") no-repeat -192px -1px;
+.navsTabCon > li > a > .deriveDocument {
+    background: url("images/navsIcon.png") no-repeat -192px -1px;
 }
 
-.navTabCon > li > a > .statisticsMessage {
-    background: url("images/navIcon.png") no-repeat -216px -1px;
+.navsTabCon > li > a > .statisticsMessage {
+    background: url("images/navsIcon.png") no-repeat -216px -1px;
 }
 
-.navTabCon > li > a > .preWorkInspection {
-    background: url("images/navIcon.png") no-repeat -240px -1px;
+.navsTabCon > li > a > .preWorkInspection {
+    background: url("images/navsIcon.png") no-repeat -240px -1px;
 }
 
-.navTabCon > li > a > .midWorkInspection {
-    background: url("images/navIcon.png") no-repeat -312px -1px;
+.navsTabCon > li > a > .midWorkInspection {
+    background: url("images/navsIcon.png") no-repeat -312px -1px;
 }
 
-.navTabCon > li > a > .laterWorkInspection {
-    background: url("images/navIcon.png") no-repeat -336px -1px;
+.navsTabCon > li > a > .laterWorkInspection {
+    background: url("images/navsIcon.png") no-repeat -336px -1px;
 }
 
-.navTabCon > li > a > .accountEphor {
-    background: url("images/navIcon.png") no-repeat -264px -1px;
+.navsTabCon > li > a > .accountEphor {
+    background: url("images/navsIcon.png") no-repeat -264px -1px;
 }
 
-.navTabCon > li > a > .userSet {
-    background: url("images/navIcon.png") no-repeat -288px -1px;
+.navsTabCon > li > a > .userSet {
+    background: url("images/navsIcon.png") no-repeat -288px -1px;
 }
 
-.navTabCon > li > a > .bailed {
-    background: url("images/navIcon.png") no-repeat -72px -1px;
+.navsTabCon > li > a > .bailed {
+    background: url("images/navsIcon.png") no-repeat -72px -1px;
 }
 
-.navTabCon > li > a > .inspectThesis {
-    background: url("images/navIcon.png") no-repeat -24px -62px;
+.navsTabCon > li > a > .inspectThesis {
+    background: url("images/navsIcon.png") no-repeat -24px -62px;
 }
 
-.navTabCon > li > a > .answerRecord {
-    background: url("images/navIcon.png") no-repeat -48px -62px;
+.navsTabCon > li > a > .answerRecord {
+    background: url("images/navsIcon.png") no-repeat -48px -62px;
 }
 
-.navTabCon > li > a > .preSelect {
-    background: url("images/navIcon.png") no-repeat -358px -1px;
+.navsTabCon > li > a > .preSelect {
+    background: url("images/navsIcon.png") no-repeat -358px -1px;
 }
 
-.navTabCon > li > a > .ConfigQuery {
-    background: url("images/navIcon.png") no-repeat -378px -1px;
+.navsTabCon > li > a > .ConfigQuery {
+    background: url("images/navsIcon.png") no-repeat -378px -1px;
 }
 
-.navTabCon > li > a > .reportForms { /* 统计报表 */
-    background: url("images/navIcon.png") no-repeat -72px -62px;
+.navsTabCon > li > a > .reportForms { /* 统计报表 */
+    background: url("images/navsIcon.png") no-repeat -72px -62px;
 }
 
-.navTabCon > li > a > .answerGroup {
-    background: url("images/navIcon.png") no-repeat -120px -62px;
+.navsTabCon > li > a > .answerGroup {
+    background: url("images/navsIcon.png") no-repeat -120px -62px;
 }
 
-.navTabCon > li > a > .openAnswerGroup {
-    background: url("images/navIcon.png") no-repeat -168px -62px;
+.navsTabCon > li > a > .openAnswerGroup {
+    background: url("images/navsIcon.png") no-repeat -168px -62px;
 }
 /*二级导航菜单*/
 .towtier {
@@ -586,7 +586,7 @@ s, i {
     width: 9px;
     height: 9px;
     margin-right: 8px;
-    background: url("images/navIcon.png") no-repeat 0 -22px;
+    background: url("images/navsIcon.png") no-repeat 0 -22px;
     vertical-align: middle;
 }
 
@@ -598,7 +598,7 @@ s, i {
 
 .towtier:hover i,
 .towtier .variation {
-    background: url("images/navIcon.png") no-repeat -22px -22px !important;
+    background: url("images/navsIcon.png") no-repeat -22px -22px !important;
 }
 
 
@@ -1560,28 +1560,28 @@ s, i {
     border-bottom: none;
 }
 
-    .gxf_statistics .gxf_statistics_navBar ul {
-        background: url("images/navbarBg.png") repeat-x;
+    .gxf_statistics .gxf_statistics_navsBar ul {
+        background: url("images/navsbarBg.png") repeat-x;
         border-bottom: 1px solid #22B3B8;
     }
 
-    .gxf_statistics .gxf_statistics_navBar li {
+    .gxf_statistics .gxf_statistics_navsBar li {
         float: left;
         font: 16px/36px "microsoft yehei";
     }
 
-        .gxf_statistics .gxf_statistics_navBar li a {
+        .gxf_statistics .gxf_statistics_navsBar li a {
             display: block;
             height: 36px;
             padding: 0 20px;
         }
 
-            .gxf_statistics .gxf_statistics_navBar li a.selected {
+            .gxf_statistics .gxf_statistics_navsBar li a.selected {
                 background-color: #22B3B8;
                 color: #fff;
             }
 
-            .gxf_statistics .gxf_statistics_navBar li a:hover {
+            .gxf_statistics .gxf_statistics_navsBar li a:hover {
                 background-color: #22B3B8;
                 color: #fff;
             }
@@ -2391,7 +2391,7 @@ table img {
     background: url('images/location01.png') no-repeat;
 }
 
-.rapid-nav > li {
+.rapid-navs > li {
     float: left;
     padding-left: 20px;
 }
@@ -2857,21 +2857,21 @@ color-box
 }
 
 /*span的盒子*/
-.nav-tab {
+.navs-tab {
     height: 39px;
     line-height: 38px;
     border: 1px solid #e0e0e0;
-    background: url("images/navbarBg.png") top;
+    background: url("images/navsbarBg.png") top;
     border-bottom: 1px solid #22B3B8;
 }
 
-    .nav-tab span {
+    .navs-tab span {
         cursor: pointer;
         display: inline-block;
         padding: 0 20px;
     }
 
-        .nav-tab span:hover {
+        .navs-tab span:hover {
             color: #fff;
             background-color: #22B3B8;
         }
@@ -2881,7 +2881,7 @@ color-box
     background-color: #22B3B8;
 }
 /*换一换*/
-.nav-tab .trade-text {
+.navs-tab .trade-text {
     display: none; /*默认隐藏*/
     float: right;
     margin-right: 50px;
@@ -2889,11 +2889,11 @@ color-box
     color: #75bae3;
 }
 
-    .nav-tab .trade-text:hover .trade-logo {
+    .navs-tab .trade-text:hover .trade-logo {
         transform: rotate(540deg);
     }
 
-.nav-tab .trade-logo {
+.navs-tab .trade-logo {
     transition: all 0.2s;
     display: inline-block;
     margin-right: 4px;
