@@ -72,7 +72,6 @@
     width: 70%;
     float: left;
     padding: 8px;
-    min-height: 99px;
     border-right: 1px solid #ccc;
     overflow-x: auto;
 }
@@ -82,7 +81,6 @@
     width: 30%;
     float: left;
     /*padding: 8px 10px;*/
-    min-height: 99px;
     /*min-width: 304px;*/
 }
 
