@@ -1020,6 +1020,7 @@
         $('#datepicker5').datepicker({
             autoclose: true
         });
+        $("body").find("input,textarea").attr("readOnly",true)
     });
 
 
@@ -1132,6 +1133,9 @@
         };
 
         axios.post('http://localhost:8080/ssmDemo_war_exploded/addMidreport', midreport)
+
+        axios.post('http://localhost:8080/addMidreport', midreport)
+
             .then(function (response) {
                 console.log(response);
             })
