@@ -1091,12 +1091,12 @@
         //处理外文翻译
         var tc = $("#wcqk0")[0].checked ? 0 : 1;
         var tp = parseInt($("#translation_process")[0].value);
-        var tt = $("#datepicker")[0].value;
+        var tt = new Date($("#datepicker")[0].value);
         var tm = $("#translation_comment")[0].value;
         //处理文献综述
         var pc = $("#wxwcqk0")[0].checked ? 0 : 1;
         var pp = parseInt($("#wxprogress")[0].value);
-        var pt = $("#datepicker2")[0].value;
+        var pt = new Date($("#datepicker2")[0].value);
         var pm = $("#wxcomment")[0].value;
         //处理实验进展
         var ec = 0;
@@ -1106,11 +1106,11 @@
             ex = 2;
         }
         var ep = parseInt($("#syprocess")[0].value);
-        var et = $("#datepicker3")[0].value;
+        var et = new Date($("#datepicker3")[0].value);
         var em = $("#sycomment")[0].value;
         //处理课题情况
         var kp = parseInt($("#ktprocess")[0].value);
-        var kt = $("#datepicker5")[0].value;
+        var kt = new Date($("#datepicker5")[0].value);
 
         var midreport = {
             course_id: 123,
@@ -1132,7 +1132,10 @@
             advice: null
         };
 
+        axios.post('http://localhost:8080/ssmDemo_war_exploded/addMidreport', midreport)
+
         axios.post('http://localhost:8080/addMidreport', midreport)
+
             .then(function (response) {
                 console.log(response);
             })
