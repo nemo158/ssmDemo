@@ -1,4 +1,4 @@
-package java.com.demo.mms.common.domain;
+package com.demo.mms.common.domain;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
