@@ -7,5 +7,4 @@ import com.demo.mms.common.domain.*;
  */
 public interface AdminService {
     void addAdmin(Admin admin);
-    void addMidreport(Midreport midreport);
 }

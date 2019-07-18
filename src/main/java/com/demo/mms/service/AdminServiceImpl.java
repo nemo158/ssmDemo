@@ -5,10 +5,6 @@ import com.demo.mms.common.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-/**
- * @author  teacher
- */
 @Service
 public class AdminServiceImpl implements AdminService {
     @Autowired
@@ -18,9 +14,5 @@ public class AdminServiceImpl implements AdminService {
     public void addAdmin(Admin admin) {
         adminMapper.insert(admin);
     }
-    @Transactional
-    @Override
-    public void addMidreport(Midreport midreport) {
-        adminMapper.insertMidreport(midreport);
-    }
+
 }

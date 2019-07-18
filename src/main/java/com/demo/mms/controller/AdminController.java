@@ -24,13 +24,4 @@ public class AdminController {
         rs.put("success",true);
         return rs;
     }
-
-    @RequestMapping(value="/addMidreport",method= RequestMethod.POST)
-    @ResponseBody
-    public Object saveMidreport(@RequestBody Midreport midreport){
-        adminService.addMidreport(midreport);
-        Map<String,Object> rs = new HashMap<>(64);
-        rs.put("success",true);
-        return rs;
-    }
 }
