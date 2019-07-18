@@ -40,19 +40,9 @@
     <link rel="stylesheet" href="../../dist/css/origin/webuploader(2).css">
 
     <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Google Font -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
     <header class="main-header">
         <!-- Logo -->
         <a href="../../index2.html" class="logo">
@@ -433,7 +423,6 @@
         </section>
         <!-- /.sidebar -->
     </aside>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" ?>
         <div id="nochoiceDiv" class="gxf_tips" style="display:none; margin-bottom:15px;">
@@ -524,13 +513,12 @@
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>完成情况<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="radio" id="wcqk0"
-                                                                                       name="radio_17_wcqk" value="0"
-                                                                                       checked="checked">
-                                            <label for="wcqk0" class="margr">完成</label><input type="radio" id="wcqk1"
-                                                                                              name="radio_17_wcqk"
-                                                                                              value="1" onclick="displaypro(this.id)"> <label
-                                                    for="wcqk1" class="margr">部分完成</label></div>
+                                        <div class="translation_radio gxf_rangy_left gxf_noRangy">
+                                            <input type="radio" id="wcqk0" name="radio_17_wcqk" value="0">
+                                            <label for="wcqk0" class="margr">完成</label>
+                                            <input type="radio" id="wcqk1" name="radio_17_wcqk" value="1"
+                                                   checked="checked">
+                                            <label for="wcqk1" class="margr">部分完成</label></div>
                                         <div id="right_box_left_wcqk" class="gxf_rangy_right_box gxf_noRangy">
                                             <ul class="gxf_rangy_right gxf_noRangy">
                                                 <li class="gxf_rangy_noContent"><h3>该内容暂不支持批注</h3></li>
@@ -540,11 +528,14 @@
                                 </div>
                             </li>
                             <li>
-                                <div id="wcqk4" style="display: none;"  class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div class="gxf_rangy_left gxf_noRangy">
-                                            <input id="translation_process" type="text" class="form-control" placeholder="请填写0-100范围内的数字" maxlength="3" onblur="checkprogress(this.id,this.value)" onKeyUp="value=value.replace(/\D/g,'')" >
+                                            <input id="translation_process" type="text" class="form-control progresst"
+                                                   placeholder="请填写0-100范围内的数字" maxlength="3"
+                                                   onKeyUp="value=value.replace(/\D/g,'')">
                                         </div>
                                         <!-- text input -->
 
@@ -557,7 +548,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -604,13 +595,13 @@
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>完成情况<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="radio" id="wxwcqk0"
-                                                                                       name="radio_22_wxwcqk" value="0"
-                                                                                       checked="checked"> <label
-                                                for="wxwcqk0" class="margr">完成</label><input type="radio" id="wxwcqk1"
-                                                                                             name="radio_22_wxwcqk"
-                                                                                             value="1"> <label
-                                                for="wxwcqk1" class="margr">部分完成</label></div>
+                                        <div class="wx_radio gxf_rangy_left gxf_noRangy">
+                                            <input type="radio" id="wxwcqk0" name="radio_22_wxwcqk" value="0">
+                                            <label for="wxwcqk0" class="margr">完成</label>
+                                            <input type="radio" id="wxwcqk1" name="radio_22_wxwcqk" value="1"
+                                                   checked="checked">
+                                            <label for="wxwcqk1" class="margr">部分完成</label>
+                                        </div>
                                         <div id="right_box_left_wxwcqk" class="gxf_rangy_right_box gxf_noRangy">
                                             <ul class="gxf_rangy_right gxf_noRangy">
                                                 <li class="gxf_rangy_noContent"><h3>该内容暂不支持批注</h3></li>
@@ -620,12 +611,13 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div  class="wxwcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl">请填写0-100范围内的数字</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div class="gxf_rangy_left gxf_noRangy"><input id="wxprogress" type="text"
-                                                                                       class="form-control"
+                                                                                       class="form-control progresst"
                                                                                        placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_wxbfwc" class="gxf_rangy_right_box gxf_noRangy">
@@ -637,7 +629,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wxwcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -661,8 +653,7 @@
                             </li>
                             <li>
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
-                                    <i> </i>备注<span class="writerText margl"> 共输入<i
-                                        style="color: #f00;">3</i>字符</span><span class="statement margl"></span></h3>
+                                    <i> </i>备注<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div id="left_wxbz" tablemodelid="25" class="gxf_rangy_left"
                                              style="height: 115px;"><textarea id="wxcomment" class="form-control"
@@ -684,7 +675,7 @@
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>完成情况<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="radio" id="sywcqk0"
+                                        <div class="sy_radio gxf_rangy_left gxf_noRangy"><input type="radio" id="sywcqk0"
                                                                                        name="radio_27_sywcqk" value="0">
                                             <label for="sywcqk0" class="margr">完成</label><input type="radio"
                                                                                                 id="sywcqk1"
@@ -694,7 +685,9 @@
                                             <label for="sywcqk1" class="margr">部分完成</label><input type="radio"
                                                                                                   id="sywcqk2"
                                                                                                   name="radio_27_sywcqk"
-                                                                                                  value="2"> <label
+                                                                                                  value="2"
+                                                                                                  onclick="displaypro(this.id)">
+                                            <label
                                                     for="sywcqk2" class="margr">无实验</label></div>
                                         <div id="right_box_left_sywcqk" class="gxf_rangy_right_box gxf_noRangy">
                                             <ul class="gxf_rangy_right gxf_noRangy">
@@ -705,12 +698,13 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div  class=" sywcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span
                                         class="statement margl">请填写0-100范围内的数字；若无实验，可不填写</span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input id="syprocess" type="text"
-                                                                                       class="form-control"
+                                        <div class="gxf_rangy_left gxf_noRangy"><input id="syprogress" type="text"
+                                                                                       class="form-control progresst"
                                                                                        placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_syjd" class="gxf_rangy_right_box gxf_noRangy">
@@ -722,7 +716,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="sywcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”；如无实验，可不填写</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -793,6 +787,7 @@
                                                                                                    id="qtwcqk2"
                                                                                                    name="radio_33_qtwcqk"
                                                                                                    value="2"
+                                                                                                   onclick="displaypro(this.id)"
                                                                                                    checked="checked">
                                             <label for="qtwcqk2" class="margr">无其它情况</label></div>
                                         <div id="right_box_left_qtwcqk" class="gxf_rangy_right_box gxf_noRangy">
@@ -804,11 +799,12 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div id="qtwcqk4" class="gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl">请填写0-100范围内的数字；若无其它情况，可不填写</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="text" class="form-control"
+                                        <div class="gxf_rangy_left gxf_noRangy"><input type="text" class="form-control progresst"
                                                                                        placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_sybfjd" class="gxf_rangy_right_box gxf_noRangy">
@@ -866,7 +862,7 @@
                                     <i> </i>现完成进度（%）<span class="statement margl">请填写0-100范围内的数字</span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div class="gxf_rangy_left gxf_noRangy">
-                                            <input id="ktprocess" type="text" class="form-control"
+                                            <input id="ktprocess" type="text" class="form-control progresst"
                                                    placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_ktwcjd" class="gxf_rangy_right_box gxf_noRangy">
@@ -994,7 +990,6 @@
 <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- bootstrap datepicker -->
 <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -1076,21 +1071,40 @@
 </script>
 <script>
 
-    $(document).ready(function (){
+    $(document).ready(function () {
         $("#kv-explorer").fileinput({
             language: 'zh',
-            'theme': 'explorer-fas',
-            'uploadUrl': '#',
+            theme: 'explorer-fas',
+            uploadUrl: '#',
             overwriteInitial: false,
             initialPreviewAsData: true,
+            showPreview:true,//是否显示预览
             initialPreview: [],
+            enctype:"multipart/form-data",
+            uploadExtraData:function () {
+                var data={
+                    apkName:$("#apkName").val(),
+                    versionNum:$("#versionNum").val(),
+                    description:$("#description").val()
+                };
+                return data;
+            },
             initialPreviewConfig: []
+        }).on('filepreupload', function (event, data, previewId, index) {     //上传中
+            var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+            console.log('文件正在上传');
+        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+            console.log('文件上传成功！' + data.id);
+
+        }).on('fileerror', function (event, data, msg) {  //一个文件上传失败
+            console.log('文件上传失败！' + data.id);
         });
     })
 </script>
+
 <script type="text/javascript">
-
-
+    //报告处理
     function saveReport() {
         var that = this;
         //处理外文翻译
@@ -1110,7 +1124,7 @@
         } else {
             ex = 2;
         }
-        var ep = parseInt($("#syprocess")[0].value);
+        var ep = parseInt($("#syprogress")[0].value);
         var et = new Date($("#datepicker3")[0].value);
         var em = $("#sycomment")[0].value;
         //处理课题情况
@@ -1146,47 +1160,50 @@
                 console.log(error);
             });
 
-        // var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-        // httpRequest.open('POST', '', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
-        // httpRequest.withCredentials = true;
-        // httpRequest.send(midreport);//第三步：发送请求  将请求参数写在URL中
-        // /**
-        //  * 获取数据后的处理程序
-        //  */
-        // httpRequest.onreadystatechange = function () {
-        //     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-        //         var json = httpRequest.responseText;//获取到json字符串，还需解析
-        //         console.log(json);
-        //     }
-        // };
     }
 </script>
 <script>
-    $('#submit').on('click',function () {
-        // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
+    $(function () {
+        //组件触发处理
+        $('#submit').on('click', function () {
+            // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
+            toastr.success("操作成功", "消息提示");
+        });
 
-        toastr.success("操作成功", "消息提示");
-    })
-</script>
-<script type="text/javascript">
-    function checkprogress(id,input) {
-        var regex = /^\d+$/;
-        console.log(id);
-        if(regex.test(input)){
-            if(input<=100 && input>0){
+        $(".translation_radio :radio").change(function () {
+
+            $(".wcqk4").toggle();
+        });
+        $(".wx_radio :radio").change(function () {
+
+            $(".wxwcqk4").toggle();
+        });
+        $(".sy_radio :radio").change(function () {
+
+            $(".sywcqk4").toggle();
+        });
+        $(".progresst").blur(function () {
+            var that=this;
+            var id=that.id;
+             id = "#" + id;
+            var input=that.value;
+            var regex = /^\d+$/;
+            if (regex.test(input)) {
+                if (input <= 100 && input > 0) {
+                } else {
+                    toastr.warning("请输入0-100的数字");
+                    $(id).val("");
+                }
             }else{
                 toastr.warning("请输入0-100的数字");
-                var t="#"+id;
-                $(t).val("");
+                $(id).val("");
             }
-        }
-    }
-    function displaypro(id) {
-        var patt1 = /([a-z]{4})/;
-        console.log( id.match(patt1))
+        });
+
+    });
 
 
-    }
 </script>
+
 </body>
 </html>
