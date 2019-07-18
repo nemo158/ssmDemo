@@ -8,5 +8,4 @@ import com.demo.mms.common.domain.*;
  */
 public interface AdminMapper {
     int insert(Admin admin);
-    int insertMidreport(Midreport midreport);
 }
