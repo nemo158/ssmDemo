@@ -30,9 +30,11 @@ public class Midreport {
     private Date project_time;
 
     private String advice;
+    private int version;
 
-
-
+    public void setVersion(int version) {
+        this.version = version;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -176,5 +178,9 @@ public class Midreport {
 
     public Date getProject_time() {
         return project_time;
+    }
+
+    public int getVersion() {
+        return version;
     }
 }

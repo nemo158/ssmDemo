@@ -5,9 +5,4 @@
     insert into admin (id, name, password, remarks)
     values   (#{id}, #{name}, #{password}, #{remarks})
   </insert>
-  <insert id="insertMidreport" parameterType="com.demo.mms.common.domain.Midreport">
-
-    insert into midreport (id, course_id, state,translation_complete,translation_progress,translation_time,translation_comment,paper_complete,paper_progress,paper_time,paper_comment,experiment_complete,experiment_progress,experiment_time,experiment_comment,project_progress,project_time,advice)
-    values   (#{id}, #{course_id}, #{state},#{translation_complete},#{translation_progress},#{translation_time},#{translation_comment},#{paper_complete},#{paper_progress},#{paper_time},#{paper_comment},#{experiment_complete},#{experiment_progress},#{experiment_time},#{experiment_comment},#{project_progress},#{project_time},#{advice})
-  </insert>
 </mapper>
