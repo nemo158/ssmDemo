@@ -672,7 +672,7 @@ s, i {
     padding: 0 50px;
     border: none;
     outline: none;
-    height: 26px;
+    height: 40px;
     color: #fff;
     cursor: pointer;
     border-radius: 6px;
@@ -688,7 +688,7 @@ s, i {
 .clearBtn {
     padding: 0 50px;
     outline: none;
-    height: 26px;
+    height: 40px;
     color: #000;
     cursor: pointer;
     border-radius: 6px;

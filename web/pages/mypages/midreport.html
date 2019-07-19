@@ -12,21 +12,9 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-    <link href="../../bower_components/bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet"
-          type="text/css"/>
-    <script src="../../bower_components/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="../../bower_components/bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
-    <script src="../../bower_components/bootstrap-fileinput/js/locales/zh.js" type="text/javascript"></script>
-
-    <script src="../../bower_components/toastr/toastr.min.js"></script>
-    <link rel="stylesheet" href="../../bower_components/toastr/toastr.min.css">
-
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
@@ -39,20 +27,31 @@
     <link rel="stylesheet" href="../../dist/css/origin/common(1).css">
     <link rel="stylesheet" href="../../dist/css/origin/webuploader(2).css">
 
+    <!-- 富文本css-->
+    <link href="../../bower_components/summernote/dist/summernote.css" rel="stylesheet">
+    <script src="../../bower_components/summernote/dist/summernote.js"></script>
+    <script src="../../bower_components/summernote/dist/lang/summernote-zh-CN.js"></script>
+
+    <!-- 时间选择器-->
     <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- 文件上传-->
+    <link href="../../bower_components/bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet"
+          type="text/css"/>
+    <script src="../../bower_components/bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
+    <script src="../../bower_components/bootstrap-fileinput/js/locales/zh.js" type="text/javascript"></script>
 
-    <!-- Google Font -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <!-- 弹窗-->
+    <script src="../../bower_components/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" href="../../bower_components/toastr/toastr.min.css">
+
+    <!-- axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
     <header class="main-header">
         <!-- Logo -->
         <a href="../../index2.html" class="logo">
@@ -433,7 +432,6 @@
         </section>
         <!-- /.sidebar -->
     </aside>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" ?>
         <div id="nochoiceDiv" class="gxf_tips" style="display:none; margin-bottom:15px;">
@@ -524,13 +522,12 @@
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>完成情况<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="radio" id="wcqk0"
-                                                                                       name="radio_17_wcqk" value="0"
-                                                                                       checked="checked">
-                                            <label for="wcqk0" class="margr">完成</label><input type="radio" id="wcqk1"
-                                                                                              name="radio_17_wcqk"
-                                                                                              value="1" onclick="displaypro(this.id)"> <label
-                                                    for="wcqk1" class="margr">部分完成</label></div>
+                                        <div class="translation_radio gxf_rangy_left gxf_noRangy">
+                                            <input type="radio" id="wcqk0" name="radio_17_wcqk" value="0">
+                                            <label for="wcqk0" class="margr">完成</label>
+                                            <input type="radio" id="wcqk1" name="radio_17_wcqk" value="1"
+                                                   checked="checked">
+                                            <label for="wcqk1" class="margr">部分完成</label></div>
                                         <div id="right_box_left_wcqk" class="gxf_rangy_right_box gxf_noRangy">
                                             <ul class="gxf_rangy_right gxf_noRangy">
                                                 <li class="gxf_rangy_noContent"><h3>该内容暂不支持批注</h3></li>
@@ -540,11 +537,14 @@
                                 </div>
                             </li>
                             <li>
-                                <div id="wcqk4" style="display: none;"  class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div class="gxf_rangy_left gxf_noRangy">
-                                            <input id="translation_process" type="text" class="form-control" placeholder="请填写0-100范围内的数字" maxlength="3" onblur="checkprogress(this.id,this.value)" onKeyUp="value=value.replace(/\D/g,'')" >
+                                            <input id="translation_process" type="text" class="form-control progresst"
+                                                   placeholder="请填写0-100范围内的数字" maxlength="3"
+                                                   onKeyUp="value=value.replace(/\D/g,'')">
                                         </div>
                                         <!-- text input -->
 
@@ -557,13 +557,12 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
 
-                                        <div id="left_yjsj" tablemodelid="19" class="gxf_rangy_left"
-                                        >
+                                        <div id="left_yjsj" tablemodelid="19" class="gxf_rangy_left">
                                             <div class="input-group date">
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
@@ -604,13 +603,13 @@
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>完成情况<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="radio" id="wxwcqk0"
-                                                                                       name="radio_22_wxwcqk" value="0"
-                                                                                       checked="checked"> <label
-                                                for="wxwcqk0" class="margr">完成</label><input type="radio" id="wxwcqk1"
-                                                                                             name="radio_22_wxwcqk"
-                                                                                             value="1"> <label
-                                                for="wxwcqk1" class="margr">部分完成</label></div>
+                                        <div class="wx_radio gxf_rangy_left gxf_noRangy">
+                                            <input type="radio" id="wxwcqk0" name="radio_22_wxwcqk" value="0">
+                                            <label for="wxwcqk0" class="margr">完成</label>
+                                            <input type="radio" id="wxwcqk1" name="radio_22_wxwcqk" value="1"
+                                                   checked="checked">
+                                            <label for="wxwcqk1" class="margr">部分完成</label>
+                                        </div>
                                         <div id="right_box_left_wxwcqk" class="gxf_rangy_right_box gxf_noRangy">
                                             <ul class="gxf_rangy_right gxf_noRangy">
                                                 <li class="gxf_rangy_noContent"><h3>该内容暂不支持批注</h3></li>
@@ -620,12 +619,13 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div  class="wxwcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl">请填写0-100范围内的数字</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div class="gxf_rangy_left gxf_noRangy"><input id="wxprogress" type="text"
-                                                                                       class="form-control"
+                                                                                       class="form-control progresst"
                                                                                        placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_wxbfwc" class="gxf_rangy_right_box gxf_noRangy">
@@ -637,7 +637,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wxwcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -661,8 +661,7 @@
                             </li>
                             <li>
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
-                                    <i> </i>备注<span class="writerText margl"> 共输入<i
-                                        style="color: #f00;">3</i>字符</span><span class="statement margl"></span></h3>
+                                    <i> </i>备注<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div id="left_wxbz" tablemodelid="25" class="gxf_rangy_left"
                                              style="height: 115px;"><textarea id="wxcomment" class="form-control"
@@ -684,7 +683,7 @@
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>完成情况<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="radio" id="sywcqk0"
+                                        <div class="sy_radio gxf_rangy_left gxf_noRangy"><input type="radio" id="sywcqk0"
                                                                                        name="radio_27_sywcqk" value="0">
                                             <label for="sywcqk0" class="margr">完成</label><input type="radio"
                                                                                                 id="sywcqk1"
@@ -694,7 +693,9 @@
                                             <label for="sywcqk1" class="margr">部分完成</label><input type="radio"
                                                                                                   id="sywcqk2"
                                                                                                   name="radio_27_sywcqk"
-                                                                                                  value="2"> <label
+                                                                                                  value="2"
+                                                                                                  onclick="displaypro(this.id)">
+                                            <label
                                                     for="sywcqk2" class="margr">无实验</label></div>
                                         <div id="right_box_left_sywcqk" class="gxf_rangy_right_box gxf_noRangy">
                                             <ul class="gxf_rangy_right gxf_noRangy">
@@ -705,12 +706,13 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div  class=" sywcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span
                                         class="statement margl">请填写0-100范围内的数字；若无实验，可不填写</span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input id="syprocess" type="text"
-                                                                                       class="form-control"
+                                        <div class="gxf_rangy_left gxf_noRangy"><input id="syprogress" type="text"
+                                                                                       class="form-control progresst"
                                                                                        placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_syjd" class="gxf_rangy_right_box gxf_noRangy">
@@ -722,7 +724,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="sywcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”；如无实验，可不填写</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -793,6 +795,7 @@
                                                                                                    id="qtwcqk2"
                                                                                                    name="radio_33_qtwcqk"
                                                                                                    value="2"
+                                                                                                   onclick="displaypro(this.id)"
                                                                                                    checked="checked">
                                             <label for="qtwcqk2" class="margr">无其它情况</label></div>
                                         <div id="right_box_left_qtwcqk" class="gxf_rangy_right_box gxf_noRangy">
@@ -804,11 +807,12 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div id="qtwcqk4" class="gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl">请填写0-100范围内的数字；若无其它情况，可不填写</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="text" class="form-control"
+                                        <div class="gxf_rangy_left gxf_noRangy"><input type="text" class="form-control progresst"
                                                                                        placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_sybfjd" class="gxf_rangy_right_box gxf_noRangy">
@@ -866,7 +870,7 @@
                                     <i> </i>现完成进度（%）<span class="statement margl">请填写0-100范围内的数字</span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
                                         <div class="gxf_rangy_left gxf_noRangy">
-                                            <input id="ktprocess" type="text" class="form-control"
+                                            <input id="ktprocess" type="text" class="form-control progresst"
                                                    placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_ktwcjd" class="gxf_rangy_right_box gxf_noRangy">
@@ -921,7 +925,6 @@
                             <li id="tianjiafujian">
                                 <p>添加附件：<span class="statement" id="scfj">上传有关中期报告的附件，上传的文件将以附件的形式显示。支持附件格式为doc，docx，pdf，wps，rar，zip</span>
                                 </p>
-
                                 <div class="file-loading">
                                     <input id="kv-explorer" type="file" multiple>
                                 </div>
@@ -981,32 +984,10 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../bower_components/bootstrap-fileinput/js/fileinput.min.js"></script>
-<script src="../../bower_components/bootstrap-fileinput/js/locales/zh.js" type="text/javascript"></script>
-<!-- DataTables -->
-<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- bootstrap datepicker -->
-<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
 <script>
     $(function () {
-        initFileInput("input-id");
         $('#datepicker').datepicker({
             autoclose: true
         });
@@ -1037,31 +1018,40 @@
             showMethod: "fadeIn",
             hideMethod: "fadeOut"
         };
+        axios.get("http://localhost:8080/returnMidreport",{
+            params:{
+                course_id: "456"
+            }
+        }).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+                console.log(error);
+            })
         // initFileInput("kv-explorer")
         // $("body").find("input,textarea").attr("readOnly",true)
     });
 
-    function initFileInput(ctrlName) {
-        var control = $('#' + ctrlName);
-        control.fileinput({
-            language: 'zh', //设置语言
-            uploadUrl: "http://localhost:8080/saveFile", //上传的地址
-            allowedFileExtensions: ["doc", "docx", "pdf", "wps", "rar", "zip"],//接收的文件后缀
-            maxFilesNum: 5,//上传最大的文件数量
-            uploadAsync: false, //默认异步上传
-            showUpload: true, //是否显示上传按钮
-            showRemove: true, //显示移除按钮
-            showPreview: true, //是否显示预览
-            showCaption: false,//是否显示标题
-            browseClass: "btn btn-primary", //按钮样式
-            //dropZoneEnabled: true,//是否显示拖拽区域
-            maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
-            //minFileCount: 0,
-            //maxFileCount: 10, //表示允许同时上传的最大文件个数
-            enctype: 'multipart/form-data',
-            validateInitialCount: true,
-            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
-            msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+</script>
+<script>
+    $(document).ready(function () {
+        $("#kv-explorer").fileinput({
+            language: 'zh',
+            theme: 'explorer-fas',
+            uploadUrl: '#',
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            showPreview:true,//是否显示预览
+            initialPreview: [],
+            enctype:"multipart/form-data",
+            uploadExtraData:function () {
+                var data={
+                    apkName:$("#apkName").val(),
+                    versionNum:$("#versionNum").val(),
+                    description:$("#description").val()
+                };
+                return data;
+            },
+            initialPreviewConfig: []
         }).on('filepreupload', function (event, data, previewId, index) {     //上传中
             var form = data.form, files = data.files, extra = data.extra,
                 response = data.response, reader = data.reader;
@@ -1071,39 +1061,69 @@
 
         }).on('fileerror', function (event, data, msg) {  //一个文件上传失败
             console.log('文件上传失败！' + data.id);
-        })
-    }
-</script>
-<script>
-
-    $(document).ready(function (){
-        $("#kv-explorer").fileinput({
-            language: 'zh',
-            'theme': 'explorer-fas',
-            'uploadUrl': '#',
-            overwriteInitial: false,
-            initialPreviewAsData: true,
-            initialPreview: [],
-            initialPreviewConfig: []
         });
+
+
+
     })
 </script>
+
 <script type="text/javascript">
+    //报告处理
     $(function () {
-        axios.get("http://localhost:8080/returnMidreport",{
-            params:{
-                course_id: "3110001"
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/returnMidreport",
+            data: {course_id:"4587"},
+            success: function(msg){
+                $("body").find("input,textarea").attr("readOnly",true);
+               initReport(msg.success)
             }
-        }).then(function (response) {
-            console.log(response);
-        })
-            .catch(function (error) {
-                console.log(error);
-            })
+        });
 
     });
 
 
+    function initReport(midreport){
+        if(midreport.translation_complete.equal(1)){
+            $("#wcqk0").attr(checked,"checked");
+            $(".wcqk4").hide();
+        }else{
+            $("#wcqk1").attr(checked,"checked");
+            $("#translation_process").val(midreport.translation_progress);
+            $("#datepicker").val(midreport.translation_time)
+        }
+        $("#translation_comment").val(midreport.translation_comment);
+
+        if(midreport.paper_complete.equal(1)){
+            $("#wxwcqk0").attr(checked,"checked");
+            $(".wcqk4").hide();
+        }else{
+            $("#wxwcqk1").attr(checked,"checked");
+            $("#translation_process").val(midreport.paper_progress);
+            $("#datepicker2").val(midreport.paper_time)
+        }
+        $("#wxcomment").val(midreport.paper_comment);
+
+        if (midreport.experiment_complete.equal(0)){
+            $("#sywcqk0").attr(checked,"checked");
+        }else if(midreport.experiment_complete.equal(2)){
+            $("#sywcqk2").attr(checked,"checked");
+        }else{
+            $("#sywcqk1").attr(checked,"checked");
+            $("#syprogress").val(midreport.experiment_progress);
+            $("#datepicker3").val(midreport.experiment_time)
+        }
+        $("#sycomment").val(midreport.experiment_comment);
+
+        $("#ktprocess").val(midreport.project_progress);
+        $("#datepicker5").val(midreport.project_time);
+
+
+
+
+        console.log(midreport.course_id)
+    }
     function saveReport() {
         var that = this;
         //处理外文翻译
@@ -1123,7 +1143,7 @@
         } else {
             ex = 2;
         }
-        var ep = parseInt($("#syprocess")[0].value);
+        var ep = parseInt($("#syprogress")[0].value);
         var et = new Date($("#datepicker3")[0].value);
         var em = $("#sycomment")[0].value;
         //处理课题情况
@@ -1131,8 +1151,8 @@
         var kt = new Date($("#datepicker5")[0].value);
 
         var midreport = {
-            course_id: 311000,
-            state: 123,
+            course_id: 3110001,
+            state: 1,
             translation_complete: tc,
             translation_progress: tp,
             translation_time: tt,
@@ -1149,57 +1169,66 @@
             project_time: kt,
             advice: null
         };
-
         axios.post('http://localhost:8080/addMidreport', midreport)
-
             .then(function (response) {
-                console.log(response);
+                console.log(response)
             })
             .catch(function (error) {
                 console.log(error);
             });
-
-        // var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-        // httpRequest.open('POST', '', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
-        // httpRequest.withCredentials = true;
-        // httpRequest.send(midreport);//第三步：发送请求  将请求参数写在URL中
-        // /**
-        //  * 获取数据后的处理程序
-        //  */
-        // httpRequest.onreadystatechange = function () {
-        //     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-        //         var json = httpRequest.responseText;//获取到json字符串，还需解析
-        //         console.log(json);
+        // $.ajax({
+        //     type: "POST",
+        //     url: "http://localhost:8080/addMidreport",
+        //     data: midreport,
+        //     success: function(msg){
+        //         toastr.success("操作成功", "保存报告");
         //     }
-        // };
+        // });
+
     }
 </script>
 <script>
-    $('#submit').on('click',function () {
-        // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
+    $(function () {
+        //组件触发处理
+        $('#submit').on('click', function () {
+            // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
+            toastr.success("操作成功", "消息提示");
+        });
 
-        toastr.success("操作成功", "消息提示");
-    })
-</script>
-<script type="text/javascript">
-    function checkprogress(id,input) {
-        var regex = /^\d+$/;
-        console.log(id);
-        if(regex.test(input)){
-            if(input<=100 && input>0){
+        $(".translation_radio :radio").change(function () {
+
+            $(".wcqk4").toggle();
+        });
+        $(".wx_radio :radio").change(function () {
+
+            $(".wxwcqk4").toggle();
+        });
+        $(".sy_radio :radio").change(function () {
+
+            $(".sywcqk4").toggle();
+        });
+        $(".progresst").blur(function () {
+            var that=this;
+            var id=that.id;
+             id = "#" + id;
+            var input=that.value;
+            var regex = /^\d+$/;
+            if (regex.test(input)) {
+                if (input <= 100 && input > 0) {
+                } else {
+                    toastr.warning("请输入0-100的数字");
+                    $(id).val("");
+                }
             }else{
                 toastr.warning("请输入0-100的数字");
-                var t="#"+id;
-                $(t).val("");
+                $(id).val("");
             }
-        }
-    }
-    function displaypro(id) {
-        var patt1 = /([a-z]{4})/;
-        console.log( id.match(patt1))
+        });
+
+    });
 
 
-    }
 </script>
+
 </body>
 </html>
