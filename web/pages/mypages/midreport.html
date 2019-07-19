@@ -46,7 +46,7 @@
     <script src="../../bower_components/toastr/toastr.min.js"></script>
     <link rel="stylesheet" href="../../bower_components/toastr/toastr.min.css">
 
-    <!-- axios-->
+    <!--AXIOS-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
@@ -557,7 +557,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="wcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -619,7 +620,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div  class="wxwcqk4 gxf_designTable_secondTitle"><h3
+                                <div class="wxwcqk4 gxf_designTable_secondTitle"><h3
                                         class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl">请填写0-100范围内的数字</span>
                                 </h3>
@@ -637,7 +638,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="wxwcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="wxwcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -683,18 +685,18 @@
                                 <div class="gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
                                     <i> </i>完成情况<span class="statement margl"></span></h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="sy_radio gxf_rangy_left gxf_noRangy"><input type="radio" id="sywcqk0"
-                                                                                       name="radio_27_sywcqk" value="0">
+                                        <div class="sy_radio gxf_rangy_left gxf_noRangy"><input type="radio"
+                                                                                                id="sywcqk0"
+                                                                                                name="radio_27_sywcqk"
+                                                                                                value="0">
                                             <label for="sywcqk0" class="margr">完成</label><input type="radio"
                                                                                                 id="sywcqk1"
                                                                                                 name="radio_27_sywcqk"
-                                                                                                value="1"
-                                                                                                checked="checked">
+                                                                                                value="1">
                                             <label for="sywcqk1" class="margr">部分完成</label><input type="radio"
                                                                                                   id="sywcqk2"
                                                                                                   name="radio_27_sywcqk"
-                                                                                                  value="2"
-                                                                                                  onclick="displaypro(this.id)">
+                                                                                                  value="2" checked='checked'>
                                             <label
                                                     for="sywcqk2" class="margr">无实验</label></div>
                                         <div id="right_box_left_sywcqk" class="gxf_rangy_right_box gxf_noRangy">
@@ -706,7 +708,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div  class=" sywcqk4 gxf_designTable_secondTitle"><h3
+                                <div class=" sywcqk4 gxf_designTable_secondTitle"><h3
                                         class="gxf_designTable_secondTitle_Title">
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span
                                         class="statement margl">请填写0-100范围内的数字；若无实验，可不填写</span></h3>
@@ -724,7 +726,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="sywcqk4 gxf_designTable_secondTitle"><h3 class="gxf_designTable_secondTitle_Title">
+                                <div class="sywcqk4 gxf_designTable_secondTitle"><h3
+                                        class="gxf_designTable_secondTitle_Title">
                                     <i> </i>预计何时完成<span class="statement margl">请填写时间，格式为“××××年××月××日”；如无实验，可不填写</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
@@ -812,7 +815,8 @@
                                     <i> </i>若选择“部分完成”，请填写先完成进度（%）<span class="statement margl">请填写0-100范围内的数字；若无其它情况，可不填写</span>
                                 </h3>
                                     <div class="gxf_designTable_rangy clearfix">
-                                        <div class="gxf_rangy_left gxf_noRangy"><input type="text" class="form-control progresst"
+                                        <div class="gxf_rangy_left gxf_noRangy"><input type="text"
+                                                                                       class="form-control progresst"
                                                                                        placeholder="请填写0-100范围内的数字">
                                         </div>
                                         <div id="right_box_left_sybfjd" class="gxf_rangy_right_box gxf_noRangy">
@@ -936,7 +940,7 @@
                 </div>
             </div>
             <div class="margt">
-                <input id="save" onclick="saveReport()" class="clearBtn margl" type="button" value="保存">
+                <input id="save" class="clearBtn margl" type="button" value="保存">
                 <input id="submit" class="formBtn" type="button" value="提交">
             </div>
 
@@ -985,8 +989,8 @@
 <!-- ./wrapper -->
 
 
-
 <script>
+    //组件初始化
     $(function () {
         $('#datepicker').datepicker({
             autoclose: true
@@ -1018,36 +1022,21 @@
             showMethod: "fadeIn",
             hideMethod: "fadeOut"
         };
-        axios.get("http://localhost:8080/returnMidreport",{
-            params:{
-                course_id: "456"
-            }
-        }).then(function (response) {
-            console.log(response);
-        }).catch(function (error) {
-                console.log(error);
-            })
-        // initFileInput("kv-explorer")
-        // $("body").find("input,textarea").attr("readOnly",true)
-    });
 
-</script>
-<script>
-    $(document).ready(function () {
         $("#kv-explorer").fileinput({
             language: 'zh',
             theme: 'explorer-fas',
             uploadUrl: '#',
             overwriteInitial: false,
             initialPreviewAsData: true,
-            showPreview:true,//是否显示预览
+            showPreview: true,//是否显示预览
             initialPreview: [],
-            enctype:"multipart/form-data",
-            uploadExtraData:function () {
-                var data={
-                    apkName:$("#apkName").val(),
-                    versionNum:$("#versionNum").val(),
-                    description:$("#description").val()
+            enctype: "multipart/form-data",
+            uploadExtraData: function () {
+                var data = {
+                    apkName: $("#apkName").val(),
+                    versionNum: $("#versionNum").val(),
+                    description: $("#description").val()
                 };
                 return data;
             },
@@ -1063,138 +1052,6 @@
             console.log('文件上传失败！' + data.id);
         });
 
-
-
-    })
-</script>
-
-<script type="text/javascript">
-    //报告处理
-    $(function () {
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:8080/returnMidreport",
-            data: {course_id:"4587"},
-            success: function(msg){
-                $("body").find("input,textarea").attr("readOnly",true);
-               initReport(msg.success)
-            }
-        });
-
-    });
-
-
-    function initReport(midreport){
-        if(midreport.translation_complete.equal(1)){
-            $("#wcqk0").attr(checked,"checked");
-            $(".wcqk4").hide();
-        }else{
-            $("#wcqk1").attr(checked,"checked");
-            $("#translation_process").val(midreport.translation_progress);
-            $("#datepicker").val(midreport.translation_time)
-        }
-        $("#translation_comment").val(midreport.translation_comment);
-
-        if(midreport.paper_complete.equal(1)){
-            $("#wxwcqk0").attr(checked,"checked");
-            $(".wcqk4").hide();
-        }else{
-            $("#wxwcqk1").attr(checked,"checked");
-            $("#translation_process").val(midreport.paper_progress);
-            $("#datepicker2").val(midreport.paper_time)
-        }
-        $("#wxcomment").val(midreport.paper_comment);
-
-        if (midreport.experiment_complete.equal(0)){
-            $("#sywcqk0").attr(checked,"checked");
-        }else if(midreport.experiment_complete.equal(2)){
-            $("#sywcqk2").attr(checked,"checked");
-        }else{
-            $("#sywcqk1").attr(checked,"checked");
-            $("#syprogress").val(midreport.experiment_progress);
-            $("#datepicker3").val(midreport.experiment_time)
-        }
-        $("#sycomment").val(midreport.experiment_comment);
-
-        $("#ktprocess").val(midreport.project_progress);
-        $("#datepicker5").val(midreport.project_time);
-
-
-
-
-        console.log(midreport.course_id)
-    }
-    function saveReport() {
-        var that = this;
-        //处理外文翻译
-        var tc = $("#wcqk0")[0].checked ? 0 : 1;
-        var tp = parseInt($("#translation_process")[0].value);
-        var tt = new Date($("#datepicker")[0].value);
-        var tm = $("#translation_comment")[0].value;
-        //处理文献综述
-        var pc = $("#wxwcqk0")[0].checked ? 0 : 1;
-        var pp = parseInt($("#wxprogress")[0].value);
-        var pt = new Date($("#datepicker2")[0].value);
-        var pm = $("#wxcomment")[0].value;
-        //处理实验进展
-        var ec = 0;
-        if ($("#sywcqk1")[0].checked) {
-            ex = 1;
-        } else {
-            ex = 2;
-        }
-        var ep = parseInt($("#syprogress")[0].value);
-        var et = new Date($("#datepicker3")[0].value);
-        var em = $("#sycomment")[0].value;
-        //处理课题情况
-        var kp = parseInt($("#ktprocess")[0].value);
-        var kt = new Date($("#datepicker5")[0].value);
-
-        var midreport = {
-            course_id: 3110001,
-            state: 1,
-            translation_complete: tc,
-            translation_progress: tp,
-            translation_time: tt,
-            translation_comment: tm,
-            paper_complete: pc,
-            paper_progress: pp,
-            paper_time: pt,
-            paper_comment: pm,
-            experiment_complete: ec,
-            experiment_progress: ep,
-            experiment_time: et,
-            experiment_comment: em,
-            project_progress: kp,
-            project_time: kt,
-            advice: null
-        };
-        axios.post('http://localhost:8080/addMidreport', midreport)
-            .then(function (response) {
-                console.log(response)
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        // $.ajax({
-        //     type: "POST",
-        //     url: "http://localhost:8080/addMidreport",
-        //     data: midreport,
-        //     success: function(msg){
-        //         toastr.success("操作成功", "保存报告");
-        //     }
-        // });
-
-    }
-</script>
-<script>
-    $(function () {
-        //组件触发处理
-        $('#submit').on('click', function () {
-            // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
-            toastr.success("操作成功", "消息提示");
-        });
-
         $(".translation_radio :radio").change(function () {
 
             $(".wcqk4").toggle();
@@ -1208,10 +1065,10 @@
             $(".sywcqk4").toggle();
         });
         $(".progresst").blur(function () {
-            var that=this;
-            var id=that.id;
-             id = "#" + id;
-            var input=that.value;
+            var that = this;
+            var id = that.id;
+            id = "#" + id;
+            var input = that.value;
             var regex = /^\d+$/;
             if (regex.test(input)) {
                 if (input <= 100 && input > 0) {
@@ -1219,13 +1076,151 @@
                     toastr.warning("请输入0-100的数字");
                     $(id).val("");
                 }
-            }else{
+            } else {
                 toastr.warning("请输入0-100的数字");
                 $(id).val("");
             }
         });
 
     });
+
+</script>
+
+<script type="text/javascript">
+    //页面加载先判断是否有之前的版本
+    $(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/returnMidreport",
+            data: {course_id: "3110001"},
+            success: function (msg) {
+                initReport(msg.success)
+            }
+        });
+        function initReport(midreport) {
+            console.log(midreport.translation_complete);
+            if (midreport.state !== "SAVE") {
+                $("body").find("input,textarea").attr("readOnly", true);
+                $("#submit").hide();
+                $("#save").hide();
+            }
+            if (midreport.translation_complete == 1) {
+                $("#wcqk0").attr('checked', "checked");
+                $(".wcqk4").hide();
+            } else {
+                $("#wcqk1").attr('checked', "checked");
+                $("#translation_process").val(midreport.translation_progress);
+                $("#datepicker").val(midreport.translation_time)
+            }
+            $("#translation_comment").val(midreport.translation_comment);
+
+            if (midreport.paper_complete == 1) {
+                $("#wxwcqk0").attr('checked', "checked");
+                $(".wxwcqk4").hide();
+            } else {
+                $("#wxwcqk1").attr('checked', "checked");
+                $("#translation_process").val(midreport.paper_progress);
+                $("#datepicker2").val(midreport.paper_time)
+            }
+            $("#wxcomment").val(midreport.paper_comment);
+
+            if (midreport.experiment_complete == 0) {
+                $("#sywcqk0").attr('checked', "checked");
+                $(".sywcqk4").hide();
+            } else if (midreport.experiment_complete == 2) {
+                $("#sywcqk2").attr('checked', "checked");
+                $(".sywcqk4").hide();
+            } else {
+                $("#sywcqk1").attr('checked', "checked");
+                $("#syprogress").val(midreport.experiment_progress);
+                $("#datepicker3").val(midreport.experiment_time)
+            }
+            $("#sycomment").val(midreport.experiment_comment);
+
+            $("#ktprocess").val(midreport.project_progress);
+            $("#datepicker5").val(midreport.project_time);
+
+
+            console.log(midreport.course_id)
+        }
+    });
+</script>
+<script type="text/javascript">
+   //报告保存提交处理
+    $(function () {
+        //提交报告
+        $('#submit').on('click', function () {
+            // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
+            commitReport(3110001, "SUBMIT");
+            toastr.success("提交成功", "消息提示");
+            window.location.reload();
+        });
+        $("#save").on('click', function () {
+            commitReport(3110001, "SAVE")
+            toastr.success("保存成功", "消息提示");
+            window.location.reload();
+
+        })
+
+
+        function commitReport(course_id, state) {
+            var that = this;
+            //处理外文翻译
+            var tc = $("#wcqk0")[0].checked ? 0 : 1;
+            var tp = parseInt($("#translation_process")[0].value);
+            var tt = new Date($("#datepicker")[0].value);
+            var tm = $("#translation_comment")[0].value;
+            //处理文献综述
+            var pc = $("#wxwcqk0")[0].checked ? 0 : 1;
+            var pp = parseInt($("#wxprogress")[0].value);
+            var pt = new Date($("#datepicker2")[0].value);
+            var pm = $("#wxcomment")[0].value;
+            //处理实验进展
+            var ec = 0;
+            if ($("#sywcqk1")[0].checked) {
+                ec = 1;
+            } else {
+                ec = 2;
+            }
+            var ep = parseInt($("#syprogress")[0].value);
+            var et = new Date($("#datepicker3")[0].value);
+            var em = $("#sycomment")[0].value;
+            //处理课题情况
+            var kp = parseInt($("#ktprocess")[0].value);
+            var kt = new Date($("#datepicker5")[0].value);
+
+
+            //state:  状态: SAVE COMMIT PASS FAIL
+            //version: 版本号
+            var midreport = {
+                course_id: course_id,
+                state: state,
+                translation_complete: tc,
+                translation_progress: tp,
+                translation_time: tt,
+                translation_comment: tm,
+                paper_complete: pc,
+                paper_progress: pp,
+                paper_time: pt,
+                paper_comment: pm,
+                experiment_complete: ec,
+                experiment_progress: ep,
+                experiment_time: et,
+                experiment_comment: em,
+                project_progress: kp,
+                project_time: kt,
+                advice: null,
+                create_time: new Date()
+            };
+            axios.post('http://localhost:8080/addMidreport', midreport)
+                .then(function (response) {
+                    console.log(response)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+    })
 
 
 </script>
