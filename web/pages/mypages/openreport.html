@@ -1063,6 +1063,8 @@
         });
     })
 </script>
+
+
 <script type="text/javascript">
     $(function () {
         initFileInput("对应input的id");
@@ -1101,101 +1103,119 @@
                 console.log('文件上传失败！' + data.id);
             })
         }
-
-        function saveContent() {
-            var c_s = $(".my-textarea")[0].value;
-            var c_o = $(".my-textarea")[1].value;
-            var r_c = $(".my-textarea")[2].value;
-            var r_m = $(".my-textarea")[3].value;
-            var r_s = $(".my-textarea")[4].value;
-            var references = $(".my-textarea")[5].value;
-            var m_t = $(".my-textarea")[6].value;
-            var m_p = $(".my-textarea")[7].value;
-            var m_h = $(".my-textarea")[8].value;
-            var t1_id = $(".my-textarea")[9].value;
-            var t2_id = $(".my-textarea")[10].value;
-            var t3_id = $(".my-textarea")[11].value;
-            var m_s = $(".my-textarea")[12].value;
-            var state = $(".my-textarea")[13].value;
-            var advice = $(".my-textarea")[14].value;
-
-            var datalist = {
-                id: 123,
-                course_id: 456,
-                course_meaning: c_s,
-                current_overview: c_o,
-                research_content: r_c,
-                research_mind: r_m,
-                research_schedule: r_s,
-                references: references,
-                meeting_time: m_t,
-                meeting_place: m_p,
-                meeting_host: m_h,
-                teacher1_id: t1_id,
-                teacher2_id: t2_id,
-                teacher3_id: t3_id,
-                meeting_summary: m_s,
-                state: state,
-                advice: advice
-            };
-            Jdatalist = Json.stringify(datalist);
-            $.ajax({
-                type:'POST',
-                url:'http://localhost:8080/ssmDemo_war_exploded/addMidreport',
-                data: Jdatalist,
-                dataType: 'json',
-                contentType: application/json,
-                success: function (data) {
-                    alert('Success')
-                    //发送数据成功后的处理代码，参数data就是返回的那个json
-                    var i;
-                    while(i<=15){
-                        document.getElementsByClassName("my-textarea")[i].value.innerHTML = data[0];
-                    }
-                    console.log("返回数据成功...")
-                },
-                error: function (err) {
-                    alert(err);
-                }
-            });
-        }
     });
-</script>
+    $("#save-input").click(function () {
+        var c_s = $("#1-textarea")[0].value;
+        var c_o = $(".my-textarea")[1].value;
+        var r_c = $(".my-textarea")[2].value;
+        var r_m = $(".my-textarea")[3].value;
+        var r_s = $(".my-textarea")[4].value;
+        var references = $(".my-textarea")[5].value;
+        var m_t = $(".my-textarea")[6].value;
+        var m_p = $(".my-textarea")[7].value;
+        var m_h = $(".my-textarea")[8].value;
+        var t1_id = $(".my-textarea")[9].value;
+        var t2_id = $(".my-textarea")[10].value;
+        var t3_id = $(".my-textarea")[11].value;
+        var m_s = $(".my-textarea")[12].value;
+        var state = $(".my-textarea")[13].value;
+        var advice = $(".my-textarea")[14].value;
 
-<script>
-    $('#submit-input').on('click',function () {
-        // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
-        toastr.options = {
-            closeButton: false,
-            debug: false,
-            progressBar: true,
-            positionClass: "toast-top-center",
-            onclick: null,
-            showDuration: "300",
-            hideDuration: "800",
-            timeOut: "1000",
-            extendedTimeOut: "1000",
-            showEasing: "swing",
-            hideEasing: "linear",
-            showMethod: "fadeIn",
-            hideMethod: "fadeOut"
+        var openreport = {
+            id: 147963,
+            course_id: 63096,
+            course_meaning: c_s,
+            current_overview: c_o,
+            research_content: r_c,
+            research_mind: r_m,
+            research_schedule: r_s,
+            references: references,
+            meeting_time: m_t,
+            meeting_place: m_p,
+            meeting_host: m_h,
+            teacher1_id: t1_id,
+            teacher2_id: t2_id,
+            teacher3_id: t3_id,
+            meeting_summary: m_s,
+            state: state,
+            advice: advice
         };
-        toastr.success("操作成功", "消息提示");
+        axios.post('http://localhost:8080/addOpenReport', openreport)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     })
+    $("#submit-input").click(function () {
+        var c_s = $("#1-textarea")[0].value;
+        var c_o = $(".my-textarea")[1].value;
+        var r_c = $(".my-textarea")[2].value;
+        var r_m = $(".my-textarea")[3].value;
+        var r_s = $(".my-textarea")[4].value;
+        var references = $(".my-textarea")[5].value;
+        var m_t = $(".my-textarea")[6].value;
+        var m_p = $(".my-textarea")[7].value;
+        var m_h = $(".my-textarea")[8].value;
+        var t1_id = $(".my-textarea")[9].value;
+        var t2_id = $(".my-textarea")[10].value;
+        var t3_id = $(".my-textarea")[11].value;
+        var m_s = $("#22-textarea")[0].value;
+        // var state = $(".my-textarea")[13].value;
+        // var advice = $(".my-textarea")[14].value;
 
-    // axis.get("",{
-    //     params: {
-    //         id: 123
-    //     }
-    // })
-    // .then(function (response) {
-    //     console.log(response)
-    // ;})
-    // .catch(function (reason) {
-    //     console.log(reason)
-    // });
-
-
+        var openreport = {
+            id: c_s,
+            course_id: 456,
+            course_meaning: "必定无",
+            current_overview: c_o,
+            research_content: r_c,
+            research_mind: r_m,
+            research_schedule: r_s,
+            references: references,
+            meeting_time: m_t,
+            meeting_place: m_p,
+            meeting_host: m_h,
+            teacher1_id: t1_id,
+            teacher2_id: t2_id,
+            teacher3_id: t3_id,
+            meeting_summary: m_s,
+            state: "WAIT",
+            advice: 123
+        };
+        /*axios.post('http://localhost:8080/getOpenReport?id="id"', openreport.id)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });*/
+        $.ajax({
+            type: "POST",
+            url: "/getOpenReport",
+            data: { "id" :openreport.id},
+            success: function(msg){
+                // alert( "Data Saved: " + msg );
+                toastr.options = {
+                    closeButton: false,
+                    debug: false,
+                    progressBar: true,
+                    positionClass: "toast-top-center",
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "800",
+                    timeOut: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut"
+                };
+                toastr.success("操作成功", "消息提示");
+            }
+        });
+    })
 
 </script>
 
