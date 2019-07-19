@@ -930,7 +930,7 @@
                                 <p>添加附件：<span class="statement" id="scfj">上传有关中期报告的附件，上传的文件将以附件的形式显示。支持附件格式为doc，docx，pdf，wps，rar，zip</span>
                                 </p>
                                 <div class="file-loading">
-                                    <input id="kv-explorer" type="file" multiple>
+                                    <input id="kv-explorer" type="file" multiple name="items">
                                 </div>
 
                                 <div id="divFileProgressContainer"></div>
@@ -1026,17 +1026,20 @@
         $("#kv-explorer").fileinput({
             language: 'zh',
             theme: 'explorer-fas',
-            uploadUrl: '#',
+            uploadUrl: 'http://localhost:8080/saveFile',
             overwriteInitial: false,
             initialPreviewAsData: true,
-            showPreview: true,//是否显示预览
-            initialPreview: [],
-            enctype: "multipart/form-data",
-            uploadExtraData: function () {
-                var data = {
-                    apkName: $("#apkName").val(),
-                    versionNum: $("#versionNum").val(),
-                    description: $("#description").val()
+            showPreview:true,//是否显示预览
+            initialPreview: [{
+                img1:"a.png"
+            }],
+            enctype:"multipart/form-data",
+            uploadExtraData:function () {
+                var data={
+                    apkName:$("#apkName").val(),
+                    versionNum:$("#versionNum").val(),
+                    description:$("#description").val()
+
                 };
                 return data;
             },
