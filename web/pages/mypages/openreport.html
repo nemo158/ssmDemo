@@ -697,7 +697,7 @@
 
                     <!--两个按钮-->
                     <div class="margt">
-                        <input id="save-input" onclick="saveReport()" class="clearBtn margl" type="button" value="保存">
+                        <input id="save-input" class="clearBtn margl" type="button" value="保存">
                         <input id="submit-input"  class="formBtn" type="button" value="提交">
                     </div>
 
@@ -1106,7 +1106,7 @@
     });
     $("#save-input").click(function () {
         var c_s = $("#1-textarea")[0].value;
-        var c_o = $(".my-textarea")[1].value;
+        var c_o = $("#2-textarea")[0].value;
         var r_c = $(".my-textarea")[2].value;
         var r_m = $(".my-textarea")[3].value;
         var r_s = $(".my-textarea")[4].value;
@@ -1117,12 +1117,12 @@
         var t1_id = $(".my-textarea")[9].value;
         var t2_id = $(".my-textarea")[10].value;
         var t3_id = $(".my-textarea")[11].value;
-        var m_s = $(".my-textarea")[12].value;
-        var state = $(".my-textarea")[13].value;
-        var advice = $(".my-textarea")[14].value;
+        // var m_s = $(".my-textarea")[12].value;
+        // var state = $(".my-textarea")[13].value;
+        // var advice = $(".my-textarea")[14].value;
 
         var openreport = {
-            id: 147963,
+            id: c_s,
             course_id: 63096,
             course_meaning: c_s,
             current_overview: c_o,
@@ -1136,9 +1136,11 @@
             teacher1_id: t1_id,
             teacher2_id: t2_id,
             teacher3_id: t3_id,
-            meeting_summary: m_s,
-            state: state,
-            advice: advice
+            meeting_summary: m_h,
+            state: m_h,
+            advice: m_h,
+            version:c_o,
+            submit_time: m_t
         };
         axios.post('http://localhost:8080/addOpenReport', openreport)
             .then(function (response) {
@@ -1182,7 +1184,8 @@
             teacher3_id: t3_id,
             meeting_summary: m_s,
             state: "WAIT",
-            advice: 123
+            advice: 123,
+            version: c_o
         };
         /*axios.post('http://localhost:8080/getOpenReport?id="id"', openreport.id)
             .then(function (response) {
