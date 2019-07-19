@@ -23,7 +23,6 @@ public class MidreportServicceImpl implements MidreportService{
     @Transactional
     @Override
     public Midreport findreport(int course_id,int version) {
-        System.out.println(course_id+" "+version);
         return midreportMapper.selectMidreport(course_id,version);
     }
 }
