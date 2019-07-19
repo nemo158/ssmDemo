@@ -25,4 +25,11 @@ public class MidreportServicceImpl implements MidreportService{
     public Midreport findreport(int course_id,int version) {
         return midreportMapper.selectMidreport(course_id,version);
     }
+    @Transactional
+    @Override
+    public void addMidreportpath(String finalpath,String course_id,String version){
+        System.out.println("2"+finalpath+" "+course_id+" "+version);
+        midreportMapper.insertMidreportpath(finalpath,course_id,version);
+
+    }
 }

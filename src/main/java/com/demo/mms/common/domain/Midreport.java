@@ -31,6 +31,11 @@ public class Midreport {
 
     private String advice;
     private int version;
+    private String path;
+
+    public void setPath(String path) {
+        this.path = path;
+    }
 
     public void setVersion(int version) {
         this.version = version;
@@ -182,5 +187,9 @@ public class Midreport {
 
     public int getVersion() {
         return version;
+    }
+
+    public String getPath() {
+        return path;
     }
 }
