@@ -54,7 +54,7 @@ public class MidreportController {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
                 //设置上传文件的保存地址目录
-                String dirPath="D:\\16级\\ssmDemo0\\web\\storage\\"+course_id+"\\";
+                String dirPath="D:\\16级\\ssmDemo0\\web\\storage\\";
                 File file =new File(dirPath);
                 //如果保存文件的地址不存在，就先创建目录
                 if(!file.exists()){
