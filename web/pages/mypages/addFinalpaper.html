@@ -490,23 +490,41 @@
                     <tr>
                         <td>
                             <div class="WZN-lrtable-l">【文件名】：</div>
+                            <div class="WZN-lrtable-r">
+                                <input  style="margin-bottom: 10px" id="papername" type="text" class="form-control ">
+                                <div class="file-loading">
+                                    <input id="paperfile" type="file" multiple name="items">
+                                </div>
+                            </div>
                             <div class="WZN-lrtable-r ">
-                                <span id="pianming">2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊 </span>
-                                <a id="pmSpan" class="listA margl"
-                                   href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=0&amp;user=2015141463170&amp;userServerID=0&amp;fileID=9079&amp;universityNum=2647&amp;isHistory=0&amp;check=412becd2414a52e1383b9197f8eeeef0"
-                                   style="" download="2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊 ">点击下载原文</a>
-                                <a id="clickPostil" style="" class="listA margl" href="javascript:;">查看批注</a>
-                                <span id="clickLearning" class="margl" style=""><a class="listA" href="javascript:;">阅读原文</a></span>
+                                <input id="filename" type="text" class="form-control ">
+                                <div style="display:none">
+                                    <a id="pmSpan" class="listA margl"
+                                       href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=0&amp;user=2015141463170&amp;userServerID=0&amp;fileID=9079&amp;universityNum=2647&amp;isHistory=0&amp;check=412becd2414a52e1383b9197f8eeeef0"
+                                       style=""
+                                       download="2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊 ">点击下载原文</a>
+                                    <a id="clickPostil" style="" class="listA margl" href="javascript:;">查看批注</a>
+                                    <span id="clickLearning" class="margl" style=""><a class="listA"
+                                                                                       href="javascript:;">阅读原文</a></span>
+                                </div>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="WZN-lrtable-l">【检测结果】：</div>
+
                             <div class="WZN-lrtable-r">
-                                <span id="jcjg"><span class="per_y" title="文字复制比">7.5%</span><a class="listA margl"
-                                                                                                target="_Blank"
-                                                                                                href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=report&amp;fileID=9079&amp;fileServerID=1;7;131587;&amp;reportType=1&amp;user=2015141463170&amp;universityNum=2647&amp;isHistory=0&amp;check=8e3b4abd571120077b1a1a04ffde5985">下载报告单</a></span>
+                                <input  style="margin-bottom: 10px" id="result" type="text" class="form-control ">
+                                <div class="file-loading">
+                                    <input id="resultfile" type="file" multiple name="items">
+                                </div>
+                            </div>
+                            <div class="WZN-lrtable-r" style="display: none">
+                                <input id="resultshown" type="text" class="form-control ">
+                                <a class="listA margl"
+                                                                                        target="_Blank"
+                                                                                        href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=report&amp;fileID=9079&amp;fileServerID=1;7;131587;&amp;reportType=1&amp;user=2015141463170&amp;universityNum=2647&amp;isHistory=0&amp;check=8e3b4abd571120077b1a1a04ffde5985">下载报告单</a></span>
                                 <span><input id="queren_btn" type="button" class="formBtn margl" name="name"
                                              value="确认检测" style="display:none;"></span>
                             </div>
@@ -514,85 +532,49 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="WZN-lrtable-l">【写作助手】：</div>
-                            <div class="WZN-lrtable-r">
-                                <span id="writingHelper"><a class="listA"
-                                                            href="javascript:openframe(&#39;写作检查结果&#39;,&#39;../Thesis/ContentDetectionResults.html?id=6134&amp;writeaid=7760&amp;isHistory=0&amp;sid=120007552&#39;);">查看写作检查结果</a><span
-                                        class="mgL">格式检查未提交</span><span class="mgL"><span class="txt_red">如果论文需要多次写作检查和格式检查，请点击这里</span> <a
-                                        id="goWritingHelper" class="listA A_line" href="javascript:;">进入写作助手</a></span></span>
+                            <div class="WZN-lrtable-l">【关键词】：</div>
+                            <div class="WZN-lrtable-r" id="gjc"><input id="keys" type="text" class="form-control ">
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="WZN-lrtable-l">【关键词】：</div>
-                            <div class="WZN-lrtable-r" id="gjc">条件生成对抗网络;类不平衡问题;分类精度;人工样本</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             <div class="WZN-lrtable-l">【创新点】：</div>
-                            <div class="WZN-lrtable-r" id="cxd">使用条件生对抗网络来对类不平衡的图片数据集进行样本扩充，缓解不平衡问题。</div>
+                            <div class="WZN-lrtable-r" id="cxd"><input id="points" type="text" class="form-control ">
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="WZN-lrtable-l">【中文摘要】：</div>
                             <div class="WZN-lrtable-r" id="zwzy">
-                                类不平衡问题是机器学习研究领域经常遇到的问题，会对分类结果产生一定的负面影响，目前有效的解决方案是对数据集中少数类别的数据进行扩充。针对图片数据集来说，现在主流的方法是通过过采样技术来增加样本的数量，这种方法虽然能缓解类不平衡问题，但是也会带来例如过拟合等方面的问题。生成对抗网络作为神经网络的一种，其主要用途在于制造与真实样本十分接近的人工样本。通过输入真实数据，网络模型经过生成模型和判别模型二者博弈的过程，输出的是和输入的数据非常类似的样本，此种算法可以有效缓解类不平衡问题带来的影响。
-                                在生成对抗网络模型的基础上，通过在建模时对两个模型增加控制条件来输出指定类别的人造数据，可以专门针对数据集中的少数类数据进行扩充。使用这种条件生成对抗网络可以避免原始生成对抗网络模型生成数据的不确定性，对于类不平衡问题来说更有现实意义。主要工作如下：
-                                （1）了解不平衡数据集对分类问题的影响，对现有的数据扩充方法进行调研，熟悉各种方式的特点，并总结出其存在的问题。
-                                （2）使用条件生成对抗网络模型来生成人工样本，既达到了数据扩充的目的，又避免了现有方法所存在的问题。
-                                （3）研究相关图片数据集，根据实验要求选择出不平衡数据集，同时对平衡数据集进行处理来制造少数类，供算法研究的使用。
-                                （4）通过训练不平衡数据集，生成少数类的人工样本，使用分类算法对扩充前后的数据集进行训练，发现分类精度有所提升，证明生成的数据具有一定的有效性。
+                                <textarea id="summary" class="form-control" rows="4" placeholder=""></textarea>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="WZN-lrtable-l">【英文摘要】：</div>
-                            <div class="WZN-lrtable-r" id="ywzy">Class imbalance is a problem often encountered in the
-                                field of machine learning research, which will have a certain negative impact on the
-                                classification results. At present, the effective solution is to expand the data of a
-                                few categories in the data set. For the image data set, the current mainstream method is
-                                to increase the number of samples through oversampling technology. Although this method
-                                can alleviate the problem of class imbalance, it will also bring problems such as
-                                overfitting. As a kind of neural network, the main purpose of generating antagonistic
-                                network is to produce artificial samples very close to real samples. By inputting real
-                                data, the network model generates a game between the model and the discriminant model,
-                                and the output is a sample which is very similar to the input data. This algorithm can
-                                effectively alleviate the impact of the class imbalance problem.
-                                On the basis of generating the antagonistic network model, the artificial data of the
-                                specified category can be output by adding control conditions to the two models during
-                                the modeling process. Using this condition to generate the antagonistic network can
-                                avoid the uncertainty of the data generated by the original antagonistic network model.
-                                The main work of is as follows:
-                                (1) Understanding the impact of unbalanced data sets on classification problems, deeply
-                                understanding the characteristics of various methods, and summarizing the existing
-                                problems.by investigating the existing data expansion methods.
-                                (2) Using conditional generation antagonistic network model to generate artificial
-                                samples not only achieves the purpose of data expansion, but also avoids the problems
-                                existing in existing methods.
-                                (3) Studying related picture data set, select unbalanced data set according to the
-                                requirement, and process balanced data set to produce a few classes for algorithm
-                                research.
-                                (4) By training the unbalanced data set and generating a small number of artificial
-                                samples, the classification algorithm is used to train the data set before and after
-                                expansion, and the classification accuracy is found to be improved, which proves that
-                                the generated data has certain validity.
+                            <div class="WZN-lrtable-r" id="ywzy">
+                                <textarea id="summary-e" class="form-control" rows="4" placeholder=""></textarea>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="WZN-lrtable-l">【其他】：</div>
-                            <div class="WZN-lrtable-r" id="others">无</div>
+                            <div class="WZN-lrtable-r"><input id="others" type="text" class="form-control "></div>
                         </td>
                     </tr>
                     <tr id="fujian">
                         <td>
                             <div class="WZN-lrtable-l">【附件】：</div>
-                            <div id="accessory" class="WZN-lrtable-r">
+                            <div class="WZN-lrtable-r">
+                                <div class="file-loading">
+                                    <input id="original_file" type="file" multiple name="items">
+                                </div>
+                            </div>
+                            <div class="WZN-lrtable-r" style="display:none">
                                 <span id="accessorySpan">附件.zip</span>&nbsp;&nbsp;&nbsp;<a id="accessoryA" class="listA"
                                                                                            href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=6&amp;user=2015141463170&amp;userServerID=0&amp;fileID=49037&amp;universityNum=2647&amp;isHistory=0&amp;check=9fd80099b7cc20715952b2b70f6eac45"
                                                                                            style="" download="附件.zip">点击下载</a>
@@ -601,6 +583,12 @@
                     </tr>
                     </tbody>
                 </table>
+            </div>
+            <div>
+                <div class="margt">
+                    <input id="save" class="clearBtn margl" type="button" value="保存">
+                    <input id="submit" class="formBtn" type="button" value="提交">
+                </div>
             </div>
 
             <div class="gxf_problem gxf_problem_reader" id="CheckDetail">
@@ -637,8 +625,89 @@
             <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
             reserved.
         </footer>
-
-
     </div>
+</div>
+<script type="text/javascript">
+    $("div [name='items']" ).fileinput({
+        language: 'zh',
+        theme: 'explorer-fas',
+        uploadUrl: 'http://localhost:8080/saveFile',
+        overwriteInitial: false,
+        initialPreviewAsData: true,
+        showPreview: true,//是否显示预览
+        initialPreview: [],
+        showUpload:false,
+        enctype: "multipart/form-data",
+        uploadExtraData: function () {
+            var data = {
+
+            };
+            return data;
+        },
+        initialPreviewConfig: []
+    }).on('filepreupload', function (event, data, previewId, index) {     //上传中
+        var form = data.form, files = data.files, extra = data.extra,
+            response = data.response, reader = data.reader;
+        console.log('文件正在上传');
+    }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+        console.log('文件上传成功！' + data.id);
+
+    }).on('fileerror', function (event, data, msg) {  //一个文件上传失败
+        console.log('文件上传失败！' + data.id);
+    });
+    toastr.options = {
+        closeButton: false,
+        debug: false,
+        progressBar: true,
+        positionClass: "toast-top-center",
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "800",
+        timeOut: "1000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+    };
+</script>
+<script>
+    $("#save").on("click",function () {
+        commitPages("123","SAVE");
+        $("div [name='items']" ).fileinput('upload');
+        toastr.success("保存成功", "消息提示");
+        window.location.reload();
+
+    })
+    $("#submit").on("click",function () {
+        commitPages("123","SUBMIT");
+        $("div [name='items']" ).fileinput('upload');
+        toastr.success("提交成功", "消息提示");
+        window.location.reload();
+
+    });
+    function  commitPages(id,sta) {
+        var page={
+            studentid:id,
+            state:sta,
+            commit_time:new Date(),
+            reportname:$("#papername")[0].value,
+            keywoord:$("#keys")[0].value,
+            innovation_point:$("#points")[0].value,
+            chinese_abstract:$("#summary")[0].value,
+            english_abstract:$("#summary-e")[0].value,
+            others:$("#others")[0].value,
+            detection_result:$("#result")[0].value,
+        };
+
+        axios.post('http://localhost:8080/addFinalreport', page)
+            .then(function (response) {
+                console.log(response)
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+</script>
 </body>
 </html>

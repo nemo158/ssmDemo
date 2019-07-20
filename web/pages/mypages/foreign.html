@@ -563,11 +563,13 @@
 
 
 <script type="text/javascript">
+    //处理组件初始化
     $(document).ready(function() {
         $("div [name='summernote']").summernote({
             lang: 'zh-CN',
             tabsize: 4,
-            height: 700})
+            height: 700});
+
         $("div [name='items']" ).fileinput({
             language: 'zh',
             theme: 'explorer-fas',
@@ -595,7 +597,79 @@
         }).on('fileerror', function (event, data, msg) {  //一个文件上传失败
             console.log('文件上传失败！' + data.id);
         });
+        toastr.options = {
+            closeButton: false,
+            debug: false,
+            progressBar: true,
+            positionClass: "toast-top-center",
+            onclick: null,
+            showDuration: "300",
+            hideDuration: "800",
+            timeOut: "1000",
+            extendedTimeOut: "1000",
+            showEasing: "swing",
+            hideEasing: "linear",
+            showMethod: "fadeIn",
+            hideMethod: "fadeOut"
+        };
     })
+</script>
+<script type="text/javascript">
+    //页面信息处理
+
+    //初始化加载
+    $(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/returnMidreport",
+            data: {course_id: "3110002"},
+            success: function (msg) {
+                initReport(msg.success)
+            }
+        });
+        function initReport(page){
+            if (page.state !== "SAVE") {
+                $("body").find("div [name='items']").attr("readOnly", true);
+                $("#submit").hide();
+                $("#save").hide();
+            }
+            $('#original').summernote('code',page.original_content);
+            $('#translated').summernote('code',page.translation_content);
+        }
+    });
+    //保存提交
+    $("#save").on("click",function () {
+        commitPages("123","SAVE");
+        $("div [name='items']" ).fileinput('upload');
+        toastr.success("保存成功", "消息提示");
+        window.location.reload();
+
+
+    });
+    $("#submit").on("click",function () {
+        commitPages("123","SUBMIT");
+        $("div [name='items']" ).fileinput('upload');
+        toastr.success("提交成功", "消息提示");
+        window.location.reload();
+
+    });
+
+    function  commitPages(id,sta) {
+        var page={
+            course_id:id,
+            state:sta,
+            translation_content: $('#translated').summernote('code'),
+            original_content: $("original").summernote('code')
+        };
+
+        axios.post('http://localhost:8080/addMidreport', page)
+            .then(function (response) {
+                console.log(response)
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 </script>
 </body>
 </html>
