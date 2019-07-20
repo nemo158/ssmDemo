@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mms.dao.courseMapper">
+  <resultMap id="BaseResultMap" type="com.demo.mms.common.domain.course">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="avail_major" jdbcType="VARCHAR" property="availMajor" />
+    <result column="mode" jdbcType="VARCHAR" property="mode" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="attach_major" jdbcType="VARCHAR" property="attachMajor" />
+    <result column="instructor" jdbcType="VARCHAR" property="instructor" />
+    <result column="inst_id" jdbcType="INTEGER" property="instId" />
+    <result column="student" jdbcType="VARCHAR" property="student" />
+    <result column="student_id" jdbcType="INTEGER" property="studentId" />
+    <result column="inst_email" jdbcType="VARCHAR" property="instEmail" />
+    <result column="stu_major" jdbcType="VARCHAR" property="stuMajor" />
+    <result column="declare_time" jdbcType="TIMESTAMP" property="declareTime" />
+    <result column="resource" jdbcType="VARCHAR" property="resource" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="tea_title" jdbcType="VARCHAR" property="teaTitle" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, title, avail_major, mode, type, attach_major, instructor, inst_id, student, student_id, 
+    inst_email, stu_major, declare_time, resource, state, tea_title
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from course
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from course
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.demo.mms.common.domain.course">
+    insert into course (id, title, avail_major, 
+      mode, type, attach_major, 
+      instructor, inst_id, student, 
+      student_id, inst_email, stu_major, 
+      declare_time, resource, state, 
+      tea_title)
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{availMajor,jdbcType=VARCHAR}, 
+      #{mode,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{attachMajor,jdbcType=VARCHAR}, 
+      #{instructor,jdbcType=VARCHAR}, #{instId,jdbcType=INTEGER}, #{student,jdbcType=VARCHAR}, 
+      #{studentId,jdbcType=INTEGER}, #{instEmail,jdbcType=VARCHAR}, #{stuMajor,jdbcType=VARCHAR}, 
+      #{declareTime,jdbcType=TIMESTAMP}, #{resource,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+      #{teaTitle,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.mms.common.domain.course">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="availMajor != null">
+        avail_major,
+      </if>
+      <if test="mode != null">
+        mode,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="attachMajor != null">
+        attach_major,
+      </if>
+      <if test="instructor != null">
+        instructor,
+      </if>
+      <if test="instId != null">
+        inst_id,
+      </if>
+      <if test="student != null">
+        student,
+      </if>
+      <if test="studentId != null">
+        student_id,
+      </if>
+      <if test="instEmail != null">
+        inst_email,
+      </if>
+      <if test="stuMajor != null">
+        stu_major,
+      </if>
+      <if test="declareTime != null">
+        declare_time,
+      </if>
+      <if test="resource != null">
+        resource,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="teaTitle != null">
+        tea_title,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="availMajor != null">
+        #{availMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="mode != null">
+        #{mode,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="attachMajor != null">
+        #{attachMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="instructor != null">
+        #{instructor,jdbcType=VARCHAR},
+      </if>
+      <if test="instId != null">
+        #{instId,jdbcType=INTEGER},
+      </if>
+      <if test="student != null">
+        #{student,jdbcType=VARCHAR},
+      </if>
+      <if test="studentId != null">
+        #{studentId,jdbcType=INTEGER},
+      </if>
+      <if test="instEmail != null">
+        #{instEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="stuMajor != null">
+        #{stuMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="declareTime != null">
+        #{declareTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="resource != null">
+        #{resource,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="teaTitle != null">
+        #{teaTitle,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.mms.common.domain.course">
+    update course
+    <set>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="availMajor != null">
+        avail_major = #{availMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="mode != null">
+        mode = #{mode,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="attachMajor != null">
+        attach_major = #{attachMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="instructor != null">
+        instructor = #{instructor,jdbcType=VARCHAR},
+      </if>
+      <if test="instId != null">
+        inst_id = #{instId,jdbcType=INTEGER},
+      </if>
+      <if test="student != null">
+        student = #{student,jdbcType=VARCHAR},
+      </if>
+      <if test="studentId != null">
+        student_id = #{studentId,jdbcType=INTEGER},
+      </if>
+      <if test="instEmail != null">
+        inst_email = #{instEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="stuMajor != null">
+        stu_major = #{stuMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="declareTime != null">
+        declare_time = #{declareTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="resource != null">
+        resource = #{resource,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="teaTitle != null">
+        tea_title = #{teaTitle,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.mms.common.domain.course">
+    update course
+    set title = #{title,jdbcType=VARCHAR},
+      avail_major = #{availMajor,jdbcType=VARCHAR},
+      mode = #{mode,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      attach_major = #{attachMajor,jdbcType=VARCHAR},
+      instructor = #{instructor,jdbcType=VARCHAR},
+      inst_id = #{instId,jdbcType=INTEGER},
+      student = #{student,jdbcType=VARCHAR},
+      student_id = #{studentId,jdbcType=INTEGER},
+      inst_email = #{instEmail,jdbcType=VARCHAR},
+      stu_major = #{stuMajor,jdbcType=VARCHAR},
+      declare_time = #{declareTime,jdbcType=TIMESTAMP},
+      resource = #{resource,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR},
+      tea_title = #{teaTitle,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id = "selectCourse" parameterType="java.lang.Integer" resultType="com.demo.mms.common.domain.course">
+   select *
+   from course
+   where student_id =#(student_id);
+  </select>
+</mapper>
