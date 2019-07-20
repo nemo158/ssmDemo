@@ -396,7 +396,6 @@
                         <li><a href="./foreign.html "><i class="fa fa-circle-o"></i>提交外文译文和原件</a></li>
                         <li><a href="./literaturereview.html"><i class="fa fa-circle-o"></i>提交文献综述</a></li>
                         <li><a href="./finapaper.html "><i class="fa fa-circle-o"></i>提交毕业设计(论文)</a></li>
-                        <li><a href=" "><i class="fa fa-circle-o"></i>指导教师答疑安排</a></li>
                     </ul>
                 </li>
 
@@ -1026,7 +1025,7 @@
         $("#kv-explorer").fileinput({
             language: 'zh',
             theme: 'explorer-fas',
-            uploadUrl: 'http://localhost:8080/saveFile',
+            uploadUrl: 'http://localhost:8080/saveMidreport',
             overwriteInitial: false,
             initialPreviewAsData: true,
             showPreview: true,//是否显示预览
@@ -1101,7 +1100,7 @@
         function initReport(midreport) {
             console.log(midreport.translation_complete);
             if (midreport.state !== "SAVE") {
-                $("body").find("input,textarea").attr("readOnly", true);
+                $("body").find("input,textarea").attr("disabled", true);
                 $("#submit").hide();
                 $("#save").hide();
             }

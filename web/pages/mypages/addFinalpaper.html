@@ -393,7 +393,7 @@
                         <li><a href="./foreign.html "><i class="fa fa-circle-o"></i>提交外文译文和原件</a></li>
                         <li><a href="./literaturereview.html"><i class="fa fa-circle-o"></i>提交文献综述</a></li>
                         <li><a href="./finapaper.html "><i class="fa fa-circle-o"></i>提交毕业设计(论文)</a></li>
-                        <li><a href=" "><i class="fa fa-circle-o"></i>指导教师答疑安排</a></li>
+
                     </ul>
                 </li>
 
@@ -663,6 +663,34 @@
 
 </script>
 <script type="text/javascript">
+    //页面信息处理
+
+    //初始化加载
+    $(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/returnMidreport",
+            data: {studentid: "3110002"},
+            success: function (msg) {
+                initReport(msg.success)
+            }
+        });
+        function initReport(page){
+            if (page.state !== "SAVE") {
+                $("body").find('input, textarea').attr("readOnly", true);
+                $("#submit").hide();
+                $("#save").hide();
+            }
+            $("#papername").val(page.reportname);
+            $("#keys").val(page.innovation_point);
+            $("#points").val(page.chinese_abstract);
+            $("#summary").val(page.chinese_abstract);
+            $("#summary-e").val(page.english_abstract);
+            $("#others").val(page.others);
+            $("#result").val(page.detection_result);
+        }
+    });
+    //保存提交
     $("#save").on("click",function () {
         commitPages("123","SAVE");
         $("div [name='items']" ).fileinput('upload');
