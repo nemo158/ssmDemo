@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.HashMap;
 import java.util.List;
@@ -48,7 +50,10 @@ public class FinalreportController {
      */
     @RequestMapping(value = "/saveFinalreport",method = RequestMethod.POST)
     @ResponseBody
-    public Object saveFile(List<MultipartFile> items, @Param("studentid")Integer studentid,@Param("type") String type){
+    public Object saveFile(List<MultipartFile> items, @Param("studentid")Integer studentid, @Param("type") String type, HttpServletRequest request){
+//        HttpSession session = request.getSession();
+//
+        String savePath = request.getSession().getServletContext().getRealPath("/storage");;
         System.out.println(type);
         if(items !=null && items.size()>0){
             Integer version = finalreportService.addMaxversion(studentid);
@@ -60,7 +65,7 @@ public class FinalreportController {
             for (MultipartFile item : items) {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
-                String dirPath="D:\\16级\\ssmDemo0\\web\\storage\\"+studentid+"\\";
+                String dirPath=savePath+"/storage/"+studentid+"\\";
                 File file =new File(dirPath);
                 if(!file.exists()){
                     file.mkdirs();

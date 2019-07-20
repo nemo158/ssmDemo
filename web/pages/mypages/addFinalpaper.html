@@ -73,18 +73,20 @@
             <div class="navbar-custom-menu">
                 <div class="bannerRight">
                     <p class="john"><span id="user_name">王启帆(2015141463170)</span>, &nbsp;欢迎使用系统</p>
-                    <p class="character">学年：<span id="plan_name">2018-2019</span>&nbsp; / &nbsp;角色：<span class="role_name">学生</span><span id="academyName" title="专业：软件学院-软件工程">&nbsp; / &nbsp;专业：软件学院-...</span></p>
+                    <p class="character">学年：<span id="plan_name">2018-2019</span>&nbsp; / &nbsp;角色：<span
+                            class="role_name">学生</span><span id="academyName" title="专业：软件学院-软件工程">&nbsp; / &nbsp;专业：软件学院-...</span>
+                    </p>
                     <!--<input  id="hdUserDefinedRoles" value="[{&quot;name&quot;:&quot;管理员&quot;,&quot;value&quot;:1},{&quot;name&quot;:&quot;学生&quot;,&quot;value&quot;:2},{&quot;name&quot;:&quot;指导教师&quot;,&quot;value&quot;:3},{&quot;name&quot;:&quot;专业负责人&quot;,&quot;value&quot;:4},{&quot;name&quot;:&quot;教学秘书&quot;,&quot;value&quot;:5},{&quot;name&quot;:&quot;院长&quot;,&quot;value&quot;:6},{&quot;name&quot;:&quot;答辩录入员&quot;,&quot;value&quot;:7},{&quot;name&quot;:&quot;督导专家&quot;,&quot;value&quot;:8},{&quot;name&quot;:&quot;评阅专家&quot;,&quot;value&quot;:9},{&quot;name&quot;:&quot;辅助导师&quot;,&quot;value&quot;:10},{&quot;name&quot;:&quot;管理员（被授权）&quot;,&quot;value&quot;:11}]">-->
                     <!--<input id="hdAuthToken" value="">-->
                     <p class="quitChunk">
-                        <a id="knowledge" >诚信与学术规范<span class="new"></span></a>
+                        <a id="knowledge">诚信与学术规范<span class="new"></span></a>
                         <a id="WeChart">绑定微信</a>
-                        <a id="help" >帮助</a>
+                        <a id="help">帮助</a>
                         <a id="quit">退出</a>
                     </p>
                 </div>
             </div>
-            <img style=" float:left;padding:15px"  src="../../dist/img/scu.png">
+            <img style=" float:left;padding:15px" src="../../dist/img/scu.png">
             <p class="login-paper" id="xtmc">本科毕业论文（设计）管理系统</p>
         </nav>
     </header>
@@ -245,21 +247,19 @@
                     <tr>
                         <td>
                             <div class="WZN-lrtable-l">【文件名】：</div>
-                            <div class="WZN-lrtable-r">
-                                <input  style="margin-bottom: 10px" id="papername" type="text" class="form-control ">
+                            <div class="WZN-lrtable-r" >
+                                <input style="margin-bottom: 10px" id="papername" type="text" class="form-control ">
                                 <div class="file-loading">
                                     <input id="paperfile" type="file" multiple name="items">
                                 </div>
                             </div>
-                            <div class="WZN-lrtable-r ">
-                                <div style="display:none">
-                                    <a id="pmSpan" class="listA margl"
-                                       href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=0&amp;user=2015141463170&amp;userServerID=0&amp;fileID=9079&amp;universityNum=2647&amp;isHistory=0&amp;check=412becd2414a52e1383b9197f8eeeef0"
-                                       style=""
+                            <div class="WZN-lrtable-r "  style="display: none" id="file_download">
+                                <div id="file_name">   2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊</div>
+
+                                <div id="filename" >
+                                    <a id="file_path" class="listA margl"
+                                       href=""
                                        download="2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊 ">点击下载原文</a>
-                                    <a id="clickPostil" style="" class="listA margl" href="javascript:;">查看批注</a>
-                                    <span id="clickLearning" class="margl" style=""><a class="listA"
-                                                                                       href="javascript:;">阅读原文</a></span>
                                 </div>
                             </div>
                         </td>
@@ -267,18 +267,16 @@
                     <tr>
                         <td>
                             <div class="WZN-lrtable-l">【检测结果】：</div>
-
                             <div class="WZN-lrtable-r">
-                                <input  style="margin-bottom: 10px" id="result" type="text" class="form-control ">
+                                <input style="margin-bottom: 10px" id="result" type="text" class="form-control ">
                                 <div class="file-loading">
                                     <input id="resultfile" type="file" multiple name="items">
                                 </div>
                             </div>
-                            <div class="WZN-lrtable-r" style="display: none">
-                                <input id="resultshown" type="text" class="form-control ">
-                                <a class="listA margl" target="_Blank" href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=report&amp;fileID=9079&amp;fileServerID=1;7;131587;&amp;reportType=1&amp;user=2015141463170&amp;universityNum=2647&amp;isHistory=0&amp;check=8e3b4abd571120077b1a1a04ffde5985">下载报告单</a></span>
-                                <span><input id="queren_btn" type="button" class="formBtn margl" name="name"
-                                             value="确认检测" style="display:none;"></span>
+                            <div class="WZN-lrtable-r" id='result_download' style="display: none">
+                                <div id="result_name">   2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊</div>
+                                <a  id="result_path" class="listA margl" target="_Blank"
+                                   href="">下载报告单</a>
                             </div>
                         </td>
                     </tr>
@@ -326,8 +324,8 @@
                                     <input id="otherfile" type="file" multiple name="items">
                                 </div>
                             </div>
-                            <div class="WZN-lrtable-r" style="display:none">
-                                <span id="accessorySpan">附件.zip</span>&nbsp;&nbsp;&nbsp;<a id="accessoryA" class="listA"
+                            <div class="WZN-lrtable-r" id="other_file" style="display:none">
+                                <span id="other_name">附件.zip</span>&nbsp;&nbsp;&nbsp;<a id="other_path" class="listA"
                                                                                            href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=6&amp;user=2015141463170&amp;userServerID=0&amp;fileID=49037&amp;universityNum=2647&amp;isHistory=0&amp;check=9fd80099b7cc20715952b2b70f6eac45"
                                                                                            style="" download="附件.zip">点击下载</a>
                             </div>
@@ -396,7 +394,7 @@
             showMethod: "fadeIn",
             hideMethod: "fadeOut"
         };
-        $("#paperfile" ).fileinput({
+        $("#paperfile").fileinput({
             language: 'zh',
             theme: 'explorer-fas',
             uploadUrl: 'http://localhost:8080/saveFinalreport',
@@ -404,18 +402,18 @@
             initialPreviewAsData: true,
             showPreview: true,//是否显示预览
             initialPreview: [],
-            showUpload:false,
+            showUpload: false,
             enctype: "multipart/form-data",
             uploadExtraData: function () {
                 var data = {
-                    studentid:"123",
-                    type:"paper"
+                    studentid: "123",
+                    type: "paper"
                 };
                 return data;
             },
             initialPreviewConfig: []
         })
-        $("#resultfile" ).fileinput({
+        $("#resultfile").fileinput({
             language: 'zh',
             theme: 'explorer-fas',
             uploadUrl: 'http://localhost:8080/saveFinalreport',
@@ -423,18 +421,18 @@
             initialPreviewAsData: true,
             showPreview: true,//是否显示预览
             initialPreview: [],
-            showUpload:false,
+            showUpload: false,
             enctype: "multipart/form-data",
             uploadExtraData: function () {
                 var data = {
-                    studentid:"123",
-                    type:"result"
+                    studentid: "123",
+                    type: "result"
                 };
                 return data;
             },
             initialPreviewConfig: []
         })
-        $("#otherfile" ).fileinput({
+        $("#otherfile").fileinput({
             language: 'zh',
             theme: 'explorer-fas',
             uploadUrl: 'http://localhost:8080/saveFinalreport',
@@ -442,12 +440,12 @@
             initialPreviewAsData: true,
             showPreview: true,//是否显示预览
             initialPreview: [],
-            showUpload:false,
+            showUpload: false,
             enctype: "multipart/form-data",
             uploadExtraData: function () {
                 var data = {
-                    studentid:"123",
-                    type:"other"
+                    studentid: "123",
+                    type: "other"
                 };
                 return data;
             },
@@ -464,15 +462,16 @@
     $(function () {
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/returnMidreport",
-            data: {studentid: "3110002"},
+            url: "http://localhost:8080/returnFinalreport",
+            data: {studentid: "123"},
             success: function (msg) {
                 initReport(msg.success)
             }
         });
-        function initReport(page){
+
+        function initReport(page) {
             if (page.state !== "SAVE") {
-                $("body").find('input, textarea').attr("readOnly", true);
+                $("body").find('input, textarea').attr("disabled", true);
                 $("#submit").hide();
                 $("#save").hide();
             }
@@ -483,40 +482,60 @@
             $("#summary-e").val(page.english_abstract);
             $("#others").val(page.others);
             $("#result").val(page.detection_result);
+
+            var reportA = page.fileadress;
+            var resultA = page.result_address;
+            var otherA = page.enclosure_address;
+
+            if (reportA != null) {
+                $("#file_download").show();
+                $("#file_path").attr('href',reportA);
+                // $("file_name")
+            }
+            if(resultA!=null){
+                $("#result_download").show();
+                $("#result_path").attr('href',resultA);
+            }
+            if(otherA!=null){
+                $("#other_file").show();
+                $("other_path").attr("href",otherA);
+            }
+
+
         }
     });
     //保存提交
-    $("#save").on("click",function () {
-        commitPages("123","SAVE");
-        $("div [name='items']" ).fileinput('upload');
+    $("#save").on("click", function () {
+        commitPages("123", "SAVE");
+        toastr.success("保存成功", "消息提示");
 
     });
 
-    $("#submit").on("click",function () {
-        commitPages("123","SUBMIT");
-        $("div [name='items']" ).fileinput('upload');
+    $("#submit").on("click", function () {
+        commitPages("123", "SUBMIT");
         toastr.success("提交成功", "消息提示");
-        window.location.reload();
+        // window.location.reload();
 
     });
-    function  commitPages(id,sta) {
-        var page={
-            studentid:id,
-            state:sta,
-            commit_time:new Date(),
-            reportname:$("#papername")[0].value,
-            keywoord:$("#keys")[0].value,
-            innovation_point:$("#points")[0].value,
-            chinese_abstract:$("#summary")[0].value,
-            english_abstract:$("#summary-e")[0].value,
-            others:$("#others")[0].value,
-            detection_result:$("#result")[0].value,
+
+    function commitPages(id, sta) {
+        var page = {
+            studentid: id,
+            state: sta,
+            commit_time: new Date(),
+            reportname: $("#papername")[0].value,
+            keywoord: $("#keys")[0].value,
+            innovation_point: $("#points")[0].value,
+            chinese_abstract: $("#summary")[0].value,
+            english_abstract: $("#summary-e")[0].value,
+            others: $("#others")[0].value,
+            detection_result: $("#result")[0].value,
         };
 
         axios.post('http://localhost:8080/addFinalreport', page)
             .then(function (response) {
-                toastr.success("保存成功", "消息提示");
-                window.location.reload();
+                $("div [name='items']").fileinput('upload');
+                // window.location.reload();
             })
             .catch(function (error) {
                 console.log(error);

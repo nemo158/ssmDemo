@@ -220,9 +220,9 @@
       tea_title = #{teaTitle,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id = "selectCourse" parameterType="java.lang.Integer" resultType="com.demo.mms.common.domain.course">
+  <select id = "selecourse" parameterType="java.lang.Integer" resultType="com.demo.mms.common.domain.course">
    select *
    from course
-   where student_id =#(student_id);
+   where student_id =#{student_id};
   </select>
 </mapper>
