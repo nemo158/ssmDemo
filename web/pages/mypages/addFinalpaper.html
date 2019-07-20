@@ -323,7 +323,7 @@
                             <div class="WZN-lrtable-l">【附件】：</div>
                             <div class="WZN-lrtable-r">
                                 <div class="file-loading">
-                                    <input id="original_file" type="file" multiple name="items">
+                                    <input id="otherfile" type="file" multiple name="items">
                                 </div>
                             </div>
                             <div class="WZN-lrtable-r" style="display:none">
@@ -396,7 +396,7 @@
             showMethod: "fadeIn",
             hideMethod: "fadeOut"
         };
-        $("div [name='items']" ).fileinput({
+        $("#paperfile" ).fileinput({
             language: 'zh',
             theme: 'explorer-fas',
             uploadUrl: 'http://localhost:8080/saveFinalreport',
@@ -408,21 +408,51 @@
             enctype: "multipart/form-data",
             uploadExtraData: function () {
                 var data = {
-                    studentid:"123"
+                    studentid:"123",
+                    type:"paper"
                 };
                 return data;
             },
             initialPreviewConfig: []
-        }).on('filepreupload', function (event, data, previewId, index) {     //上传中
-            var form = data.form, files = data.files, extra = data.extra,
-                response = data.response, reader = data.reader;
-            console.log('文件正在上传');
-        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
-            console.log('文件上传成功！' + data.id);
-
-        }).on('fileerror', function (event, data, msg) {  //一个文件上传失败
-            console.log('文件上传失败！' + data.id);
-        });
+        })
+        $("#resultfile" ).fileinput({
+            language: 'zh',
+            theme: 'explorer-fas',
+            uploadUrl: 'http://localhost:8080/saveFinalreport',
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            showPreview: true,//是否显示预览
+            initialPreview: [],
+            showUpload:false,
+            enctype: "multipart/form-data",
+            uploadExtraData: function () {
+                var data = {
+                    studentid:"123",
+                    type:"result"
+                };
+                return data;
+            },
+            initialPreviewConfig: []
+        })
+        $("#otherfile" ).fileinput({
+            language: 'zh',
+            theme: 'explorer-fas',
+            uploadUrl: 'http://localhost:8080/saveFinalreport',
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            showPreview: true,//是否显示预览
+            initialPreview: [],
+            showUpload:false,
+            enctype: "multipart/form-data",
+            uploadExtraData: function () {
+                var data = {
+                    studentid:"123",
+                    type:"other"
+                };
+                return data;
+            },
+            initialPreviewConfig: []
+        })
 
     })
 
