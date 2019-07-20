@@ -1,7 +1,6 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.Finalreport;
-import com.demo.mms.common.domain.Midreport;
 import com.demo.mms.service.FinalreportService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +24,12 @@ public class FinalreportController {
     @RequestMapping(value="/addFinalreport",method= RequestMethod.POST)
     @ResponseBody
     public Object addFinalreport(@RequestBody Finalreport finalreport){
-        Integer version = finalreportService.addMaxversion(finalreport.getReporid());
+        Integer version = finalreportService.addMaxversion(finalreport.getStudentid());
         if(version==null){
             version=0;
         }
         finalreport.setVersion(version+1);
+        System.out.println("add"+finalreport.getVersion());
         finalreportService.addFinalreport(finalreport);
         Map<String,Object> rs = new HashMap<>(64);
         rs.put("success",true);
@@ -37,9 +37,9 @@ public class FinalreportController {
     }
     @RequestMapping("/returnFinalreport")
     @ResponseBody
-    public Object returnFinalreport(int report_id){
-        Integer version = finalreportService.addMaxversion(report_id);
-        Finalreport finalreport= finalreportService.findFinalreport(report_id,version);
+    public Object returnFinalreport(int studentid){
+        Integer version = finalreportService.addMaxversion(studentid);
+        Finalreport finalreport= finalreportService.findFinalreport(studentid,version);
         Map<String,Object> rs = new HashMap<>(64);
         rs.put("success",finalreport);
         return rs;
@@ -47,11 +47,13 @@ public class FinalreportController {
     /**
      * 接收文件上传请求
      */
-    @RequestMapping("/saveFinalreport")
+    @RequestMapping(value = "/saveFinalreport",method = RequestMethod.POST)
     @ResponseBody
-    public Object saveFile(List<MultipartFile> items, @Param("student_id")int student_id){
+    public Object saveFile(List<MultipartFile> items, @Param("studentid")Integer studentid){
         if(items !=null && items.size()>0){
-            Integer version = finalreportService.addMaxversion(student_id);
+            studentid=123;
+            Integer version = finalreportService.addMaxversion(studentid);
+
             if (version==null){
                 version=0;
             }
@@ -59,11 +61,8 @@ public class FinalreportController {
             for (MultipartFile item : items) {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
-
-                //设置上传文件的保存地址目录
-                String dirPath="D:\\TemFileUpload\\"+student_id+"\\";
+                String dirPath="D:\\TemFileUpload\\"+studentid+"\\";
                 File file =new File(dirPath);
-                //如果保存文件的地址不存在，就先创建目录
                 if(!file.exists()){
                     file.mkdirs();
                 }
@@ -72,8 +71,7 @@ public class FinalreportController {
                 try {
                     //使用MultipartFile接口的方法完成文件上传到指定位置
                     item.transferTo(new File(finalpath));
-                    finalreportService.addFinalreportpath(finalpath,Integer.toString(student_id),Integer.toString(version));
-                    System.out.println("1"+finalpath+" "+student_id+" "+version);
+                    finalreportService.addFinalreportpath(finalpath,Integer.toString(studentid),Integer.toString(version));
                     //文件上传成功后，需要将文件存放路径存入数据库中
                     //TODO,省略
                 } catch (Exception e) {

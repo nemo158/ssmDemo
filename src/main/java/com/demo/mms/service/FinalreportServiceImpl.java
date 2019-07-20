@@ -13,14 +13,14 @@ public class FinalreportServiceImpl implements FinalreportService {
 
     @Transactional
     @Override
-    public Finalreport findFinalreport(int report_id,int version) {
-        return finalreportMapper.returnFinalreport(report_id,version);
+    public Finalreport findFinalreport(int studentid,int version) {
+        return finalreportMapper.returnFinalreport(studentid,version);
     }
 
     @Transactional
     @Override
-    public Integer addMaxversion(int report_id) {
-        return finalreportMapper.selectMaxversion(report_id);
+    public Integer addMaxversion(int studentid) {
+        return finalreportMapper.selectMaxversion(studentid);
     }
 
     @Transactional
@@ -30,7 +30,7 @@ public class FinalreportServiceImpl implements FinalreportService {
     }
 
     @Override
-    public void addFinalreportpath(String finalpath, String student_id, String version) {
-        finalreportMapper.insertFinalreportpath(finalpath,student_id,version);
+    public void addFinalreportpath(String finalpath, String studentid, String version) {
+        finalreportMapper.insertFinalreportpath(finalpath,studentid,version);
     }
 }

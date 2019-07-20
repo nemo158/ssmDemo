@@ -5,18 +5,18 @@
             resultType="com.demo.mms.common.domain.Finalreport">
     select *
     from finalreport
-    where report_id=#{report_id} and version=#{version};
+    where studentid=#{studentid} and version=#{version};
   </select>
     <insert id="insertFinalreport" parameterType="com.demo.mms.common.domain.Finalreport">
-    insert into fianlreport (reporid, studentid, fileadress,score1,score2,score3,advice,comment_time,rpeortname,state,keyword,innovation_point,chinese_abstract,others,detection_result,report_adress,result_adress,enclosure_adress,version)
-    values   (#{reporid}, #{studentid}, #{fileadress},#{score1},#{score2},#{score3},#{advice},#{comment_time},#{rpeortname},#{state},#{keyword},#{innovation_point},#{chinese_abstract},#{others},#{detection_result},#{report_adress},#{result_adress},#{enclosure_adress},#{version})
+    insert into finalreport (reportid, studentid, fileaddress,score1,score2,score3,advice,commit_time,reportname,state,keyword,innovation_point,chinese_abstract,others,detection_result,report_address,result_address,enclosure_address,version)
+    values   (#{reporid}, #{studentid}, #{fileaddress},#{score1},#{score2},#{score3},#{advice},#{commit_time},#{reportname},#{state},#{keyword},#{innovation_point},#{chinese_abstract},#{others},#{detection_result},#{report_address},#{result_address},#{enclosure_address},#{version})
   </insert>
     <select id="selectMaxversion" parameterType="java.lang.Integer" resultType="int">
     select max(version)
     from finalreport
-    where report_id=#{report_id};
+    where studentid=#{studentid};
   </select>
     <update id="insertFinalreportpath" parameterType="java.lang.String">
-    update midreport set path = #{finalpath} where student_id= #{student_id} and version = #{version}
+    update finalreport set fileaddress = #{finalpath} where studentid= #{studentid} and version = #{version}
   </update>
 </mapper>

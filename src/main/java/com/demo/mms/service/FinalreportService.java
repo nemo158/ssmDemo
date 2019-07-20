@@ -3,11 +3,11 @@ package com.demo.mms.service;
 import com.demo.mms.common.domain.Finalreport;
 
 public interface FinalreportService {
-    Finalreport findFinalreport(int report_id,int version);
+    Finalreport findFinalreport(int studentid,int version);
 
-    Integer addMaxversion(int report_id);
+    Integer addMaxversion(int studentid);
 
     void addFinalreport(Finalreport finalreport);
 
-    void addFinalreportpath(String finalpath, String student_id, String version);
+    void addFinalreportpath(String finalpath, String studentid, String version);
 }

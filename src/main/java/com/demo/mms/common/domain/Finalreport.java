@@ -6,15 +6,15 @@ import java.sql.Date;
 
 public class Finalreport {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private int reporid;
+    private int reportid;
     private int studentid;
-    private String fileadress;
+    private String fileaddress;
     private int score1;
     private int score2;
     private int score3;
     private String advice;
-    private Date comment_time;
-    private String rpeortname;
+    private Date commit_time;
+    private String reportname;
     private String state;
     private String keyword;
     private String innovation_point;
@@ -22,17 +22,17 @@ public class Finalreport {
     private String english_abstract;
     private String others;
     private String detection_result;
-    private String report_adress;
-    private String result_adress;
-    private String enclosure_adress;
+    private String report_address;
+    private String result_address;
+    private String enclosure_address;
     private int version;
 
     public void setVersion(int version) {
         this.version = version;
     }
 
-    public void setReporid(int reporid) {
-        this.reporid = reporid;
+    public void setReporid(int reportid) {
+        this.reportid = reportid;
     }
 
     public void setStudentid(int studentid) {
@@ -40,7 +40,7 @@ public class Finalreport {
     }
 
     public void setFileadress(String fileadress) {
-        this.fileadress = fileadress;
+        this.fileaddress = fileadress;
     }
 
     public void setScore1(int score1) {
@@ -60,11 +60,11 @@ public class Finalreport {
     }
 
     public void setComment_time(Date comment_time) {
-        this.comment_time = comment_time;
+        this.commit_time = comment_time;
     }
 
     public void setRpeortname(String rpeortname) {
-        this.rpeortname = rpeortname;
+        this.reportname = rpeortname;
     }
 
     public void setState(String state) {
@@ -96,19 +96,19 @@ public class Finalreport {
     }
 
     public void setReport_adress(String report_adress) {
-        this.report_adress = report_adress;
+        this.report_address = report_adress;
     }
 
     public void setResult_adress(String result_adress) {
-        this.result_adress = result_adress;
+        this.result_address = result_adress;
     }
 
     public void setEnclosure_adress(String enclosure_adress) {
-        this.enclosure_adress = enclosure_adress;
+        this.enclosure_address = enclosure_adress;
     }
 
     public int getReporid() {
-        return reporid;
+        return reportid;
     }
 
     public int getStudentid() {
@@ -116,7 +116,7 @@ public class Finalreport {
     }
 
     public String getFileadress() {
-        return fileadress;
+        return fileaddress;
     }
 
     public int getScore1() {
@@ -136,11 +136,11 @@ public class Finalreport {
     }
 
     public Date getComment_time() {
-        return comment_time;
+        return commit_time;
     }
 
     public String getRpeortname() {
-        return rpeortname;
+        return reportname;
     }
 
     public String getState() {
@@ -172,15 +172,15 @@ public class Finalreport {
     }
 
     public String getReport_adress() {
-        return report_adress;
+        return report_address;
     }
 
     public String getResult_adress() {
-        return result_adress;
+        return result_address;
     }
 
     public String getEnclosure_adress() {
-        return enclosure_adress;
+        return enclosure_address;
     }
 
     public int getVersion() {
