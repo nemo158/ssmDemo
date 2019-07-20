@@ -174,7 +174,6 @@ a:hover, a:active, a:focus {
     -o-transition: margin-left .3s ease-in-out;
     transition: margin-left .3s ease-in-out;
     margin-bottom: 0;
-    margin-left: 230px;
     border: none;
     min-height: 50px;
     border-radius: 0
@@ -278,12 +277,12 @@ a:hover, a:active, a:focus {
     display: block;
     float: left;
     height: 50px;
-    font-size: 20px;
+    font-size: 40px;
+    padding:20px;
     line-height: 50px;
     text-align: center;
     width: 230px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 0 15px;
     font-weight: 300;
     overflow: hidden
 }
@@ -3463,6 +3462,7 @@ table.text-center, table.text-center td, table.text-center th {
     text-align: center;
     margin-bottom: 25px;
     font-weight: 300
+
 }
 
 .login-logo a, .register-logo a {

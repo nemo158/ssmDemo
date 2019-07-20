@@ -46,7 +46,7 @@ public class MidreportController {
     /**
      * 接收文件上传请求
      */
-    @RequestMapping("/saveFile")
+    @RequestMapping("/saveMidreport")
     @ResponseBody
     public Object fileUpload(List<MultipartFile> items){
         //对上传图像进行解析操作
@@ -55,7 +55,7 @@ public class MidreportController {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
                 //设置上传文件的保存地址目录
-                String dirPath="D:\\FileUpload\\";
+                String dirPath="C:\\FileUpload\\";
                 File file =new File(dirPath);
                 //如果保存文件的地址不存在，就先创建目录
                 if(!file.exists()){

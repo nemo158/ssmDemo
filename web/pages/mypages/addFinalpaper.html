@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>本科毕业论文(设计)管理系统</title>
-    <!-- Tell the browser to be responsive to screen width -->
+
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- 基础css-->
+
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -21,8 +21,8 @@
     <script src="../../dist/js/adminlte.min.js"></script>
 
 
-    <!-- 川大css-->
     <link rel="stylesheet" href="../../dist/css/origin/easyui(4).css">
+    <link rel="stylesheet" href="../../dist/css/origin/default(1).css">
     <link rel="stylesheet" href="../../dist/css/origin/rangyStyle(1).css">
     <link rel="stylesheet" href="../../dist/css/origin/base(4).css">
     <link rel="stylesheet" href="../../dist/css/origin/common(1).css">
@@ -33,8 +33,13 @@
     <script src="../../bower_components/summernote/dist/summernote.js"></script>
     <script src="../../bower_components/summernote/dist/lang/summernote-zh-CN.js"></script>
 
+    <!-- 时间选择器-->
+    <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
     <!-- 文件上传-->
-    <link href="../../bower_components/bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="../../bower_components/bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet"
+          type="text/css"/>
     <script src="../../bower_components/bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
     <script src="../../bower_components/bootstrap-fileinput/js/locales/zh.js" type="text/javascript"></script>
 
@@ -44,11 +49,6 @@
 
     <!--AXIOS-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 
 </head>
@@ -154,11 +154,11 @@
                     <ul class="treeview-menu">
                         <li><a href=" ./openreport.html"><i class="fa fa-circle-o"></i>提交开题报告</a></li>
                         <li><a href="./midreport.html "><i class="fa fa-circle-o"></i>提交中期检查</a></li>
-                        <li><a href=" ./guideance.html"><i class="fa fa-circle-o"></i>提交指导记录</a></li>
+                        <li class="active"><a href=" ./guideance.html"><i class="fa fa-circle-o"></i>提交指导记录</a></li>
                         <li><a href="./foreign.html "><i class="fa fa-circle-o"></i>提交外文译文和原件</a></li>
-                        <li class="active"><a href="./literaturereview.html"><i class="fa fa-circle-o"></i>提交文献综述</a>
-                        </li>
+                        <li><a href="./literaturereview.html"><i class="fa fa-circle-o"></i>提交文献综述</a></li>
                         <li><a href="./finapaper.html "><i class="fa fa-circle-o"></i>提交毕业设计(论文)</a></li>
+
                     </ul>
                 </li>
 
@@ -197,19 +197,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
-        <div class="main" id="choiceDiv" style="">
-            <div class="gxf_problem gxf_pro_top" id="historyDiv" style="">
-                <div class="active"><h2><span class="sanjiao_active"></span>文献综述</h2></div>
-                <div class="gxf_pro_content ">
-                    <span>最新提交时间：<span id="zxtjsj">2019-05-01 23:14:31</span></span>
-                    <span><a
-                            href="http://scu.co.cnki.net/Student/SubmitLiteratureReview.html?r=0.795223277492539#CheckDetail"
-                            class="listA">查看审核详情</a></span>
-                    <span><a id="distorylink" class="listA" style=""
-                             href="javascript:openframe(&#39;文献综述历史纪录&#39;, &#39;../Student/StuHistoryFile.html?projectId=null&amp;sid=null&amp;opeType=10&#39;,false)">查看历史记录</a></span>
-                </div>
-            </div>
+        <div class="main" id="choiceDiv">
             <!-- 课题基本信息 -->
             <div id="gxf-project-information">
                 <div class="gxf_problem gxf_problem_detail">
@@ -236,7 +224,8 @@
                             </li>
                             <li><span class="detadil_txt_left"> 导师联系邮箱：</span><span class="detadil_txt_right"></span>
                             </li>
-                            <li><span class="detadil_txt_left"> 学生姓名：</span><span class="detadil_txt_right">王启帆（2015141463170）</span>
+                            <li><span class="detadil_txt_left"> 学生姓名：</span><span class="detadil_txt_right"
+                                                                                  title="王启帆（2015141463170）">王启帆（2015141463170）</span>
                             </li>
                             <li><span class="detadil_txt_left"> 学生院系专业：</span><span
                                     class="detadil_txt_right">软件学院-软件工程</span></li>
@@ -244,172 +233,173 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 详情 -->
-            <div id="openReportDetail" style="">
-                <div class=" gxf_problem gxf_problem_title">
-                    <div><h2><span></span>内容详情</h2></div>
-                    <div class="gxf_designTable_content">
-                        <ul class="gxf_designTable_box" id="DesignTable">
-                            <li><p>文献综述需要填写的内容<span class="writerText margl"> <span class="statement margl">请按照学校的要求，在下方输入相关内容，若无内容请填写“无”</span>
-                            </span>></p>
-                                <div class="gxf_designTable_rangy clearfix">
-                                    <div id="left_neirong1" class="gxf_rangy_left">
-                                        <div id="summernote"></div>
-                                    </div>
-                                    <div id="right_box_left_neirong1" class="gxf_rangy_right_box"
-                                         style="height: 1456px;"><p class="gxf_rangy_right_top">支持左侧选择文字批注，也支持★<a
-                                            class="listA rangy_all" href="javascript:;">整体批注</a></p>
-                                        <ul id="right_left_neirong1" class="gxf_rangy_right" style="height: 1425px;">
-                                            <li class="gxf_rangy_noContent"><h3>暂无批注内容</h3></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul><!-- 自定义时详情 -->
-                        <ul class="gxf_designTable_box">
-                            <li id="fujian" style="">
-                                <p>附件<span id="fujian-test" class="margl" style="font-size: 12px;"> </span></p>
-                                <div id="accessory" class="gxf_designTable_detailes">附件：<span id="accessorySpan">毕业论文文献综述.docx</span><a
-                                        class="listA margl"
-                                        href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=7&amp;user=2015141463170&amp;userServerID=0&amp;fileID=44280&amp;universityNum=2647&amp;isHistory=0&amp;check=e3c56384962d62ad9baa6be17960451a"
-                                        download="毕业论文文献综述.docx">点击下载</a></div>
+        </div>
+        <!-- 详情 -->
+        <div class="main" id="thesisDetail">
+            <div class="WZN-g">
+                <div><h2><span></span>论文检测结果</h2></div>
+            </div>
+            <div class="WZN-lrtable ">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="WZN-lrtable-l">【文件名】：</div>
+                            <div class="WZN-lrtable-r">
+                                <input  style="margin-bottom: 10px" id="papername" type="text" class="form-control ">
                                 <div class="file-loading">
-                                    <input id="original_file" type="file" multiple name="items">
+                                    <input id="paperfile" type="file" multiple name="items">
                                 </div>
-                            </li>
+                            </div>
+                            <div class="WZN-lrtable-r ">
+                                <div style="display:none">
+                                    <a id="pmSpan" class="listA margl"
+                                       href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=0&amp;user=2015141463170&amp;userServerID=0&amp;fileID=9079&amp;universityNum=2647&amp;isHistory=0&amp;check=412becd2414a52e1383b9197f8eeeef0"
+                                       style=""
+                                       download="2015毕设_2015141463170_王启帆_条件生成对抗网络在少数类有效数据生成中的研究与应用_段磊 ">点击下载原文</a>
+                                    <a id="clickPostil" style="" class="listA margl" href="javascript:;">查看批注</a>
+                                    <span id="clickLearning" class="margl" style=""><a class="listA"
+                                                                                       href="javascript:;">阅读原文</a></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="WZN-lrtable-l">【检测结果】：</div>
 
-                            <div class="margt">
-                                <input id="save"  style="margin:20px" class="clearBtn margl" type="button" value="保存">
-                                <input id="submit" style="margin:20px" class="formBtn" type="button" value="提交">
+                            <div class="WZN-lrtable-r">
+                                <input  style="margin-bottom: 10px" id="result" type="text" class="form-control ">
+                                <div class="file-loading">
+                                    <input id="resultfile" type="file" multiple name="items">
+                                </div>
                             </div>
-                        </ul>
-                    </div>
-                    <div class="gxf_problem gxf_problem_reader" id="CheckDetail">
-                        <div><h2><span></span>审核情况</h2></div>
-                        <div id="designTableCheckBox">
-                            <div class="gxf_designTable_check">指导教师审核情况</div>
-                            <div class="gxf_designTable_content">
-                                <ul class="gxf_designTable_box">
-                                    <li class="gxf_designTable_roleTime"><span>审核人：段磊</span><span class="margl">审核时间：2019-06-03 10:38:59</span>
-                                    </li>
-                                    <li class="_checkState_"><p>审核状态</p><input type="hidden" class="hdOpeKeyId"
-                                                                               value="103274" projectid="6134"
-                                                                               roletype="3" checkstate="1"><input
-                                            type="hidden" class="showAttachment" value="true" filename=""
-                                            filelink=""><input type="hidden" class="designTableModel" value="检查通过。"
-                                                               aesdesigntableinfo="L0KAQnNmvyFryG0yMC3tkzJVHX62A8l6tCllvnsX+7JmJ33kkUnUDhlAfyylGB18Q8VHWMDRgpc0I7XPAQlg8bWmPiruMSZoPvMUjW05IlmxnyKGGqbOVF1SJ1hq175PLusQMowrRiGuEUfEXduwqlmaXiJIkCFlimKCIyHaVaaJCcqSrQrIyenFGX0io7K40ia+6Hw8wab8tycO2p1cnw==">
-                                        <div class="gxf_designTable_detailes"><span class="txt_green">审核通过</span></div>
-                                    </li>
-                                    <li><p>审核意见</p>
-                                        <div class="gxf_designTable_detailes">检查通过。</div>
-                                    </li>
-                                </ul>
+                            <div class="WZN-lrtable-r" style="display: none">
+                                <input id="resultshown" type="text" class="form-control ">
+                                <a class="listA margl" target="_Blank" href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=report&amp;fileID=9079&amp;fileServerID=1;7;131587;&amp;reportType=1&amp;user=2015141463170&amp;universityNum=2647&amp;isHistory=0&amp;check=8e3b4abd571120077b1a1a04ffde5985">下载报告单</a></span>
+                                <span><input id="queren_btn" type="button" class="formBtn margl" name="name"
+                                             value="确认检测" style="display:none;"></span>
                             </div>
-                        </div>
-                    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="WZN-lrtable-l">【关键词】：</div>
+                            <div class="WZN-lrtable-r" id="gjc"><input id="keys" type="text" class="form-control ">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="WZN-lrtable-l">【创新点】：</div>
+                            <div class="WZN-lrtable-r" id="cxd"><input id="points" type="text" class="form-control ">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="WZN-lrtable-l">【中文摘要】：</div>
+                            <div class="WZN-lrtable-r" id="zwzy">
+                                <textarea id="summary" class="form-control" rows="4" placeholder=""></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="WZN-lrtable-l">【英文摘要】：</div>
+                            <div class="WZN-lrtable-r" id="ywzy">
+                                <textarea id="summary-e" class="form-control" rows="4" placeholder=""></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="WZN-lrtable-l">【其他】：</div>
+                            <div class="WZN-lrtable-r"><input id="others" type="text" class="form-control "></div>
+                        </td>
+                    </tr>
+                    <tr id="fujian">
+                        <td>
+                            <div class="WZN-lrtable-l">【附件】：</div>
+                            <div class="WZN-lrtable-r">
+                                <div class="file-loading">
+                                    <input id="otherfile" type="file" multiple name="items">
+                                </div>
+                            </div>
+                            <div class="WZN-lrtable-r" style="display:none">
+                                <span id="accessorySpan">附件.zip</span>&nbsp;&nbsp;&nbsp;<a id="accessoryA" class="listA"
+                                                                                           href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=6&amp;user=2015141463170&amp;userServerID=0&amp;fileID=49037&amp;universityNum=2647&amp;isHistory=0&amp;check=9fd80099b7cc20715952b2b70f6eac45"
+                                                                                           style="" download="附件.zip">点击下载</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div class="margt">
+                    <input id="save" class="clearBtn margl" type="button" value="保存">
+                    <input id="submit" class="formBtn" type="button" value="提交">
                 </div>
             </div>
 
-        </div>
-
-
-        <div class="panel window panel-htop" style="display: none; width: 400px; left: 443px; top: 193px;">
-            <div class="panel-header panel-header-noborder window-header" style="width: 392px;">
-                <div class="panel-title">New Dialog</div>
-                <div class="panel-tool"><a href="javascript:;" class="panel-tool-close"></a></div>
-            </div>
-            <div id="delmessagebox" class="easyui-dialog panel-body panel-body-noborder window-body"
-                 style="text-align: center; padding: 10px; overflow-wrap: break-word; width: 378px; height: 143px;"
-                 data-options="closed:true" title=""></div>
-        </div>
-        <div class="window-shadow" style="display: none; left: 443px; top: 193px; width: 400px; height: 200px;"></div>
-        <div class="panel window panel-htop"
-             style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9005;">
-            <div class="panel-header panel-header-noborder window-header" style="width: 392px;">
-                <div class="panel-title">提示</div>
-                <div class="panel-tool"></div>
-            </div>
-        </div>
-        <div class="window-shadow"
-             style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9004;"></div>
-        <div class="window-mask" style="display: none; z-index: 9003; position: fixed;"></div>
-        <div class="panel window panel-htop"
-             style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9008;">
-            <div class="panel-header panel-header-noborder window-header" style="width: 392px;">
-                <div class="panel-title">提示</div>
-                <div class="panel-tool"></div>
+            <div class="gxf_problem gxf_problem_reader" id="CheckDetail">
+                <div><h2><span></span>审核情况</h2></div>
+                <div id="designTableCheckBox">
+                    <div class="gxf_designTable_check">指导教师审核情况</div>
+                    <div class="gxf_designTable_content">
+                        <ul class="gxf_designTable_box">
+                            <li class="gxf_designTable_roleTime"><span>审核人：段磊</span><span class="margl">审核时间：2019-05-07 22:43:08</span>
+                            </li>
+                            <li class="_checkState_"><p>审核状态</p><input type="hidden" class="hdOpeKeyId" value="116412"
+                                                                       projectid="6134" roletype="3"
+                                                                       checkstate="1"><input type="hidden"
+                                                                                             class="showAttachment"
+                                                                                             value="true" filename=""
+                                                                                             filelink=""><input
+                                    type="hidden" class="designTableModel" value="论文工作达到本科毕业要求，同意提交审核。"
+                                    aesdesigntableinfo="x3tL/pbW6yCi03ZxwbaZ4VN9ZRdHDiqP3NbEZLJ4SZUkfUXCZ4UkzzictIW91E/jJ5JIOO+djkXd/dMwbfFJSHMvdzXrtXOk1i4fJ6aNFr/zWGICfOfyihWUtVSOan95PlVpW1slC45D9yb3+xpvEo5BbvaIk9zeqpiywSErI+GoT9dWsVVVENR5GvctF2pKRvGA/ZI7R9prradjQrv+zw==">
+                                <div class="gxf_designTable_detailes"><span class="txt_green">审核通过</span></div>
+                            </li>
+                            <li><p>审核意见</p>
+                                <div class="gxf_designTable_detailes">论文工作达到本科毕业要求，同意提交审核。</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="window-shadow"
-             style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9007;"></div>
-        <div class="window-mask" style="display: none; z-index: 9006; position: fixed;"></div>
-        <div class="panel window panel-htop"
-             style="display: none; width: 400px; left: 443px; top: 193px; z-index: 9011;">
-            <div class="panel-header panel-header-noborder window-header" style="width: 392px;">
-                <div class="panel-title">提示</div>
-                <div class="panel-tool"></div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.0
             </div>
-        </div>
-        <div class="window-shadow"
-             style="display: none; left: 443px; top: 193px; width: 400px; height: 200px; z-index: 9010;"></div>
-        <div class="window-mask" style="display: none; z-index: 9009; position: fixed;"></div>
-        <div class="panel window panel-htop"
-             style="display: none; width: 400px; left: 435px; top: 193px; z-index: 9026;">
-            <div class="panel-header panel-header-noborder window-header" style="width: 392px;">
-                <div class="panel-title">提示</div>
-                <div class="panel-tool"></div>
-            </div>
-        </div>
-        <div class="window-shadow"
-             style="display: none; left: 435px; top: 193px; width: 400px; height: 200px; z-index: 9025;"></div>
-        <div class="window-mask" style="display: none; z-index: 9024; position: fixed;"></div>
-        <div style="width:0; height:0; overflow:hidden; ">
-            <div id="gxf_rangy_maxredBox" class="easyui-dialog" data-options="closed:true,modal:true,closable: false"
-                 style=" width:800px; height:470px; text-align:left; padding:5px 20px;">
-                <div><input type="hidden" id="hdArticleRemarkId" value=""><input type="hidden" id="hdSelectedText"
-                                                                                 value=""><input type="hidden"
-                                                                                                 id="hdSerializedSelection"
-                                                                                                 value="">
-                    <p style="line-height: 30px;"><span>批注人：</span><span id="lblCreatorName">---</span><span
-                            class="margl">批注时间：</span><span id="lblDatetime"></span></p>
-                    <p style="word-break: break-word;"><input id="txtRemark" type="text" class="easyui-textbox"
-                                                              data-options="multiline:true,height:160,width:760"></p>
-                    <h3 style="margin: 10px 0;">选中批注的内容：</h3>
-                    <p id="postilDetailContent"></p></div>
-            </div>
-        </div>
-        <div style="width:0; height:0; overflow:hidden; ">
-            <div id="gxf_rangy_delModelBox" class="easyui-dialog" data-options="closed:true,modal:true"
-                 style=" width:400px; height: 200px; text-align:center; padding:30px"></div>
-        </div>
+            <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+            reserved.
+        </footer>
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
-        </div>
-        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-        reserved.
-    </footer>
-
-
 </div>
-<!-- ./wrapper -->
-
-<script src="../../dist/js/demo.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            lang: 'zh-CN',
-            placeholder: '文献综述',
-            tabsize: 4,
-            height: 1500
-        });
-        $("div [name='items']" ).fileinput({
+    $(function () {
+        toastr.options = {
+            closeButton: false,
+            debug: false,
+            progressBar: true,
+            positionClass: "toast-top-center",
+            onclick: null,
+            showDuration: "300",
+            hideDuration: "800",
+            timeOut: "1000",
+            extendedTimeOut: "1000",
+            showEasing: "swing",
+            hideEasing: "linear",
+            showMethod: "fadeIn",
+            hideMethod: "fadeOut"
+        };
+        $("#paperfile" ).fileinput({
             language: 'zh',
             theme: 'explorer-fas',
-            uploadUrl: 'http://localhost:8080/saveFile',
+            uploadUrl: 'http://localhost:8080/saveFinalreport',
             overwriteInitial: false,
             initialPreviewAsData: true,
             showPreview: true,//是否显示预览
@@ -418,22 +408,54 @@
             enctype: "multipart/form-data",
             uploadExtraData: function () {
                 var data = {
-
+                    studentid:"123",
+                    type:"paper"
                 };
                 return data;
             },
             initialPreviewConfig: []
-        }).on('filepreupload', function (event, data, previewId, index) {     //上传中
-            var form = data.form, files = data.files, extra = data.extra,
-                response = data.response, reader = data.reader;
-            console.log('文件正在上传');
-        }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
-            console.log('文件上传成功！' + data.id);
+        })
+        $("#resultfile" ).fileinput({
+            language: 'zh',
+            theme: 'explorer-fas',
+            uploadUrl: 'http://localhost:8080/saveFinalreport',
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            showPreview: true,//是否显示预览
+            initialPreview: [],
+            showUpload:false,
+            enctype: "multipart/form-data",
+            uploadExtraData: function () {
+                var data = {
+                    studentid:"123",
+                    type:"result"
+                };
+                return data;
+            },
+            initialPreviewConfig: []
+        })
+        $("#otherfile" ).fileinput({
+            language: 'zh',
+            theme: 'explorer-fas',
+            uploadUrl: 'http://localhost:8080/saveFinalreport',
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            showPreview: true,//是否显示预览
+            initialPreview: [],
+            showUpload:false,
+            enctype: "multipart/form-data",
+            uploadExtraData: function () {
+                var data = {
+                    studentid:"123",
+                    type:"other"
+                };
+                return data;
+            },
+            initialPreviewConfig: []
+        })
 
-        }).on('fileerror', function (event, data, msg) {  //一个文件上传失败
-            console.log('文件上传失败！' + data.id);
-        });
-    });
+    })
+
 </script>
 <script type="text/javascript">
     //页面信息处理
@@ -443,47 +465,58 @@
         $.ajax({
             type: "GET",
             url: "http://localhost:8080/returnMidreport",
-            data: {course_id: "3110002"},
+            data: {studentid: "3110002"},
             success: function (msg) {
                 initReport(msg.success)
             }
         });
         function initReport(page){
             if (page.state !== "SAVE") {
-                $("body").find('#summernote').attr("readOnly", true);
+                $("body").find('input, textarea').attr("readOnly", true);
                 $("#submit").hide();
                 $("#save").hide();
             }
-            $('#summernote').summernote('code',page.content);
+            $("#papername").val(page.reportname);
+            $("#keys").val(page.innovation_point);
+            $("#points").val(page.chinese_abstract);
+            $("#summary").val(page.chinese_abstract);
+            $("#summary-e").val(page.english_abstract);
+            $("#others").val(page.others);
+            $("#result").val(page.detection_result);
         }
     });
     //保存提交
     $("#save").on("click",function () {
         commitPages("123","SAVE");
-        $("#summernote" ).fileinput('upload');
-        toastr.success("保存成功", "消息提示");
-        window.location.reload();
-
+        $("div [name='items']" ).fileinput('upload');
 
     });
+
     $("#submit").on("click",function () {
         commitPages("123","SUBMIT");
-        $("#summernote" ).fileinput('upload');
+        $("div [name='items']" ).fileinput('upload');
         toastr.success("提交成功", "消息提示");
         window.location.reload();
 
     });
-
     function  commitPages(id,sta) {
         var page={
-            course_id:id,
+            studentid:id,
             state:sta,
-            content: $('#summernote').summernote('code'),
+            commit_time:new Date(),
+            reportname:$("#papername")[0].value,
+            keywoord:$("#keys")[0].value,
+            innovation_point:$("#points")[0].value,
+            chinese_abstract:$("#summary")[0].value,
+            english_abstract:$("#summary-e")[0].value,
+            others:$("#others")[0].value,
+            detection_result:$("#result")[0].value,
         };
 
-        axios.post('http://localhost:8080/addMidreport', page)
+        axios.post('http://localhost:8080/addFinalreport', page)
             .then(function (response) {
-                console.log(response)
+                toastr.success("保存成功", "消息提示");
+                window.location.reload();
             })
             .catch(function (error) {
                 console.log(error);

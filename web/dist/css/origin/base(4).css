@@ -232,11 +232,12 @@ s, i {
 
 .bannerRight {
     height: 101px;
-    width: 100%;
+    width: 600px;
     overflow: hidden;
     position: relative;
     /*right: 0;
     top: 0;*/
+    color:white;;
     font-size: 16px;
     text-align: right;
     white-space:nowrap;
