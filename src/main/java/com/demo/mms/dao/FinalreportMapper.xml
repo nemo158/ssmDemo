@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mms.dao.FinalreportMapper">
+    <select id="returnFinalreport" parameterType="java.lang.Integer"
+            resultType="com.demo.mms.common.domain.Finalreport">
+    select *
+    from finalreport
+    where report_id=#{report_id} and version=#{version};
+  </select>
+    <insert id="insertFinalreport" parameterType="com.demo.mms.common.domain.Finalreport">
+    insert into fianlreport (reporid, studentid, fileadress,score1,score2,score3,advice,comment_time,rpeortname,state,keyword,innovation_point,chinese_abstract,others,detection_result,report_adress,result_adress,enclosure_adress,version)
+    values   (#{reporid}, #{studentid}, #{fileadress},#{score1},#{score2},#{score3},#{advice},#{comment_time},#{rpeortname},#{state},#{keyword},#{innovation_point},#{chinese_abstract},#{others},#{detection_result},#{report_adress},#{result_adress},#{enclosure_adress},#{version})
+  </insert>
+    <select id="selectMaxversion" parameterType="java.lang.Integer" resultType="int">
+    select max(version)
+    from finalreport
+    where report_id=#{report_id};
+  </select>
+    <update id="insertFinalreportpath" parameterType="java.lang.String">
+    update midreport set path = #{finalpath} where student_id= #{student_id} and version = #{version}
+  </update>
+</mapper>
