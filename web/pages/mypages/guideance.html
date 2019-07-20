@@ -421,7 +421,6 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
         <div id="timeLimit" class="gxf_tips" style="display:none;">
             <div class="gxf_tip">
                 <i></i>信息提示
@@ -438,7 +437,7 @@
                     <div class="gxf_pro_content gxf_content_table">
                         <ul class="clearfix gxf_project_detadil_ul">
                             <li style="width:100%;"><span class="detadil_txt_left"> 课题题目：</span><span
-                                    style="width:600px;" class="detadil_txt_right">条件生成对抗网络在少数类有效数据生成中的研究与应用</span></li>
+                                    style="width:600px;" class="detadil_txt_right"> </span></li>
                             <li><span class="detadil_txt_left"> 可选专业：</span><span class="detadil_txt_right">软件工程</span>
                             </li>
                             <li><span class="detadil_txt_left"> 课题申报时间：</span><span
@@ -466,155 +465,40 @@
                 </div>
             </div>
 
+            <div class="gxf_problem gxf_pro_top">
+                <h2><span></span>学生指导记录列表</h2>
+            </div>
+            <!--提交指导记录按钮-->
+            <!--<form action="http://localhost:8080/pages/mypages/addGuideance.hml" method="get">-->
+            <div id="Submit_GuideRecord" style="margin-bottom: 10px;">
+                <input id="submit" class="formBtn" type="button" value="提交指导记录">
+            </div>
             <!--指导记录-->
             <section class="content" style="width: 100%;">
-                <div class="row">
-                    <div class="col-xs-12">
+                <div class="row" class="gxf_problem gxf_pro_top">
+                    <div class="col-md-12">
                         <div class="box">
-                            <div class="box-header">
-                                <h3 class="box-title">Hover Data Table</h3>
-                            </div>
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <table style="text-align:center" id="example2" class="table table-bordered table-hover">
+                                <table style="text-align:center" id="main-table" class="table table-bordered table-hover gxf_problem gxf_pro_top">
                                     <thead>
                                     <tr>
-                                        <!--<th data-field="index" data-formatter="indexFormatter" >序号</th>-->
-                                        <th>课题题目</th>
-                                        <th>提交时间</th>
-                                        <th>提交次数</th>
-                                        <th>审核状态</th>
-                                        <th>操作</th>
+                                        <th style="text-align:center" data-field="index" data-formatter="formatter" >序号</th>
+                                        <th style="text-align:center">课题题目</th>
+                                        <th style="text-align:center">提交时间</th>
+                                        <th style="text-align:center">提交次数</th>
+                                        <th style="text-align:center">版本号</th>
+                                        <th style="text-align:center">操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
-                                    </tr>
-                                    <tr>
-                                        <!--<td>*</td>-->
-                                        <td>条件生成对抗网络在少数类有效数据生成中的研究与应用</td>
-                                        <td>2019-05-23 14:22:00</td>
-                                        <td>**</td>
-                                        <td>审核通过</td>
-                                        <td>查看详情</td>
+                                        <td id=""></td>
+                                        <td id="course-title">content</td>
+                                        <td id="course-submit-time">submit-time</td>
+                                        <td id="course-time">time</td>
+                                        <td id="course-version">version</td>
+                                        <td id="course-ope"><a href="javascript:void(0)" >查看详情</a></a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -893,45 +777,82 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-    $("#example2").DataTable({
+$(document).ready(function() {
+    var t = $("#main-table").DataTable({
         'paging'      : true,
         'lengthChange': true,
-        'searching'   : true,
-        'ordering'    : true,
+        'searching'   : false,
+        'ordering'    : false,
         'info'        : true,
         'autoWidth'   : true,
+        "bSort"       : false, //是否支持排序功能
         "bLengthChange" : true,// 每行显示记录数
-
-        'stateSave':true,
+        'stateSave'     :true,
+        // "deferRender"   : true,
         "language": {
             "paginate": {
                 "next": "下一页",
                 "previous":"上一页"
-
             },
             "search":"快速搜索",
             "info": "第_PAGE_页(共_PAGES_页)",
             "emptyTable":"无可用数据",
             "lengthMenu": "_MENU_ 条/页"
         },
-        pageList: [10, 15],
-        uniqueId: "id",
-        columns:[
-            {
-                title: '序号',
-                width: 50,
-                align: 'center',
-                formatter: function (value, row, index) {
-                    // 显示行号
-                    var options = $('#tablelist').bootstrapTable('getOptions');
-                    return options.pageSize * (options.pageNumber - 1) + index + 1;
-                }
-            }]
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                "targets": 0
+            }],
+            "order": [[ 1, 'asc' ]]
+        });
+        t.on( 'draw.dt order.dt search.dt', function () {
+            t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                cell.innerHTML = i+1;
+            });
+        }).draw();
+});
+</script>
 
-    });
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            method: "GET",
+            url:"/selectGuidances",
+            data:{course_id: 10001},
+            success: function (result) {
+                showContent(result.success);
+            }
+        })
+
+    function showContent(tableDataList) {
+        var id = 511001;                //id
+        $("#course-id").val();                //课程号
+        $("#course-title").val();             //课题题目
+        $("#course-submit-time").val();       //提交时间
+        $("#course-time").val();              //次数
+        $("#course-version").val();           //版本号
+    }
+
+    $("#submit").click(function () {
+            location.href = "./addGuideance.html";
+        })
+
+    // var Operate = $("#course-ope");//操作
+
+    // var datalist = {
+    //     id:          id,
+    //     course_id:   course_id,
+    //     content:     content,
+    //     submit_time: submit_time,
+    //     time:        time,
+    //     version:     version
+    // };
+    //
+ });
 </script>
 
 </body>
