@@ -33,6 +33,17 @@
     from openreport
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectMaxVersion" parameterType="java.lang.Integer" resultType="Integer">
+    select max(version)
+    from openreport
+    where course_id=#{courseId}
+  </select>
+  <select id="selectOpenReport" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from openreport
+    where course_id=#{courseId} and version=#{version}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from openreport
     where id = #{id,jdbcType=INTEGER}
