@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mms.dao.GuidanceMapper">
+  <resultMap id="BaseResultMap" type="com.demo.mms.common.domain.Guidance">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="course_id" jdbcType="INTEGER" property="courseId" />
+    <result column="time" jdbcType="TIMESTAMP" property="time" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="submit_time" jdbcType="TIMESTAMP" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, course_id, time, content, version, submit_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from guidance
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectMaxVersion" parameterType="java.lang.Integer" resultType="Integer">
+    select max(version)
+    from guidance
+    where course_id=#{courseId}
+  </select>
+  <select id="selectGuidance" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from guidance
+    where course_id=#{courseId} and version=#{version}
+  </select>
+  <select id="getGuidances" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from guidance
+    where course_id=#{courseId}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from guidance
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.demo.mms.common.domain.Guidance">
+    insert into guidance (id, course_id, time, 
+      content, version, submit_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{courseId,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP}, 
+      #{content,jdbcType=VARCHAR}, #{version,jdbcType=INTEGER}, #{submitTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.mms.common.domain.Guidance">
+    insert into guidance
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="courseId != null">
+        course_id,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="courseId != null">
+        #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.mms.common.domain.Guidance">
+    update guidance
+    <set>
+      <if test="courseId != null">
+        course_id = #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.mms.common.domain.Guidance">
+    update guidance
+    set course_id = #{courseId,jdbcType=INTEGER},
+      time = #{time,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=VARCHAR},
+      version = #{version,jdbcType=INTEGER},
+      submit_time = #{submitTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
