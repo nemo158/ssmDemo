@@ -15,14 +15,23 @@ public class MidreportServicceImpl implements MidreportService{
     public void addMidreport(Midreport midreport) {
         midreportMapper.insertMidreport(midreport);
     }
+
     @Transactional
     @Override
     public Integer addMaxversion(int course_id) {
         return midreportMapper.selectMaxversion(course_id);
     }
+
     @Transactional
     @Override
     public Midreport findreport(int course_id,int version) {
         return midreportMapper.selectMidreport(course_id,version);
+    }
+
+    @Transactional
+    @Override
+    public void addMidreportpath(String finalpath,String course_id,String version){
+        midreportMapper.insertMidreportpath(finalpath,course_id,version);
+
     }
 }

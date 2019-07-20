@@ -1,7 +1,6 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.*;
-import com.demo.mms.common.utils.Servlet;
 import com.demo.mms.service.MidreportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,7 +45,7 @@ public class MidreportController {
     /**
      * 接收文件上传请求
      */
-    @RequestMapping("/saveMidreport")
+    @RequestMapping("/saveFile")
     @ResponseBody
     public Object fileUpload(List<MultipartFile> items){
         //对上传图像进行解析操作
@@ -55,7 +54,7 @@ public class MidreportController {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
                 //设置上传文件的保存地址目录
-                String dirPath="C:\\FileUpload\\";
+                String dirPath="D:\\16级\\ssmDemo0\\web\\storage\\";
                 File file =new File(dirPath);
                 //如果保存文件的地址不存在，就先创建目录
                 if(!file.exists()){

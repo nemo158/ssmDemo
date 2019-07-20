@@ -799,9 +799,7 @@
             enctype: "multipart/form-data",
             uploadExtraData: function () {
                 var data = {
-                    apkName: $("#apkName").val(),
-                    versionNum: $("#versionNum").val(),
-                    description: $("#description").val()
+                    course_id:"3110002"
                 };
                 return data;
             },
@@ -919,13 +917,13 @@
             commitReport(3110002, "SUBMIT");
             $("#kv-explorer").fileinput("upload");
             toastr.success("提交成功", "消息提示");
-            window.location.reload();
+            //window.location.reload();
         });
         $("#save").on('click', function () {
             commitReport(3110002, "SAVE")
             $("#kv-explorer").fileinput("upload");
             toastr.success("保存成功", "消息提示");
-            window.location.reload();
+           // window.location.reload();
 
         })
 
