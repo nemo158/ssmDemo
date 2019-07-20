@@ -1,54 +1,57 @@
 package com.demo.mms.controller;
 
-import com.demo.mms.common.domain.*;
-import com.demo.mms.service.MidreportService;
+import com.demo.mms.common.domain.Finalreport;
+import com.demo.mms.common.domain.Midreport;
+import com.demo.mms.service.FinalreportService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Controller
-public class MidreportController {
+public class FinalreportController {
     @Autowired
-    private MidreportService midreportService;
+    private FinalreportService finalreportService;
 
-    @RequestMapping(value="/addMidreport",method= RequestMethod.POST)
+    @RequestMapping(value="/addFinalreport",method= RequestMethod.POST)
     @ResponseBody
-    public Object saveMidreport(@RequestBody Midreport midreport){
-        Integer integer = midreportService.addMaxversion(midreport.getCourse_id());
-        if(integer==null){
-            integer=0;
+    public Object addFinalreport(@RequestBody Finalreport finalreport){
+        Integer version = finalreportService.addMaxversion(finalreport.getReporid());
+        if(version==null){
+            version=0;
         }
-        midreport.setVersion(integer+1);
-        midreportService.addMidreport(midreport);
+        finalreport.setVersion(version+1);
+        finalreportService.addFinalreport(finalreport);
         Map<String,Object> rs = new HashMap<>(64);
         rs.put("success",true);
         return rs;
     }
-    @RequestMapping("/returnMidreport")
+    @RequestMapping("/returnFinalreport")
     @ResponseBody
-    public Object returnMidreport(int course_id){
-        Integer version = midreportService.addMaxversion(course_id);
-        Midreport midreport1= midreportService.findreport(course_id,version);
+    public Object returnFinalreport(int report_id){
+        Integer version = finalreportService.addMaxversion(report_id);
+        Finalreport finalreport= finalreportService.findFinalreport(report_id,version);
         Map<String,Object> rs = new HashMap<>(64);
-        rs.put("success",midreport1);
+        rs.put("success",finalreport);
         return rs;
     }
     /**
      * 接收文件上传请求
      */
-    @RequestMapping("/saveMidreport")
+    @RequestMapping("/saveFinalreport")
     @ResponseBody
-    public Object saveFile(List<MultipartFile> items, @Param("course_id")int course_id){
-        //对上传图像进行解析操作
+    public Object saveFile(List<MultipartFile> items, @Param("student_id")int student_id){
         if(items !=null && items.size()>0){
-            Integer version = midreportService.addMaxversion(course_id);
+            Integer version = finalreportService.addMaxversion(student_id);
             if (version==null){
                 version=0;
             }
@@ -58,7 +61,7 @@ public class MidreportController {
                 String originalFilename = item.getOriginalFilename();
 
                 //设置上传文件的保存地址目录
-                String dirPath="D:\\TemFileUpload\\"+course_id+"\\";
+                String dirPath="D:\\TemFileUpload\\"+student_id+"\\";
                 File file =new File(dirPath);
                 //如果保存文件的地址不存在，就先创建目录
                 if(!file.exists()){
@@ -69,8 +72,8 @@ public class MidreportController {
                 try {
                     //使用MultipartFile接口的方法完成文件上传到指定位置
                     item.transferTo(new File(finalpath));
-                    midreportService.addMidreportpath(finalpath,Integer.toString(course_id),Integer.toString(version));
-                    System.out.println("1"+finalpath+" "+course_id+" "+version);
+                    finalreportService.addFinalreportpath(finalpath,Integer.toString(student_id),Integer.toString(version));
+                    System.out.println("1"+finalpath+" "+student_id+" "+version);
                     //文件上传成功后，需要将文件存放路径存入数据库中
                     //TODO,省略
                 } catch (Exception e) {
@@ -86,12 +89,5 @@ public class MidreportController {
         rs.put("success",true);
         return rs;
     }
-    @RequestMapping("/downloadFile")
-    @ResponseBody
-    public Object downloadFile(){
-
-        Map<String,Object> rs = new HashMap<>(64);
-        rs.put("success",true);
-        return rs;
-    }
 }
+
