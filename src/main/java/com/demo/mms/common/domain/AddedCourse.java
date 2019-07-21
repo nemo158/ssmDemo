@@ -6,6 +6,15 @@ public class AddedCourse {
     private String course_type;
     private String course_overview;
     private String course_goal;
+    private String state;
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getState() {
+        return state;
+    }
 
     public void setCourse_id(int course_id) {
         this.course_id = course_id;

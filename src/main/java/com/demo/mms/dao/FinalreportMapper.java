@@ -1,14 +1,14 @@
 package com.demo.mms.dao;
 
-import com.demo.mms.common.domain.Finalreport;
+import com.demo.mms.common.domain.FinalReport;
 import org.apache.ibatis.annotations.Param;
 
 public interface FinalreportMapper {
-    Finalreport returnFinalreport(@Param("studentid") int studentid, @Param("version") int version);
+    FinalReport returnFinalreport(@Param("studentid") int studentid, @Param("version") int version);
 
     Integer selectMaxversion(int studentid);
 
-    void insertFinalreport(Finalreport finalreport);
+    void insertFinalreport(FinalReport finalreport);
 
     void insertFinalreportpath(@Param("originalFilename") String originalFilename,@Param("finalpath") String finalpath, @Param("studentid") String studentid, @Param("version") String version);
 

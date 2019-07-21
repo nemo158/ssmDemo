@@ -1,13 +1,13 @@
 package com.demo.mms.service;
 
-import com.demo.mms.common.domain.Finalreport;
+import com.demo.mms.common.domain.FinalReport;
 
 public interface FinalreportService {
-    Finalreport findFinalreport(int studentid,int version);
+    FinalReport findFinalreport(int studentid, int version);
 
     Integer addMaxversion(int studentid);
 
-    void addFinalreport(Finalreport finalreport);
+    void addFinalreport(FinalReport finalreport);
 
     void addFinalreportpath(String originalFilename,String finalpath, String studentid, String version);
 

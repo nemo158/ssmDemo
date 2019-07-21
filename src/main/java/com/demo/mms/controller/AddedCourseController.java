@@ -18,7 +18,7 @@ public class AddedCourseController {
     @Autowired
     private AddedCourseService addedCourseService;
 
-    @RequestMapping(value="/addAddedCourse",method= RequestMethod.GET)
+    @RequestMapping(value="/addAddedCourse",method= RequestMethod.POST)
     @ResponseBody
     public Object addAddedCourse(@RequestBody AddedCourse addedCourse){
         addedCourseService.addNewCourse(addedCourse);

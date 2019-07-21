@@ -250,19 +250,19 @@
                 <div class=" gxf_problem gxf_problem_title">
                     <div><h2><span></span>内容详情</h2></div>
                     <div class="gxf_designTable_content">
-                        <ul class="gxf_designTable_box" id="title">
+                        <ul class="gxf_designTable_box" >
                             <li><p>课题题目<span class="writerText margl"> <span class="statement margl">请按照学校的要求，在下方输入相关内容，若无内容请填写“无”</span>
                             </span>></p>
                                 <div class="gxf_designTable_rangy clearfix">
-                                   <input type="text" class="form-control">
+                                   <input id="c-title" type="text" class="form-control">
                                 </div>
                             </li>
                         </ul>
-                        <ul class="gxf_designTable_box" id="coursetype">
+                        <ul class="gxf_designTable_box" >
                             <li><p>题目类型<span class="writerText margl"> <span class="statement margl">请按照学校的要求，在下方输入相关内容，若无内容请填写“无”</span>
                             </span>></p>
                                 <div class="gxf_designTable_rangy clearfix">
-                                    <input type="text" class="form-control">
+                                    <input id="coursetype" type="text" class="form-control">
                                 </div>
                             </li>
                         </ul>
@@ -472,7 +472,7 @@
     $(function () {
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/returnMidreport",
+            url: "http://localhost:8080/returnAddedCourse",
             data: {course_id: "3110002"},
             success: function (msg) {
                 initReport(msg.success)
@@ -484,21 +484,22 @@
                 $("#submit").hide();
                 $("#save").hide();
             }
-            $('#summernote').summernote('code',page.content);
+            $("#c-title").val(page.course_name);
+            $('#summernote').summernote('code',page.course_overview);
+            $("#coursetype").val(page.course_type);
+            $('#summernote2').summernote('code',page.course_goal);
         }
     });
     //保存提交
     $("#save").on("click",function () {
-        commitPages("123","SAVE");
-        $("#summernote" ).fileinput('upload');
+        commitPages("3110002","SAVE");
         toastr.success("保存成功", "消息提示");
-        window.location.reload();
+        // window.location.reload();
 
 
     });
     $("#submit").on("click",function () {
-        commitPages("123","SUBMIT");
-        $("#summernote" ).fileinput('upload');
+        commitPages("3110002","SUBMIT");
         toastr.success("提交成功", "消息提示");
         window.location.reload();
 
@@ -507,15 +508,17 @@
     function  commitPages(id,sta) {
         var page={
             course_id:id,
-            title:$("#course-title")[0].value,
-            summary:$('#summernote').summernote('code'),
-            type:$("#coursetype")[0].value,
-            goal:$('#summernote1').summernote('code'),
+            state:sta,
+            course_name:$("#c-title")[0].value,
+            course_overview:$('#summernote').summernote('code'),
+            course_type:$("#coursetype")[0].value,
+            course_goal:$('#summernote2').summernote('code'),
         };
 
         axios.post('http://localhost:8080/addAddedCourse', page)
             .then(function (response) {
                 console.log(response)
+
             })
             .catch(function (error) {
                 console.log(error);

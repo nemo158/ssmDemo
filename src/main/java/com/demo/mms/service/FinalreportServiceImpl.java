@@ -1,6 +1,6 @@
 package com.demo.mms.service;
 
-import com.demo.mms.common.domain.Finalreport;
+import com.demo.mms.common.domain.FinalReport;
 import com.demo.mms.dao.FinalreportMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ public class FinalreportServiceImpl implements FinalreportService {
 
     @Transactional
     @Override
-    public Finalreport findFinalreport(int studentid,int version) {
+    public FinalReport findFinalreport(int studentid, int version) {
         return finalreportMapper.returnFinalreport(studentid,version);
     }
 
@@ -25,7 +25,7 @@ public class FinalreportServiceImpl implements FinalreportService {
 
     @Transactional
     @Override
-    public void addFinalreport(Finalreport finalreport) {
+    public void addFinalreport(FinalReport finalreport) {
         finalreportMapper.insertFinalreport(finalreport);
     }
 
