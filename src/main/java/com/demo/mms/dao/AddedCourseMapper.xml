@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mms.dao.AddedCourseMapper">
+  <insert id="insertAddedCourse" parameterType="com.demo.mms.common.domain.AddedCourse">
+    insert into addcourse (course_id, course_name, course_type, course_overview,course_goal)
+    values   (#{course_id},#{course_name},#{course_type},#{course_overview},#{course_goal})
+  </insert>
+  <delete id="deleteAddedCourse" parameterType="int">
+    delete from addcourse where course_id=#{course_id}
+  </delete>
+</mapper>

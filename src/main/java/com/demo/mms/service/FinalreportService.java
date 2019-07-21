@@ -9,9 +9,9 @@ public interface FinalreportService {
 
     void addFinalreport(Finalreport finalreport);
 
-    void addFinalreportpath(String finalpath, String studentid, String version);
+    void addFinalreportpath(String originalFilename,String finalpath, String studentid, String version);
 
-    void addFinalresultpath(String finalpath, String toString, String toString1);
+    void addFinalresultpath(String originalFilename,String finalpath, String toString, String toString1);
 
-    void addFinalotherpath(String finalpath, String toString, String toString1);
+    void addFinalotherpath(String originalFilename,String finalpath, String toString, String toString1);
 }
