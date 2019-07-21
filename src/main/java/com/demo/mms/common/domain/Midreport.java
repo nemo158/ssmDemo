@@ -32,6 +32,15 @@ public class Midreport {
     private String advice;
     private int version;
     private String path;
+    private String originfilename;
+
+    public void setOriginfilename(String originfilename) {
+        this.originfilename = originfilename;
+    }
+
+    public String getOriginfilename() {
+        return originfilename;
+    }
 
     public void setPath(String path) {
         this.path = path;

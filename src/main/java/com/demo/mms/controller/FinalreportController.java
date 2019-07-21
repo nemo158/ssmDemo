@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.HashMap;
 import java.util.List;
@@ -61,26 +60,27 @@ public class FinalreportController {
             for (MultipartFile item : items) {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
-                String dirPath=savePath+"/storage/"+studentid+"\\";
+                String dirPath=savePath+"\\"+studentid+"\\";
                 File file =new File(dirPath);
                 if(!file.exists()){
                     file.mkdirs();
                 }
                 String newFilename= UUID.randomUUID()+originalFilename.substring(originalFilename.lastIndexOf("."));;
                 String finalpath= dirPath+newFilename;
+                String dbpath="/storage\\"+studentid+"\\"+newFilename;
                 try {
                     //使用MultipartFile接口的方法完成文件上传到指定位置
                     item.transferTo(new File(finalpath));
                     if(type.equals("paper")){
-                        finalreportService.addFinalreportpath(originalFilename,finalpath,Integer.toString(studentid),Integer.toString(version));
+                        finalreportService.addFinalreportpath(originalFilename,dbpath,Integer.toString(studentid),Integer.toString(version));
                         System.out.println("1; "+originalFilename);
                     }
                     if(type.equals("result")){
-                        finalreportService.addFinalresultpath(originalFilename,finalpath,Integer.toString(studentid),Integer.toString(version));
+                        finalreportService.addFinalresultpath(originalFilename,dbpath,Integer.toString(studentid),Integer.toString(version));
                         System.out.println("2; "+originalFilename);
                     }
                     if(type.equals("other")){
-                        finalreportService.addFinalotherpath(originalFilename,finalpath,Integer.toString(studentid),Integer.toString(version));
+                        finalreportService.addFinalotherpath(originalFilename,dbpath,Integer.toString(studentid),Integer.toString(version));
                         System.out.println("3; "+originalFilename);
                     }
                     //文件上传成功后，需要将文件存放路径存入数据库中

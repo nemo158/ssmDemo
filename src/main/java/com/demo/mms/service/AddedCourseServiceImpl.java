@@ -18,4 +18,9 @@ public class AddedCourseServiceImpl implements AddedCourseService{
     public void deleteCourse(int course_id) {
         addedCourseMapper.deleteAddedCourse(course_id);
     }
+
+    @Override
+    public AddedCourse findAddedCourse(int course_id) {
+        return addedCourseMapper.findAddedCourse(course_id);
+    }
 }

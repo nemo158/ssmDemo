@@ -6,5 +6,5 @@ public interface MidreportService {
     void addMidreport(Midreport midreport);
     Integer addMaxversion(int course_id);
     Midreport findreport(int course_id,int version);
-    void addMidreportpath(String finalpath,String course_id,String version);
+    void addMidreportpath(String finalpath,String course_id,String version,String originalFilename);
 }

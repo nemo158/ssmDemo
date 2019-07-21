@@ -16,6 +16,6 @@
     where course_id=#{course_id} and version=#{version};
   </select>
   <update id="insertMidreportpath" parameterType="java.lang.String">
-    update midreport set path = #{finalpath} where course_id= #{course_id} and version = #{version}
+    update midreport set path = #{finalpath},originfilename = #{originalFilename} where course_id= #{course_id} and version = #{version}
   </update>
 </mapper>
