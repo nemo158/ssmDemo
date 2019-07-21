@@ -10,9 +10,9 @@ public interface FinalreportMapper {
 
     void insertFinalreport(Finalreport finalreport);
 
-    void insertFinalreportpath(@Param("finalpath") String finalpath, @Param("studentid") String studentid, @Param("version") String version);
+    void insertFinalreportpath(@Param("originalFilename") String originalFilename,@Param("finalpath") String finalpath, @Param("studentid") String studentid, @Param("version") String version);
 
-    void insertFinalresultpath(@Param("finalpath") String finalpath, @Param("studentid") String studentid, @Param("version") String version);
+    void insertFinalresultpath(@Param("originalFilename") String originalFilename,@Param("finalpath") String finalpath, @Param("studentid") String studentid, @Param("version") String version);
 
-    void insertFinalotherpath(@Param("finalpath") String finalpath, @Param("studentid") String studentid, @Param("version") String version);
+    void insertFinalotherpath(@Param("originalFilename") String originalFilename,@Param("finalpath") String finalpath, @Param("studentid") String studentid, @Param("version") String version);
 }
