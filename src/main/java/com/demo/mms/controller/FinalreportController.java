@@ -61,7 +61,6 @@ public class FinalreportController {
             if (version==null){
                 version=0;
             }
-            version++;
             for (MultipartFile item : items) {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
@@ -71,20 +70,21 @@ public class FinalreportController {
                     file.mkdirs();
                 }
                 String newFilename= originalFilename;
+                String dbpath="/storage/"+studentid+"\\"+version+newFilename;
                 String finalpath= dirPath+version+";"+newFilename;
                 try {
                     //使用MultipartFile接口的方法完成文件上传到指定位置
                     item.transferTo(new File(finalpath));
                     if(type.equals("paper")){
-                        finalreportService.addFinalreportpath(finalpath,Integer.toString(studentid),Integer.toString(version));
+                        finalreportService.addFinalreportpath(dbpath,Integer.toString(studentid),Integer.toString(version));
                         System.out.println(type);
                     }
                     if(type.equals("result")){
-                        finalreportService.addFinalresultpath(finalpath,Integer.toString(studentid),Integer.toString(version));
+                        finalreportService.addFinalresultpath(dbpath,Integer.toString(studentid),Integer.toString(version));
                         System.out.println(type);
                     }
                     if(type.equals("other")){
-                        finalreportService.addFinalotherpath(finalpath,Integer.toString(studentid),Integer.toString(version));
+                        finalreportService.addFinalotherpath(dbpath,Integer.toString(studentid),Integer.toString(version));
                         System.out.println(type);
                     }
                     //文件上传成功后，需要将文件存放路径存入数据库中

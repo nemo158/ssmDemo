@@ -489,16 +489,19 @@
 
             if (reportA != null) {
                 $("#file_download").show();
-                $("#file_path").attr('href',reportA);
+                var path="/"+reportA;
+                $("#file_path").attr('href',path);
                 // $("file_name")
             }
             if(resultA!=null){
                 $("#result_download").show();
-                $("#result_path").attr('href',resultA);
+                var path="/"+resultA;
+                $("#result_path").attr('href',path);
             }
             if(otherA!=null){
                 $("#other_file").show();
-                $("other_path").attr("href",otherA);
+                var path="/"+otherA;
+                $("other_path").attr("href",path);
             }
 
 
