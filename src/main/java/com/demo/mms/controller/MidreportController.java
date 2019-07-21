@@ -2,6 +2,7 @@ package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.*;
 import com.demo.mms.service.MidreportService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -45,26 +46,34 @@ public class MidreportController {
     /**
      * 接收文件上传请求
      */
-    @RequestMapping("/saveFile")
+    @RequestMapping("/saveMidreport")
     @ResponseBody
-    public Object fileUpload(List<MultipartFile> items){
+    public Object saveFile(List<MultipartFile> items, @Param("course_id")int course_id,HttpServletRequest request){
+        String savePath = request.getSession().getServletContext().getRealPath("/storage");;
         //对上传图像进行解析操作
         if(items !=null && items.size()>0){
+            Integer version = midreportService.addMaxversion(course_id);
+            if (version==null){
+                version=0;
+            }
+            version++;
             for (MultipartFile item : items) {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
+                String dirPath=savePath+"\\"+course_id+"\\";
                 //设置上传文件的保存地址目录
-                String dirPath="D:\\16级\\ssmDemo0\\web\\storage\\";
                 File file =new File(dirPath);
                 //如果保存文件的地址不存在，就先创建目录
                 if(!file.exists()){
                     file.mkdirs();
                 }
-                //使用UUID重新命名上传的文件名称（看公司需求，也可以用日期时间）
-                String newFilename= originalFilename;
+                String newFilename= UUID.randomUUID()+originalFilename.substring(originalFilename.lastIndexOf("."));;
+                String finalpath= dirPath+newFilename;
+                String dbpath="/storage\\"+course_id+"\\"+newFilename;
                 try {
                     //使用MultipartFile接口的方法完成文件上传到指定位置
-                    item.transferTo(new File(dirPath+newFilename));
+                    item.transferTo(new File(finalpath));
+                    midreportService.addMidreportpath(dbpath,Integer.toString(course_id),Integer.toString(version),originalFilename);
                     //文件上传成功后，需要将文件存放路径存入数据库中
                     //TODO,省略
                 } catch (Exception e) {
@@ -76,6 +85,14 @@ public class MidreportController {
                 }
             }
         }
+        Map<String,Object> rs = new HashMap<>(64);
+        rs.put("success",true);
+        return rs;
+    }
+    @RequestMapping("/downloadFile")
+    @ResponseBody
+    public Object downloadFile(){
+
         Map<String,Object> rs = new HashMap<>(64);
         rs.put("success",true);
         return rs;
