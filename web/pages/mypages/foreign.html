@@ -403,7 +403,7 @@
         });
         function initReport(page){
             if (page.state !== "SAVE") {
-                $("body").find("div [name='items']").attr("readOnly", true);
+                $("body").find("div [name='items']").attr("disabled", true);
                 $("#submit").hide();
                 $("#save").hide();
             }

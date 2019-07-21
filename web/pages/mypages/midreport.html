@@ -670,9 +670,9 @@
                                     </div>
                                 </div>
                             </li>
-                            <li id="fujian" style=""><p>附件</p>
-                                <div id="accessory" class="gxf_designTable_detailes"><span id="accessorySpan">四川大学毕业论文（设计）中期检查表.doc</span><a
-                                        class="listA margl"
+                            <li id="fujian" style="display:none"><p>附件</p>
+                                <div id="accessory" class="gxf_designTable_detailes">四川大学毕业论文（设计）中期检查表.doc<a
+                                        class="listA margl" id="file_path"
                                         href="http://reportdownload.cnki.net/cofiledownload/DownLoadFile.aspx?downType=2&amp;user=2015141463170&amp;userServerID=0&amp;fileID=16384&amp;universityNum=2647&amp;isHistory=0&amp;check=f1b2418d1fed8bb4926c317baa31612b"
                                         download="四川大学毕业论文（设计）中期检查表.doc">点击下载</a></div>
                             </li>
@@ -867,6 +867,17 @@
                 $("#submit").hide();
                 $("#save").hide();
             }
+         //处理文件下载
+            if(midreport.path!==null){
+                $("#tianjiafujian").hide();
+                $("#fujian").show();
+                $("#accessory").html(midreport.originfilename);
+                $("#file_path").attr({
+                    'href':midreport.path,
+                    'download':midreport.originfilename
+                });
+
+            }
             if (midreport.translation_complete == 1) {
                 $("#wcqk0").attr('checked', "checked");
                 $(".wcqk4").hide();
@@ -915,13 +926,11 @@
         $('#submit').on('click', function () {
             // 以下属性 字符串类型的必须是string 但 Number类型的属性值传入string类型也可以
             commitReport(3110002, "SUBMIT");
-            $("#kv-explorer").fileinput("upload");
             toastr.success("提交成功", "消息提示");
             //window.location.reload();
         });
         $("#save").on('click', function () {
             commitReport(3110002, "SAVE")
-            $("#kv-explorer").fileinput("upload");
             toastr.success("保存成功", "消息提示");
            // window.location.reload();
 
@@ -979,6 +988,7 @@
             };
             axios.post('http://localhost:8080/addMidreport', midreport)
                 .then(function (response) {
+                    $("#kv-explorer").fileinput("upload");
                     console.log(response)
                 })
                 .catch(function (error) {

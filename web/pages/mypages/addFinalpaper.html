@@ -489,19 +489,28 @@
 
             if (reportA != null) {
                 $("#file_download").show();
-                var path="/"+reportA;
-                $("#file_path").attr('href',path);
-                // $("file_name")
+                $("#file_path").attr({
+                    'href':reportA,
+                    'download':page.originfilename1
+                });
+                $("#file_name").html(page.originfilename1);
+
             }
             if(resultA!=null){
                 $("#result_download").show();
-                var path="/"+resultA;
-                $("#result_path").attr('href',path);
+                $("#result_path").attr({
+                    'href':resultA,
+                    'download':page.originfilename2
+                });
+                $("#result_name").html(page.originfilename2);
             }
             if(otherA!=null){
                 $("#other_file").show();
-                var path="/"+otherA;
-                $("other_path").attr("href",path);
+                $("#other_path").attr({
+                    'href':resultA,
+                    'download':page.originfilename3
+                });
+                $("#other_name").html(page.originfilename3);
             }
 
 
