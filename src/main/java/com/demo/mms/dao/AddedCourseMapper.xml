@@ -8,4 +8,9 @@
   <delete id="deleteAddedCourse" parameterType="int">
     delete from addcourse where course_id=#{course_id}
   </delete>
+  <select id="findAddedCourse" parameterType="int" resultType="com.demo.mms.common.domain.AddedCourse">
+    select *
+    from addcourse
+    where course_id=#{course_id}
+  </select>
 </mapper>

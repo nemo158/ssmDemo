@@ -26,9 +26,6 @@ public class Finalreport {
     private String result_address;
     private String enclosure_address;
     private int version;
-    private String originfilename1;
-    private String originfilename2;
-    private String originfilename3;
 
     public void setVersion(int version) {
         this.version = version;
@@ -188,85 +185,5 @@ public class Finalreport {
 
     public int getVersion() {
         return version;
-    }
-
-    public int getReportid() {
-        return reportid;
-    }
-
-    public void setReportid(int reportid) {
-        this.reportid = reportid;
-    }
-
-    public String getFileaddress() {
-        return fileaddress;
-    }
-
-    public void setFileaddress(String fileaddress) {
-        this.fileaddress = fileaddress;
-    }
-
-    public Date getCommit_time() {
-        return commit_time;
-    }
-
-    public void setCommit_time(Date commit_time) {
-        this.commit_time = commit_time;
-    }
-
-    public String getReportname() {
-        return reportname;
-    }
-
-    public void setReportname(String reportname) {
-        this.reportname = reportname;
-    }
-
-    public String getReport_address() {
-        return report_address;
-    }
-
-    public void setReport_address(String report_address) {
-        this.report_address = report_address;
-    }
-
-    public String getResult_address() {
-        return result_address;
-    }
-
-    public void setResult_address(String result_address) {
-        this.result_address = result_address;
-    }
-
-    public String getEnclosure_address() {
-        return enclosure_address;
-    }
-
-    public void setEnclosure_address(String enclosure_address) {
-        this.enclosure_address = enclosure_address;
-    }
-
-    public String getOriginfilename1() {
-        return originfilename1;
-    }
-
-    public void setOriginfilename1(String originfilename1) {
-        this.originfilename1 = originfilename1;
-    }
-
-    public String getOriginfilename2() {
-        return originfilename2;
-    }
-
-    public void setOriginfilename2(String originfilename2) {
-        this.originfilename2 = originfilename2;
-    }
-
-    public String getOriginfilename3() {
-        return originfilename3;
-    }
-
-    public void setOriginfilename3(String originfilename3) {
-        this.originfilename3 = originfilename3;
     }
 }

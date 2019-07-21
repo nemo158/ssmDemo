@@ -30,8 +30,8 @@ public class MidreportServicceImpl implements MidreportService{
 
     @Transactional
     @Override
-    public void addMidreportpath(String finalpath,String course_id,String version){
-        midreportMapper.insertMidreportpath(finalpath,course_id,version);
+    public void addMidreportpath(String finalpath,String course_id,String version,String originalFilename){
+        midreportMapper.insertMidreportpath(finalpath,course_id,version,originalFilename);
 
     }
 }

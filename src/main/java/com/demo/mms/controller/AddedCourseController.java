@@ -1,6 +1,7 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.AddedCourse;
+import com.demo.mms.common.domain.Midreport;
 import com.demo.mms.service.AddedCourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,15 @@ public class AddedCourseController {
         addedCourseService.addNewCourse(addedCourse);
         Map<String,Object> rs = new HashMap<>(64);
         rs.put("success",true);
+        return rs;
+    }
+
+    @RequestMapping("/returnAddedCourse")
+    @ResponseBody
+    public Object returnMidreport(int course_id){
+        AddedCourse addedCourse= addedCourseService.findAddedCourse(course_id);
+        Map<String,Object> rs = new HashMap<>(64);
+        rs.put("success",addedCourse);
         return rs;
     }
 

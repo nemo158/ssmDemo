@@ -6,4 +6,6 @@ public interface AddedCourseMapper {
     void insertAddedCourse(AddedCourse addedCourse);
 
     void deleteAddedCourse(int course_id);
+
+    AddedCourse findAddedCourse(int course_id);
 }
