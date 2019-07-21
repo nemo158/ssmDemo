@@ -17,6 +17,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @Controller
 public class FinalreportController {
@@ -51,17 +52,12 @@ public class FinalreportController {
     @RequestMapping(value = "/saveFinalreport",method = RequestMethod.POST)
     @ResponseBody
     public Object saveFile(List<MultipartFile> items, @Param("studentid")Integer studentid, @Param("type") String type, HttpServletRequest request){
-//        HttpSession session = request.getSession();
-//
         String savePath = request.getSession().getServletContext().getRealPath("/storage");;
-        System.out.println(type);
         if(items !=null && items.size()>0){
             Integer version = finalreportService.addMaxversion(studentid);
-
             if (version==null){
                 version=0;
             }
-            version++;
             for (MultipartFile item : items) {
                 //获取上传文件的原始名称
                 String originalFilename = item.getOriginalFilename();
@@ -70,22 +66,22 @@ public class FinalreportController {
                 if(!file.exists()){
                     file.mkdirs();
                 }
-                String newFilename= originalFilename;
-                String finalpath= dirPath+version+";"+newFilename;
+                String newFilename= UUID.randomUUID()+originalFilename.substring(originalFilename.lastIndexOf("."));;
+                String finalpath= dirPath+newFilename;
                 try {
                     //使用MultipartFile接口的方法完成文件上传到指定位置
                     item.transferTo(new File(finalpath));
                     if(type.equals("paper")){
-                        finalreportService.addFinalreportpath(finalpath,Integer.toString(studentid),Integer.toString(version));
-                        System.out.println(type);
+                        finalreportService.addFinalreportpath(originalFilename,finalpath,Integer.toString(studentid),Integer.toString(version));
+                        System.out.println("1; "+originalFilename);
                     }
                     if(type.equals("result")){
-                        finalreportService.addFinalresultpath(finalpath,Integer.toString(studentid),Integer.toString(version));
-                        System.out.println(type);
+                        finalreportService.addFinalresultpath(originalFilename,finalpath,Integer.toString(studentid),Integer.toString(version));
+                        System.out.println("2; "+originalFilename);
                     }
                     if(type.equals("other")){
-                        finalreportService.addFinalotherpath(finalpath,Integer.toString(studentid),Integer.toString(version));
-                        System.out.println(type);
+                        finalreportService.addFinalotherpath(originalFilename,finalpath,Integer.toString(studentid),Integer.toString(version));
+                        System.out.println("3; "+originalFilename);
                     }
                     //文件上传成功后，需要将文件存放路径存入数据库中
                     //TODO,省略
