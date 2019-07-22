@@ -43,6 +43,6 @@
         </param-value>
     </context-param>
     <welcome-file-list>
-        <welcome-file>myindex.html</welcome-file>
+        <welcome-file>pages/mypages/login.html</welcome-file>
     </welcome-file-list>
 </web-app>

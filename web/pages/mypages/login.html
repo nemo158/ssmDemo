@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- saved from url=(0065)http://www.17sucai.com/preview/1266961/2018-06-19/3007/index.html -->
-<html lang="zxx"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="zxx">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>本科毕设管理系统</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +11,8 @@
 
     <link rel="stylesheet" href="../../dist/login/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="../../dist/login/fontawesome-all.css">
-
+    <script src="../../dist/js/jquery-3.3.1.min.js"></script>
+    <script src="../../dist/js/jquery.form.js"></script>
 </head>
 
 <body>
@@ -20,10 +23,10 @@
     <canvas width="1519" height="382"></canvas>
 </div>
 <!-- title -->
-<h1 >本科毕业设计管理系统</h1>
+<h1>本科毕业设计管理系统</h1>
 <!-- content -->
 <div class="sub-main-w3">
-    <form action="" method="post">
+    <form id="form1" action="http://localhost:8080/checkUsrANDPwd" method="get">
         <h2>登录
             <i class="fas fa-level-down-alt"></i>
         </h2>
@@ -32,31 +35,31 @@
                 <i class="fas fa-user"></i>
                 用户名
             </label>
-            <input placeholder="学号/邮箱" name="Name" type="text" required="">
+            <input placeholder="学号/邮箱" name="usr" type="text" required="">
         </div>
         <div class="form-style-agile">
             <label>
                 <i class="fas fa-unlock-alt"></i>
                 密码
             </label>
-            <input placeholder="" name="Password" type="password" required="">
+            <input placeholder="" name="pwd" type="password" required="">
         </div>
         <div class="form-style-agile">
             <label>
                 <i class="fas fa-unlock-alt"></i>
                 身份
             </label>
-                <input style="margin-left: 30px" type="radio" id="wcqk0" name="Role" value="0"  checked="checked">
-                <label for="wcqk0" class="margr" >学生</label>
-                <input type="radio" id="wcqk1" name="Role" value="1">
-                <label for="wcqk1" class="margr">教师</label></div>
-            <div id="right_box_left_wcqk" class="gxf_rangy_right_box gxf_noRangy"></div>
+            <input style="margin-left: 30px" type="radio" id="wcqk0" name="Role" value="0" checked="checked">
+            <label for="wcqk0" class="margr">学生</label>
+            <input type="radio" id="wcqk1" name="Role" value="1">
+            <label for="wcqk1" class="margr">教师</label></div>
+        <div id="right_box_left_wcqk" class="gxf_rangy_right_box gxf_noRangy"></div>
         <!-- checkbox -->
         <div class="wthree-text">
             <ul>
                 <li>
                     <label class="anim">
-                        <input type="checkbox" class="checkbox" required="">
+                        <input type="checkbox" class="checkbox"  checked="checked" required="">
                         <span>记住我</span>
                     </label>
                 </li>
@@ -84,6 +87,36 @@
 <script src="../../dist/login/canva_moving_effect.js"></script>
 <!-- //effect js -->
 
+<script language="JavaScript">
+    $(function () {
+        $('#form1').submit(function () {
+            $.ajax({
+                url: "http://localhost:8080/checkUsrANDPwd",
+                data: $('#form1').serialize(),
+                dataType: "json",
+                error: function (data) {
+                    alert(data);
+                },
+                success: function (data) {
+                    window.location.href="myindex.html"
+                }
+            });
+        });
+    })
+
+    function getMyName() {
+        $.ajax({
+            url: "http://localhost:8080/getUser",
+            dataType: "json",
+            error: function (data) {
+                alert(data);
+            },
+            success: function (data) {
+               alert(data)
+            }})
+    }
+</script>
 
 
-</body></html>
+</body>
+</html>

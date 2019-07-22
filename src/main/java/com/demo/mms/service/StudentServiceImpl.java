@@ -18,7 +18,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean checkUsrANDPwd(int usr,String pwd){
         Student temp=studentMapper.selectByPrimaryKey(usr);
-        return pwd==temp.getPassword();
+        return pwd.equals(temp.getPassword());
     }
 
     @Override
