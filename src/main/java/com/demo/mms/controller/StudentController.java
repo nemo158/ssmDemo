@@ -1,24 +1,16 @@
 package com.demo.mms.controller;
 
 import com.demo.mms.common.domain.Student;
-import com.demo.mms.common.domain.course;
 import com.demo.mms.service.StudentService;
-import com.demo.mms.service.courseService;
 import org.apache.ibatis.annotations.Param;
-import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.testng.mustache.Model;
-import sun.applet.resources.MsgAppletViewer;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
 
 @Controller
 public class StudentController {
